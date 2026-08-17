@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>华茶里 HUA CHA LI · 优质手作茶饮</title>
-<meta name="description" content="华茶里 HUA CHA LI —— 新鲜现做、优质原料的手作茶饮品牌。经典珍珠奶茶、清爽果茶、经典纯茶与美味小吃。">
-<meta property="og:title" content="华茶里 HUA CHA LI · 优质手作茶饮">
-<meta property="og:description" content="每一杯都是手工精心制作，采用优质原料与完美冲泡的茶叶。">
+<title>HUA CHA LI · Premium Handcrafted Tea</title>
+<meta name="description" content="HUA CHA LI — freshly made, premium-ingredient handcrafted tea. Classic milk tea, refreshing fruit tea, pure tea and delicious snacks.">
+<meta property="og:title" content="HUA CHA LI · Premium Handcrafted Tea">
+<meta property="og:description" content="Every cup is handcrafted with premium ingredients and perfectly brewed tea leaves.">
 <meta property="og:type" content="website">
 <style>
   :root{
@@ -22,7 +22,7 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans TC",sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
     color:var(--text);
     background:#fff;
     line-height:1.6;
@@ -32,7 +32,7 @@
   img{max-width:100%;display:block}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
-  /* ===== 顶部导航 ===== */
+  /* ===== Header ===== */
   header{
     position:sticky;top:0;z-index:50;
     background:rgba(255,255,255,.92);
@@ -44,7 +44,7 @@
   .brand .logo{
     width:38px;height:38px;border-radius:10px;
     background:linear-gradient(135deg,var(--green),#069a52);
-    display:grid;place-items:center;color:#fff;font-size:1.1rem;
+    display:grid;place-items:center;color:#fff;font-size:.95rem;font-weight:800;letter-spacing:.02em;
   }
   .brand small{font-weight:600;color:var(--muted);font-size:.7rem;letter-spacing:.14em}
   .nav-links{display:flex;gap:30px;font-weight:600;color:var(--muted)}
@@ -113,14 +113,14 @@
   .fc-price .price{font-size:1.3rem;color:var(--green-dark);font-weight:800}
   .fc-price .from{font-size:.72rem;color:var(--muted)}
 
-  /* ===== 板块通用 ===== */
+  /* ===== Sections ===== */
   section{padding:80px 0}
   .sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
   .sec-head .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
   .sec-head h2{font-size:2.4rem;color:var(--green-dark);margin:8px 0 14px}
   .sec-head p{color:var(--muted)}
 
-  /* ===== 关于 ===== */
+  /* ===== About ===== */
   #about{background:#fff}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
   .about-text h3{color:var(--green);font-size:1.5rem;margin-bottom:16px}
@@ -144,7 +144,7 @@
   .exp-badge b{font-size:5rem;line-height:1;display:block}
   .exp-badge span{opacity:.9}
 
-  /* ===== 菜单 ===== */
+  /* ===== Menu ===== */
   #menu{background:var(--mint)}
   .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
   .tab{
@@ -188,7 +188,7 @@
   .drink .info .more{color:var(--gold);font-weight:700;font-size:.85rem}
   .menu-foot{text-align:center;margin-top:40px}
 
-  /* ===== 评价 ===== */
+  /* ===== Reviews ===== */
   #reviews{background:#fff}
   .reviews-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:stretch}
   .quote-cards{display:grid;grid-template-columns:1fr;gap:20px}
@@ -212,7 +212,7 @@
   .rating-card .m b{display:block;font-size:1.4rem}
   .rating-card .m span{opacity:.85;font-size:.85rem}
 
-  /* ===== 联系 ===== */
+  /* ===== Contact ===== */
   #contact{background:var(--mint)}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
   .contact-info h2{font-size:2.2rem;color:var(--green-dark);margin-bottom:16px}
@@ -230,7 +230,7 @@
   .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--green)}
   .contact-form textarea{min-height:110px;resize:vertical}
 
-  /* ===== 页脚 ===== */
+  /* ===== Footer ===== */
   footer{background:var(--green-dark);color:#cfe5d8;padding:56px 0 24px}
   .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:36px}
   .foot-brand{font-size:1.3rem;font-weight:800;color:#fff}
@@ -263,18 +263,18 @@
 <header>
   <div class="wrap nav">
     <a href="#" class="brand">
-      <span class="logo">🍵</span>
-      华茶里 <small>HUA CHA LI</small>
+      <span class="logo">HCL</span>
+      HUA CHA LI
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#home">首页</a>
-      <a href="#menu">菜单</a>
-      <a href="#about">关于</a>
-      <a href="#contact">联系</a>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
       <a href="tel:+85265423394" class="nav-phone">+852 6542 3394</a>
-      <a href="#contact" class="btn">立即订购</a>
+      <a href="#contact" class="btn">Order Now</a>
     </div>
     <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
@@ -283,17 +283,17 @@
 <section class="hero" id="home">
   <div class="wrap">
     <div>
-      <span class="badge"><span class="dot"></span>新鲜现做 · 优质原料</span>
-      <h1>品尝清爽的<br>美味茶饮</h1>
-      <p>每一杯都是手工精心制作，采用优质原料和完美冲泡的茶叶，为您带来独特的茶饮体验。</p>
+      <span class="badge"><span class="dot"></span>Freshly Made · Premium Ingredients</span>
+      <h1>Refreshing,<br>Delicious Tea</h1>
+      <p>Every cup is handcrafted with premium ingredients and perfectly brewed tea leaves, delivering a one-of-a-kind tea experience.</p>
       <div class="hero-cta">
-        <a href="#menu" class="btn">探索菜单</a>
-        <a href="#about" class="btn ghost">关于我们</a>
+        <a href="#menu" class="btn">Explore Menu</a>
+        <a href="#about" class="btn ghost">About Us</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>50+</b><span>饮品种类</span></div>
-        <div class="stat"><b>10k+</b><span>满意顾客</span></div>
-        <div class="stat"><b>5</b><span>年经验</span></div>
+        <div class="stat"><b>50+</b><span>Drink Varieties</span></div>
+        <div class="stat"><b>10k+</b><span>Happy Customers</span></div>
+        <div class="stat"><b>5</b><span>Years of Craft</span></div>
       </div>
     </div>
     <div class="hero-art">
@@ -301,11 +301,11 @@
         <div class="cup"><span class="bubble"></span></div>
       </div>
       <div class="float-card fc-reco">
-        <div class="tag">🍵 招牌推荐</div>
-        <b>珍珠奶茶</b>
+        <div class="tag">🥤 Signature</div>
+        <b>Pearl Milk Tea</b>
       </div>
       <div class="float-card fc-price">
-        <span class="from">起价</span>
+        <span class="from">From</span>
         <div class="price">$28</div>
       </div>
     </div>
@@ -315,26 +315,26 @@
 <section id="about">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">关于我们</div>
-      <h2>用优质原料 精心制作</h2>
-      <p>每一杯饮品都讲述着我们对品质的执着。</p>
+      <div class="eyebrow">About Us</div>
+      <h2>Crafted with Premium Ingredients</h2>
+      <p>Every drink tells the story of our passion for quality.</p>
     </div>
     <div class="about-grid">
       <div class="about-text">
-        <h3>华茶里 · 始于 2019</h3>
-        <p>华茶里成立于 2019 年，是一家专注于高品质茶饮的连锁品牌。我们从值得信赖的农场采购茶叶，新鲜冲泡每一杯，并根据您的口味定制。</p>
-        <p>我们的使命是为每一位顾客带来最纯正的茶饮体验，让每一口都充满惊喜与满足。无论是经典的珍珠奶茶，还是清新的水果茶，我们都用心制作，只为您的满意。</p>
+        <h3>HUA CHA LI · Est. 2019</h3>
+        <p>Founded in 2019, HUA CHA LI is a chain brand dedicated to premium tea beverages. We source our tea leaves from trusted farms, brew every cup fresh, and customize it to your taste.</p>
+        <p>Our mission is to bring every customer the most authentic tea experience, filling each sip with surprise and satisfaction. From classic pearl milk tea to refreshing fruit tea, we craft every cup with care — just for you.</p>
         <div class="features">
-          <div class="feature"><div class="ico">🍃</div><b>优质原料</b><span>精选上等茶叶，新鲜水果</span></div>
-          <div class="feature"><div class="ico">👨‍🍳</div><b>专业团队</b><span>经验丰富的调茶师</span></div>
-          <div class="feature"><div class="ico">✅</div><b>品质保证</b><span>严格把控每一道工序</span></div>
-          <div class="feature"><div class="ico">🕐</div><b>新鲜现做</b><span>每一杯都是现场制作</span></div>
+          <div class="feature"><div class="ico">🍃</div><b>Premium Ingredients</b><span>Finely selected tea leaves and fresh fruit</span></div>
+          <div class="feature"><div class="ico">👨‍🍳</div><b>Expert Team</b><span>Experienced tea artisans</span></div>
+          <div class="feature"><div class="ico">✅</div><b>Quality Guarantee</b><span>Every step strictly controlled</span></div>
+          <div class="feature"><div class="ico">🕐</div><b>Freshly Made</b><span>Every cup made on the spot</span></div>
         </div>
       </div>
       <div class="about-art">
         <span class="leaf l1">🍃</span>
         <span class="leaf l2">🍵</span>
-        <div class="exp-badge"><b>5+</b><span>年行业经验</span></div>
+        <div class="exp-badge"><b>5+</b><span>Years of Experience</span></div>
       </div>
     </div>
   </div>
@@ -343,53 +343,53 @@
 <section id="menu">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">我们的菜单</div>
-      <h2>探索我们的饮品</h2>
-      <p>从经典奶茶到清新果茶，从纯茶到美味小吃，总有一款适合您。</p>
+      <div class="eyebrow">Our Menu</div>
+      <h2>Explore Our Drinks</h2>
+      <p>From classic milk tea to refreshing fruit tea, from pure tea to tasty snacks — there's something for everyone.</p>
     </div>
     <div class="tabs">
-      <button class="tab active" onclick="filterDrinks('all',this)">全部</button>
-      <button class="tab" onclick="filterDrinks('milk',this)">招牌奶茶</button>
-      <button class="tab" onclick="filterDrinks('fruit',this)">清爽果茶</button>
-      <button class="tab" onclick="filterDrinks('tea',this)">经典纯茶</button>
-      <button class="tab" onclick="filterDrinks('snack',this)">美味小吃</button>
+      <button class="tab active" onclick="filterDrinks('all',this)">All</button>
+      <button class="tab" onclick="filterDrinks('milk',this)">Milk Tea</button>
+      <button class="tab" onclick="filterDrinks('fruit',this)">Fruit Tea</button>
+      <button class="tab" onclick="filterDrinks('tea',this)">Pure Tea</button>
+      <button class="tab" onclick="filterDrinks('snack',this)">Snacks</button>
     </div>
     <div class="menu-grid" id="menuGrid">
       <div class="drink" data-cat="milk">
         <div class="photo"><div class="c1"></div><span class="straw"></span><span class="score">4.9</span></div>
         <div class="info">
-          <h3>经典珍珠奶茶</h3>
-          <div class="desc">香醇奶茶配 Q 弹珍珠</div>
-          <div class="row"><span class="price">$28</span><span class="more">了解更多 →</span></div>
+          <h3>Classic Pearl Milk Tea</h3>
+          <div class="desc">Rich milk tea with chewy tapioca pearls</div>
+          <div class="row"><span class="price">$28</span><span class="more">Learn More →</span></div>
         </div>
       </div>
       <div class="drink" data-cat="milk">
         <div class="photo"><div class="c2"></div><span class="straw"></span><span class="score">4.8</span></div>
         <div class="info">
-          <h3>焦糖奶茶</h3>
-          <div class="desc">浓郁焦糖风味</div>
-          <div class="row"><span class="price">$28</span><span class="more">了解更多 →</span></div>
+          <h3>Caramel Milk Tea</h3>
+          <div class="desc">Rich caramel flavor</div>
+          <div class="row"><span class="price">$28</span><span class="more">Learn More →</span></div>
         </div>
       </div>
       <div class="drink" data-cat="milk">
         <div class="photo"><div class="c3"></div><span class="straw"></span><span class="score">4.9</span><span class="new-flag">NEW</span></div>
         <div class="info">
-          <h3>抹茶奶茶</h3>
-          <div class="desc">日式抹茶香浓</div>
-          <div class="row"><span class="price">$30</span><span class="more">了解更多 →</span></div>
+          <h3>Matcha Milk Tea</h3>
+          <div class="desc">Fragrant Japanese matcha</div>
+          <div class="row"><span class="price">$30</span><span class="more">Learn More →</span></div>
         </div>
       </div>
       <div class="drink" data-cat="milk">
         <div class="photo"><div class="c4"></div><span class="straw"></span><span class="score">4.7</span></div>
         <div class="info">
-          <h3>港式奶茶</h3>
-          <div class="desc">传统港式风味</div>
-          <div class="row"><span class="price">$30</span><span class="more">了解更多 →</span></div>
+          <h3>Hong Kong Milk Tea</h3>
+          <div class="desc">Traditional Hong Kong style</div>
+          <div class="row"><span class="price">$30</span><span class="more">Learn More →</span></div>
         </div>
       </div>
     </div>
     <div class="menu-foot">
-      <a href="#contact" class="btn">查看完整菜单</a>
+      <a href="#contact" class="btn">View Full Menu</a>
     </div>
   </div>
 </section>
@@ -397,35 +397,35 @@
 <section id="reviews">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">客户评价</div>
-      <h2>顾客怎么说</h2>
-      <p>听听我们的顾客对华茶里的真实评价。</p>
+      <div class="eyebrow">Testimonials</div>
+      <h2>What Our Customers Say</h2>
+      <p>Hear real reviews from our customers at HUA CHA LI.</p>
     </div>
     <div class="reviews-grid">
       <div class="quote-cards">
         <div class="quote">
           <div class="stars">★★★★★</div>
-          <p>"最好的奶茶！味道完美平衡，珍珠嚼劲十足。每次来都点他们家的招牌珍珠奶茶，从来没有失望过。环境也很舒适，是和朋友聚会的好地方。"</p>
-          <div class="who"><span class="av">林</span><div><b>林雨晴</b><span>忠实顾客</span></div></div>
+          <p>"The best milk tea! Perfectly balanced flavor with delightfully chewy pearls. I always order their signature pearl milk tea and it never disappoints. The cozy atmosphere makes it a great spot to gather with friends."</p>
+          <div class="who"><span class="av">R</span><div><b>Rachel Lin</b><span>Loyal Customer</span></div></div>
         </div>
         <div class="quote">
           <div class="stars">★★★★★</div>
-          <p>"我每天都来这里。服务和品质始终如一，员工都很友善。特别喜欢他们的抹茶系列，香浓不腻，是下午茶的最佳选择。"</p>
-          <div class="who"><span class="av">陈</span><div><b>陈嘉明</b><span>常客</span></div></div>
+          <p>"I come here every single day. The service and quality are consistently excellent and the staff are so friendly. I especially love their matcha series — rich but not overwhelming, the perfect afternoon tea."</p>
+          <div class="who"><span class="av">D</span><div><b>Daniel Chan</b><span>Regular</span></div></div>
         </div>
         <div class="quote">
           <div class="stars">★★★★★</div>
-          <p>"终于找到一家用真茶叶的奶茶店了！能喝出来茶叶的品质很好。果茶系列也很棒，水果新鲜，茶底清香。强烈推荐！"</p>
-          <div class="who"><span class="av">王</span><div><b>王美玲</b><span>美食博主</span></div></div>
+          <p>"Finally found a bubble tea shop that uses real tea leaves! You can truly taste the quality. Their fruit tea series is amazing too — fresh fruit and a clean tea base. Highly recommended!"</p>
+          <div class="who"><span class="av">M</span><div><b>Mia Wong</b><span>Food Blogger</span></div></div>
         </div>
       </div>
       <div class="rating-card">
         <div class="big">4.9 <small>/ 5</small></div>
-        <p style="opacity:.9;margin-top:6px">平均评分</p>
+        <p style="opacity:.9;margin-top:6px">Average Rating</p>
         <div class="metrics">
-          <div class="m"><b>10k+</b><span>好评数量</span></div>
-          <div class="m"><b>98%</b><span>满意度</span></div>
-          <div class="m"><b>50+</b><span>回头客</span></div>
+          <div class="m"><b>10k+</b><span>Positive Reviews</span></div>
+          <div class="m"><b>98%</b><span>Satisfaction</span></div>
+          <div class="m"><b>50+</b><span>Returning Customers</span></div>
         </div>
       </div>
     </div>
@@ -435,25 +435,25 @@
 <section id="contact">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">联系我们</div>
-      <h2>欢迎光临 华茶里</h2>
-      <p>每一杯都是用心制作，采用优质原料，为您带来完美的茶饮体验。</p>
+      <div class="eyebrow">Contact Us</div>
+      <h2>Visit HUA CHA LI</h2>
+      <p>Every cup is made with care, using premium ingredients for the perfect tea experience.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-row"><span class="ico">📍</span><div><b>门店地址</b><span>香港茶饮街 123 号</span></div></div>
-        <div class="contact-row"><span class="ico">📞</span><div><b>电话</b><span>+852 6542 3394</span></div></div>
-        <div class="contact-row"><span class="ico">✉️</span><div><b>邮箱</b><span>hello@huachali.com</span></div></div>
-        <div class="contact-row"><span class="ico">🕐</span><div><b>营业时间</b><span>每日 10:00 - 22:00</span></div></div>
+        <div class="contact-row"><span class="ico">📍</span><div><b>Address</b><span>123 Tea Street, Hong Kong</span></div></div>
+        <div class="contact-row"><span class="ico">📞</span><div><b>Phone</b><span>+852 6542 3394</span></div></div>
+        <div class="contact-row"><span class="ico">✉️</span><div><b>Email</b><span>hello@huachali.com</span></div></div>
+        <div class="contact-row"><span class="ico">🕐</span><div><b>Opening Hours</b><span>Daily 10:00 - 22:00</span></div></div>
       </div>
       <form class="contact-form" onsubmit="handleSubmit(event)">
-        <label>您的姓名</label>
-        <input type="text" name="name" placeholder="请输入姓名" required>
-        <label>联系电话</label>
-        <input type="tel" name="phone" placeholder="请输入电话">
-        <label>留言内容</label>
-        <textarea name="message" placeholder="想喝点什么？告诉我们…"></textarea>
-        <button type="submit" class="btn" style="width:100%;justify-content:center">发送消息</button>
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number">
+        <label>Message</label>
+        <textarea name="message" placeholder="What would you like to order? Let us know…"></textarea>
+        <button type="submit" class="btn" style="width:100%;justify-content:center">Send Message</button>
       </form>
     </div>
   </div>
@@ -463,37 +463,37 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <div><span class="logo">🍵</span>华茶里 HUA CHA LI</div>
-        <p>每一杯都是用心制作，采用优质原料，为您带来完美的茶饮体验。</p>
+        <div><span class="logo">HCL</span>HUA CHA LI</div>
+        <p>Every cup is made with care, using premium ingredients for the perfect tea experience.</p>
       </div>
       <div>
-        <h4>快速链接</h4>
-        <a href="#home">首页</a>
-        <a href="#menu">菜单</a>
-        <a href="#about">关于</a>
-        <a href="#contact">联系</a>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
       <div>
-        <h4>相关信息</h4>
-        <a href="#contact">配送信息</a>
-        <a href="#contact">隐私政策</a>
-        <a href="#contact">服务条款</a>
+        <h4>Information</h4>
+        <a href="#contact">Delivery</a>
+        <a href="#contact">Privacy Policy</a>
+        <a href="#contact">Terms of Service</a>
       </div>
       <div>
-        <h4>联系我们</h4>
+        <h4>Contact</h4>
         <a href="tel:+85265423394">+852 6542 3394</a>
         <a href="mailto:hello@huachali.com">hello@huachali.com</a>
-        <a href="#">香港茶饮街 123 号</a>
+        <a href="#">123 Tea Street, Hong Kong</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2024 华茶里 HUA CHA LI · 保留所有权利 · 用 <span class="heart">♥</span> 制作每一杯茶
+      © 2024 HUA CHA LI · All Rights Reserved · Brewed with <span class="heart">♥</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // 菜单分类筛选
+  // Menu category filter
   function filterDrinks(cat, btn){
     document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
     btn.classList.add('active');
@@ -502,11 +502,11 @@
     });
   }
 
-  // 表单提交（演示：仅提示，需接入真实后端/第三方表单服务）
+  // Form submit (demo: shows a message; needs a real backend / third-party form service)
   function handleSubmit(e){
     e.preventDefault();
     var name = e.target.name.value;
-    alert('感谢您的留言，' + (name||'朋友') + '！我们会尽快与您联系。（演示表单，实际需接入后端）');
+    alert('Thank you for your message, ' + (name||'friend') + '! We will get back to you soon. (Demo form — will need a backend to send real messages.)');
     e.target.reset();
   }
 </script>
