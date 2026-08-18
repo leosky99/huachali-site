@@ -13,7 +13,8 @@
   };
 
   function matches(g) {
-    if (currentCat !== 'all' && g.cat !== currentCat) return false;
+    if (currentCat === 'paid') return !!g.paid;
+    if (currentCat !== 'all') return false;
     if (currentQuery) {
       var q = currentQuery.toLowerCase();
       var hay = (g.title + ' ' + g.desc + ' ' + (g.tags || []).join(' ')).toLowerCase();
@@ -28,23 +29,42 @@
       grid.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">没有找到相关内容，换个关键词试试。</p>';
       return;
     }
-    grid.innerHTML = list.map(function (g) {
-      var tagHtml = (g.tags || []).map(function (t) {
-        return '<span class="tag-chip">' + t + '</span>';
-      }).join('');
+
+    function cardHtml(g) {
       return '<div class="guide" onclick="openGuide(\'' + g.id + '\')">'
         + '<div class="thumb ' + g.thumb + '">' + g.icon
         + '<span class="cat">' + CAT_LABEL[g.cat] + '</span>'
-        + (g.soon ? '<span class="soon">筹备中</span>' : (g.hot ? '<span class="soon" style="background:#E0524D">热门</span>' : ''))
+        + (g.hot ? '<span class="soon" style="background:#E0524D">热门</span>' : '')
         + (g.paid ? '<span class="soon" style="background:var(--gold)">' + g.price + '</span>' : '')
         + '</div>'
         + '<div class="g-body">'
         + '<h3>' + g.title + '</h3>'
         + '<p>' + g.desc + '</p>'
-        + (tagHtml ? '<div class="tag-row">' + tagHtml + '</div>' : '')
         + '<div class="g-more">查看攻略 →</div>'
         + '</div></div>';
-    }).join('');
+    }
+
+    // 在「全部攻略」视图下按子类分组（开户 / 信用卡 / 付费），加小标题分隔
+    if (currentCat === 'all') {
+      var groups = [
+        { key: 'account', label: '🏦 港澳开户' },
+        { key: 'card', label: '💳 香港信用卡' },
+        { key: 'paid', label: '💎 付费服务' }
+      ];
+      var html = '';
+      groups.forEach(function (grp) {
+        var items = list.filter(function (g) {
+          if (grp.key === 'paid') return !!g.paid;
+          return g.cat === grp.key;
+        });
+        if (!items.length) return;
+        html += '<div class="group-title">' + grp.label + '</div>';
+        html += '<div class="group-cards">' + items.map(cardHtml).join('') + '</div>';
+      });
+      grid.innerHTML = html;
+    } else {
+      grid.innerHTML = list.map(cardHtml).join('');
+    }
   }
 
   if (catNav) {

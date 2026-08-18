@@ -112,7 +112,10 @@
   .meta-tags{margin-top:14px}
 
   /* ===== Guide cards ===== */
-  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .guide-grid{display:block}
+  .group-title{grid-column:1/-1;color:var(--green-dark);font-size:1.35rem;font-weight:800;margin:36px 0 20px;padding-left:14px;border-left:4px solid var(--green)}
+  .group-title:first-child{margin-top:0}
+  .group-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 28px}
   .guide{
     background:#fff;border-radius:18px;border:1px solid var(--line);overflow:hidden;
     transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;cursor:pointer;
@@ -124,10 +127,10 @@
   .guide .thumb.t3{background:linear-gradient(140deg,#E3ECF5,#C7D9EA)}
   .guide .cat{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);color:var(--green-dark);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px}
   .guide .soon{position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px}
-  .guide .g-body{padding:20px}
-  .guide .g-body h3{color:var(--green-dark);font-size:1.05rem;margin-bottom:6px;line-height:1.5}
-  .guide .g-body p{color:var(--muted);font-size:.88rem}
-  .guide .g-more{color:var(--green);font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:4px;margin-top:14px}
+  .guide .g-body{padding:26px 24px 24px}
+  .guide .g-body h3{color:var(--green-dark);font-size:1.15rem;margin-bottom:10px;line-height:1.5;font-weight:800}
+  .guide .g-body p{color:var(--muted);font-size:.9rem;line-height:1.65}
+  .guide .g-more{color:var(--green);font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:4px;margin-top:18px}
 
   /* ===== Article detail ===== */
   .article-hero{background:linear-gradient(180deg,var(--mint),#fff);padding:56px 0 32px;text-align:center}
@@ -199,12 +202,12 @@
   .foot-bottom{margin-top:22px;border-top:1px solid rgba(255,255,255,.18);padding-top:20px;font-size:.82rem;color:#9fbfb8}
 
   @media(max-width:900px){
-    .guide-grid{grid-template-columns:1fr 1fr}
+    .group-cards{grid-template-columns:1fr}
     .nav-links{display:none}
     .menu-toggle{display:block}
   }
   @media(max-width:560px){
-    .guide-grid{grid-template-columns:1fr}
+    .group-cards{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -250,10 +253,8 @@
       <input type="text" id="searchInput" placeholder="搜索攻略，如：香港 / 信用卡 / 住址证明…">
     </div>
     <div class="cat-nav" id="catNav">
-      <button class="active" data-cat="all">全部</button>
-      <button data-cat="account">港澳开户</button>
-      <button data-cat="card">香港信用卡</button>
-      <button data-cat="refund">付费服务</button>
+      <button class="active" data-cat="all">全部攻略</button>
+      <button data-cat="paid">付费服务</button>
     </div>
     <div class="guide-grid" id="guideGrid"></div>
   </div>
