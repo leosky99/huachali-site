@@ -163,6 +163,13 @@
   .drink .photo .c2{width:100%;height:100%;background:linear-gradient(150deg,#f5c98a,#e29a45)}
   .drink .photo .c3{width:100%;height:100%;background:linear-gradient(150deg,#a8d5a2,#5ba566)}
   .drink .photo .c4{width:100%;height:100%;background:linear-gradient(150deg,#d7a97c,#9c6a3c)}
+  .drink .photo .c5{width:100%;height:100%;background:linear-gradient(150deg,#f7c65b,#e29a20)}
+  .drink .photo .c6{width:100%;height:100%;background:linear-gradient(150deg,#b98cd6,#7c4da0)}
+  .drink .photo .c7{width:100%;height:100%;background:linear-gradient(150deg,#f5df6b,#c8b22e)}
+  .drink .photo .c8{width:100%;height:100%;background:linear-gradient(150deg,#8fbf7f,#4d8a44)}
+  .drink .photo .c9{width:100%;height:100%;background:linear-gradient(150deg,#cfe6b0,#8fbf7f)}
+  .drink .photo .c10{width:100%;height:100%;background:linear-gradient(150deg,#e8b96a,#c0842f)}
+  .drink .photo .c11{width:100%;height:100%;background:linear-gradient(150deg,#f0d9a8,#d9b06a)}
   .drink .photo .cup-s{
     position:absolute;inset:0;margin:auto;width:56%;aspect-ratio:3/4;
     border-radius:8px 8px 16px 16px;background:rgba(255,255,255,.82);
@@ -212,6 +219,31 @@
   .rating-card .m b{display:block;font-size:1.4rem}
   .rating-card .m span{opacity:.85;font-size:.85rem}
 
+  /* ===== FAQ ===== */
+  #faq{background:#fff}
+  .faq-list{max-width:760px;margin:0 auto}
+  .faq{
+    background:var(--mint);border:1px solid var(--line);border-radius:14px;
+    margin-bottom:12px;padding:0;overflow:hidden;
+  }
+  .faq summary{
+    cursor:pointer;list-style:none;font-weight:700;color:var(--green-dark);
+    padding:18px 20px;display:flex;justify-content:space-between;align-items:center;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:var(--green);transition:transform .2s}
+  .faq[open] summary::after{transform:rotate(45deg)}
+  .faq p{padding:0 20px 18px;color:var(--muted);font-size:.95rem}
+
+  /* ===== Locations ===== */
+  #locations{background:#fff}
+  .loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .loc-card{background:var(--mint);border:1px solid var(--line);border-radius:20px;padding:28px}
+  .loc-pin{font-size:1.8rem;margin-bottom:12px}
+  .loc-card h3{color:var(--green-dark);font-size:1.2rem;margin-bottom:8px}
+  .loc-card p{color:var(--muted);font-size:.95rem}
+  .loc-card .loc-hours{color:var(--green);font-weight:600;margin-top:10px}
+
   /* ===== Contact ===== */
   #contact{background:var(--mint)}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
@@ -245,6 +277,7 @@
   @media(max-width:900px){
     .hero .wrap,.about-grid,.reviews-grid,.contact-grid{grid-template-columns:1fr}
     .menu-grid{grid-template-columns:repeat(2,1fr)}
+    .loc-grid{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr 1fr}
     h1{font-size:2.4rem}
     .nav-links,.nav-phone{display:none}
@@ -270,6 +303,7 @@
       <a href="#home">Home</a>
       <a href="#menu">Menu</a>
       <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
@@ -387,6 +421,62 @@
           <div class="row"><span class="price">$30</span><span class="more">Learn More →</span></div>
         </div>
       </div>
+      <div class="drink" data-cat="fruit">
+        <div class="photo"><div class="c5"></div><span class="straw"></span><span class="score">4.8</span><span class="new-flag">NEW</span></div>
+        <div class="info">
+          <h3>Mango Green Tea</h3>
+          <div class="desc">Fresh mango with jasmine green tea</div>
+          <div class="row"><span class="price">$32</span><span class="more">Learn More →</span></div>
+        </div>
+      </div>
+      <div class="drink" data-cat="fruit">
+        <div class="photo"><div class="c6"></div><span class="straw"></span><span class="score">4.6</span></div>
+        <div class="info">
+          <h3>Grape Fruit Tea</h3>
+          <div class="desc">Juicy grapes bursting with flavor</div>
+          <div class="row"><span class="price">$32</span><span class="more">Learn More →</span></div>
+        </div>
+      </div>
+      <div class="drink" data-cat="fruit">
+        <div class="photo"><div class="c7"></div><span class="straw"></span><span class="score">4.9</span></div>
+        <div class="info">
+          <h3>Lemon Passion Tea</h3>
+          <div class="desc">Zesty lemon & passionfruit blend</div>
+          <div class="row"><span class="price">$31</span><span class="more">Learn More →</span></div>
+        </div>
+      </div>
+      <div class="drink" data-cat="tea">
+        <div class="photo"><div class="c8"></div><span class="score">4.7</span></div>
+        <div class="info">
+          <h3>Premium Oolong Tea</h3>
+          <div class="desc">Roasted oolong, clean and aromatic</div>
+          <div class="row"><span class="price">$26</span><span class="more">Learn More →</span></div>
+        </div>
+      </div>
+      <div class="drink" data-cat="tea">
+        <div class="photo"><div class="c9"></div><span class="score">4.8</span></div>
+        <div class="info">
+          <h3>Jasmine Green Tea</h3>
+          <div class="desc">Fragrant jasmine, light and floral</div>
+          <div class="row"><span class="price">$24</span><span class="more">Learn More →</span></div>
+        </div>
+      </div>
+      <div class="drink" data-cat="snack">
+        <div class="photo"><div class="c10"></div><span class="score">4.5</span></div>
+        <div class="info">
+          <h3>Taiyaki Waffle</h3>
+          <div class="desc">Warm, fluffy Japanese-style waffle</div>
+          <div class="row"><span class="price">$22</span><span class="more">Learn More →</span></div>
+        </div>
+      </div>
+      <div class="drink" data-cat="snack">
+        <div class="photo"><div class="c11"></div><span class="score">4.6</span></div>
+        <div class="info">
+          <h3>Butter Croissant</h3>
+          <div class="desc">Buttery, flaky, freshly baked</div>
+          <div class="row"><span class="price">$18</span><span class="more">Learn More →</span></div>
+        </div>
+      </div>
     </div>
     <div class="menu-foot">
       <a href="#contact" class="btn">View Full Menu</a>
@@ -427,6 +517,68 @@
           <div class="m"><b>98%</b><span>Satisfaction</span></div>
           <div class="m"><b>50+</b><span>Returning Customers</span></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about HUA CHA LI.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq">
+        <summary>Do you offer delivery?</summary>
+        <p>Yes! We partner with major food delivery platforms. You can also call us to place an order and pick it up in-store to enjoy it fresh.</p>
+      </details>
+      <details class="faq">
+        <summary>Can I customize the sweetness and ice level?</summary>
+        <p>Absolutely. Every drink can be adjusted to your taste — choose your preferred sugar level (0–100%) and ice amount, or go sugar-free.</p>
+      </details>
+      <details class="faq">
+        <summary>Do you offer dairy-free or lactose-free options?</summary>
+        <p>Yes, we offer oat milk and soy milk substitutes for most milk tea drinks, so everyone can enjoy a delicious cup.</p>
+      </details>
+      <details class="faq">
+        <summary>Where are your stores located?</summary>
+        <p>Our flagship store is at 123 Tea Street, Hong Kong, with more locations opening soon. Follow us for the latest updates.</p>
+      </details>
+      <details class="faq">
+        <summary>How can I contact customer service?</summary>
+        <p>Call us at +852 6542 3394, email hello@huachali.com, or use the contact form on this page — we usually reply within 24 hours.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="locations">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Locations</div>
+      <h2>Find Us Near You</h2>
+      <p>Visit one of our stores and enjoy a fresh cup today.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-pin">📍</div>
+        <h3>Central Flagship</h3>
+        <p>123 Tea Street, Central, Hong Kong</p>
+        <p class="loc-hours">Daily 10:00 – 22:00</p>
+      </div>
+      <div class="loc-card">
+        <div class="loc-pin">📍</div>
+        <h3>Causeway Bay</h3>
+        <p>88 Harbour Road, Causeway Bay, Hong Kong</p>
+        <p class="loc-hours">Daily 10:30 – 22:30</p>
+      </div>
+      <div class="loc-card">
+        <div class="loc-pin">📍</div>
+        <h3>Tsim Sha Tsui</h3>
+        <p>12 Canton Road, Tsim Sha Tsui, Hong Kong</p>
+        <p class="loc-hours">Daily 10:00 – 22:00</p>
       </div>
     </div>
   </div>
@@ -475,6 +627,8 @@
       </div>
       <div>
         <h4>Information</h4>
+        <a href="#faq">FAQ</a>
+        <a href="#locations">Locations</a>
         <a href="#contact">Delivery</a>
         <a href="#contact">Privacy Policy</a>
         <a href="#contact">Terms of Service</a>
