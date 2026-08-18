@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DoorGo · 港澳开户与信用卡攻略 | Open the Door to HK &amp; Macau Finance</title>
-<meta name="description" content="DoorGo — 专业的港澳开户、信用卡优惠攻略与付费服务站。一对一开户咨询、实时信用卡优惠情报、深度攻略内容。">
+<title>DoorGo · 港澳开户与信用卡攻略</title>
+<meta name="description" content="DoorGo — 专注港澳银行开户与香港信用卡申请的科普攻略站。全流程详解、材料清单、注意事项与实用 Tips，帮你轻松通关。">
 <meta property="og:title" content="DoorGo · 港澳开户与信用卡攻略">
-<meta property="og:description" content="打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。">
+<meta property="og:description" content="专注港澳开户与香港信用卡申请的科普攻略，全流程、材料、注意事项与实用 Tips。">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/logo.png">
 <style>
@@ -27,7 +27,7 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
     color:var(--text);
     background:#fff;
-    line-height:1.7;
+    line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none}
@@ -45,229 +45,164 @@
   .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--green-dark);font-size:1.3rem;letter-spacing:-.01em}
   .brand .logo{
     width:38px;height:38px;border-radius:11px;
-    background:linear-gradient(135deg,var(--green),#0E8A70);
-    display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.05rem;
-    box-shadow:0 4px 12px -4px rgba(11,110,92,.5);
+    display:grid;place-items:center;
   }
   .nav-links{display:flex;gap:28px;font-weight:600;color:var(--muted);font-size:.95rem}
   .nav-links a{transition:color .2s}
   .nav-links a:hover{color:var(--green)}
-  .nav-cta{display:flex;align-items:center;gap:14px}
-  .lang-switch{display:flex;align-items:center;background:var(--mint);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
-  .lang-switch button{
-    background:transparent;border:none;cursor:pointer;font-size:.82rem;font-weight:700;
-    color:var(--muted);padding:5px 12px;border-radius:999px;transition:.2s;font-family:inherit;
-  }
-  .lang-switch button.active{background:var(--green);color:#fff}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--green);color:#fff;font-weight:700;
-    padding:11px 22px;border-radius:999px;border:none;cursor:pointer;
-    transition:background .2s,transform .1s;font-size:.95rem;
-  }
-  .btn:hover{background:var(--green-dark)}
-  .btn:active{transform:scale(.97)}
-  .btn.ghost{background:transparent;color:var(--green);border:2px solid var(--green)}
-  .btn.ghost:hover{background:var(--green-soft)}
-  .btn.gold{background:var(--gold);color:#fff}
-  .btn.gold:hover{background:#b38e3c}
   .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--green)}
 
   /* ===== Hero ===== */
-  .hero{background:linear-gradient(180deg,var(--mint),#fff);padding:76px 0 64px;position:relative;overflow:hidden}
+  .hero{background:linear-gradient(180deg,var(--mint),#fff);padding:72px 0 56px;position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,var(--green-soft),transparent 70%)}
-  .hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .hero .wrap{position:relative;text-align:center;max-width:760px}
   .badge{
     display:inline-flex;align-items:center;gap:8px;background:#fff;
     border:1px solid var(--line);border-radius:999px;padding:7px 14px;
     font-size:.85rem;font-weight:600;color:var(--green);margin-bottom:20px;
   }
   .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
-  h1{font-size:3rem;line-height:1.18;color:var(--green-dark);font-weight:800;margin-bottom:18px}
+  h1{font-size:clamp(2rem,5vw,3rem);line-height:1.2;color:var(--green-dark);font-weight:800;margin-bottom:18px}
   h1 .accent{color:var(--green)}
-  .hero p{color:var(--muted);max-width:480px;margin-bottom:28px;font-size:1.05rem}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  .stats{display:flex;gap:40px;margin-top:36px}
-  .stat b{display:block;font-size:1.9rem;color:var(--green)}
-  .stat span{color:var(--muted);font-size:.9rem}
-  .hero-art{position:relative}
-  .hero-card{
-    background:#fff;border:1px solid var(--line);border-radius:24px;
-    box-shadow:0 28px 60px -28px rgba(11,110,92,.3);overflow:hidden;
+  .hero p{color:var(--muted);max-width:560px;margin:0 auto 28px;font-size:1.05rem}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--green);color:#fff;font-weight:700;
+    padding:11px 24px;border-radius:999px;border:none;cursor:pointer;
+    transition:background .2s,transform .1s;font-size:.95rem;
   }
-  .hero-card .visual{
-    aspect-ratio:4/3.2;background:linear-gradient(150deg,var(--green),#0E8A70);
-    position:relative;display:grid;place-items:center;
-  }
-  .hero-card .visual .door{
-    width:46%;aspect-ratio:3/4;background:#fff;border-radius:10px 10px 0 0;
-    position:relative;box-shadow:inset 0 -10px 24px rgba(11,110,92,.12);
-  }
-  .hero-card .visual .door::after{
-    content:"";position:absolute;right:12%;top:50%;width:10px;height:10px;border-radius:50%;background:var(--gold);
-  }
-  .hero-card .visual .arrow{
-    position:absolute;font-size:2.4rem;font-weight:800;color:var(--gold);
-    animation:float 2.4s ease-in-out infinite;
-  }
-  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  .float-card{
-    position:absolute;background:#fff;border-radius:16px;padding:14px 16px;
-    box-shadow:0 14px 34px -12px rgba(0,0,0,.25);border:1px solid var(--line);
-  }
-  .float-card .tag{font-size:.72rem;color:var(--muted);margin-bottom:2px}
-  .float-card b{color:var(--green);font-size:1.05rem}
-  .fc-1{bottom:-18px;left:-20px}
-  .fc-2{bottom:24px;right:-14px;text-align:center}
-  .fc-2 .price{font-size:1.3rem;color:var(--green-dark);font-weight:800}
-  .fc-2 .from{font-size:.72rem;color:var(--muted)}
+  .btn:hover{background:var(--green-dark)}
+  .btn:active{transform:scale(.97)}
+  .btn.ghost{background:transparent;color:var(--green);border:2px solid var(--green)}
+  .btn.ghost:hover{background:var(--green-soft)}
 
   /* ===== Sections ===== */
-  section{padding:80px 0}
-  .sec-head{text-align:center;max-width:660px;margin:0 auto 48px}
+  section{padding:72px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
   .sec-head .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-  .sec-head h2{font-size:2.3rem;color:var(--green-dark);margin:8px 0 14px}
+  .sec-head h2{font-size:2.1rem;color:var(--green-dark);margin:8px 0 12px}
   .sec-head p{color:var(--muted)}
 
-  /* ===== Services / Plans ===== */
-  #services{background:#fff}
-  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .plan{
-    background:var(--mint);border:1px solid var(--line);border-radius:22px;padding:30px;
-    display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;position:relative;
+  /* ===== Search ===== */
+  .search-bar{max-width:520px;margin:0 auto 26px;position:relative}
+  .search-bar input{
+    width:100%;padding:13px 20px 13px 46px;border:1px solid var(--line);border-radius:999px;
+    font-size:.95rem;font-family:inherit;background:#fff;transition:border .2s;
   }
-  .plan:hover{transform:translateY(-6px);box-shadow:0 20px 40px -18px rgba(11,110,92,.28)}
-  .plan.popular{border:2px solid var(--green);background:#fff}
-  .plan .pop-tag{
-    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
-    background:var(--gold);color:#fff;font-size:.75rem;font-weight:800;
-    padding:4px 14px;border-radius:999px;letter-spacing:.04em;
-  }
-  .plan .p-name{color:var(--green);font-weight:800;font-size:1.1rem;margin-bottom:6px}
-  .plan .p-price{color:var(--green-dark);font-weight:800;font-size:2rem;margin-bottom:4px}
-  .plan .p-price small{font-size:.95rem;color:var(--muted);font-weight:500}
-  .plan .p-desc{color:var(--muted);font-size:.9rem;margin-bottom:20px}
-  .plan ul{list-style:none;margin-bottom:24px;flex:1}
-  .plan ul li{padding:8px 0;color:var(--text);font-size:.92rem;border-bottom:1px dashed var(--line);display:flex;gap:8px}
-  .plan ul li::before{content:"✓";color:var(--green);font-weight:800}
-  .plan .btn{justify-content:center;width:100%}
+  .search-bar input:focus{outline:none;border-color:var(--green)}
+  .search-bar .s-ico{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1rem;color:var(--muted)}
 
-  /* ===== Guides / Content ===== */
+  /* ===== Category nav ===== */
   #guides{background:var(--mint)}
+  .cat-nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+  .cat-nav button{
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:9px 20px;font-size:.9rem;font-weight:600;color:var(--muted);cursor:pointer;
+    transition:.2s;font-family:inherit;
+  }
+  .cat-nav button.active{background:var(--green);color:#fff;border-color:var(--green)}
+
+  /* ===== Tag chips ===== */
+  .tag-chip{
+    display:inline-block;background:var(--green-soft);color:var(--green-dark);
+    font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:999px;margin:0 4px 4px 0;
+  }
+  .guide .tag-row{margin-bottom:12px}
+  .meta-tags{margin-top:14px}
+
+  /* ===== Guide cards ===== */
   .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .guide{
     background:#fff;border-radius:18px;border:1px solid var(--line);overflow:hidden;
-    transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;
+    transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;cursor:pointer;
   }
   .guide:hover{transform:translateY(-6px);box-shadow:0 18px 36px -16px rgba(11,110,92,.25)}
   .guide .thumb{aspect-ratio:16/9;position:relative;display:grid;place-items:center;font-size:2.6rem}
   .guide .thumb.t1{background:linear-gradient(140deg,#DBF0EA,#B7DFD4)}
   .guide .thumb.t2{background:linear-gradient(140deg,#F6EFDC,#EADFC0)}
   .guide .thumb.t3{background:linear-gradient(140deg,#E3ECF5,#C7D9EA)}
-  .guide .thumb.t4{background:linear-gradient(140deg,#F2E5EC,#E4CBD8)}
-  .guide .thumb.t5{background:linear-gradient(140deg,#E9F0E6,#CFDFC8)}
-  .guide .thumb.t6{background:linear-gradient(140deg,#F6EDE4,#EBDBC9)}
   .guide .cat{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);color:var(--green-dark);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px}
-  .guide .lock{position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px}
+  .guide .soon{position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px}
   .guide .g-body{padding:20px}
-  .guide .g-body h3{color:var(--green-dark);font-size:1.05rem;margin-bottom:6px}
-  .guide .g-body p{color:var(--muted);font-size:.88rem;margin-bottom:16px}
-  .guide .g-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
-  .guide .g-foot .price{color:var(--green-dark);font-weight:800}
-  .guide .g-foot .free{color:var(--gold);font-weight:700;font-size:.85rem}
+  .guide .g-body h3{color:var(--green-dark);font-size:1.05rem;margin-bottom:6px;line-height:1.5}
+  .guide .g-body p{color:var(--muted);font-size:.88rem}
+  .guide .g-more{color:var(--green);font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:4px;margin-top:14px}
 
-  /* ===== Payments ===== */
-  #payments{background:#fff}
-  .pay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .pay-card{
-    border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center;
-    background:var(--mint);transition:transform .2s,border-color .2s;
+  /* ===== Article detail ===== */
+  .article-hero{background:linear-gradient(180deg,var(--mint),#fff);padding:56px 0 32px;text-align:center}
+  .article-hero .cat{display:inline-block;background:var(--green);color:#fff;font-size:.75rem;font-weight:700;padding:4px 14px;border-radius:999px;margin-bottom:16px}
+  .article-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);max-width:760px;margin:0 auto 12px}
+  .article-hero .meta{color:var(--muted);font-size:.85rem}
+  .article-body{max-width:780px;margin:0 auto;padding-bottom:72px}
+  .article-body h2{color:var(--green-dark);font-size:1.5rem;margin:40px 0 14px;padding-left:14px;border-left:4px solid var(--green)}
+  .article-body h3{color:var(--green-dark);font-size:1.15rem;margin:28px 0 10px}
+  .article-body p{color:var(--text);margin-bottom:14px;font-size:1rem}
+  .article-body ul,.article-body ol{margin:0 0 16px 24px}
+  .article-body li{margin-bottom:8px}
+  .article-body .tip-box{
+    background:var(--gold-soft);border:1px solid #ECDFBA;border-radius:14px;padding:18px 20px;margin:20px 0;
   }
-  .pay-card:hover{transform:translateY(-4px);border-color:var(--green)}
-  .pay-card .p-ico{font-size:1.6rem;margin-bottom:8px}
-  .pay-card b{display:block;color:var(--green-dark);font-size:.95rem;margin-bottom:2px}
-  .pay-card span{color:var(--muted);font-size:.8rem}
-
-  /* ===== Why ===== */
-  #why{background:var(--mint)}
-  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  .why-text h3{color:var(--green);font-size:1.5rem;margin-bottom:16px}
-  .why-text p{color:var(--muted);margin-bottom:14px}
-  .features{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
-  .feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
-  .feature .ico{font-size:1.4rem;margin-bottom:8px}
-  .feature b{color:var(--green-dark)}
-  .feature span{display:block;color:var(--muted);font-size:.88rem;margin-top:4px}
-  .why-art{
-    background:linear-gradient(160deg,var(--green),#0E8A70);border-radius:28px;
-    aspect-ratio:4/4.4;position:relative;overflow:hidden;display:grid;place-items:center;
+  .article-body .tip-box b{color:#8a6d2a}
+  .article-body .warn-box{
+    background:#FDF0EE;border:1px solid #F2C4BC;border-radius:14px;padding:18px 20px;margin:20px 0;
   }
-  .why-art .big{font-size:6rem;line-height:1}
-  .why-art .exp{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);text-align:center;color:#fff}
-  .why-art .exp b{font-size:2.6rem;display:block;line-height:1}
-  .why-art .exp span{opacity:.9;font-size:.9rem}
+  .article-body .warn-box b{color:#b4503f}
+  .article-body .info-box{
+    background:var(--green-soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:20px 0;
+  }
+  .article-body .info-box b{color:var(--green-dark)}
+  .article-body .referral-box{
+    background:linear-gradient(135deg,#F6EFDC,#FBF7EC);border:1px solid #ECDFBA;border-radius:16px;padding:22px 24px;margin:24px 0;
+  }
+  .article-body .referral-box .ref-title{font-weight:800;color:#8a6d2a;font-size:1.05rem;margin-bottom:8px}
+  .article-body .referral-box p{color:#6b5a32;margin-bottom:12px}
+  .article-body .referral-box .ref-links{display:flex;gap:10px;flex-wrap:wrap}
+  .article-body .referral-box .ref-links a{
+    display:inline-block;background:var(--gold);color:#fff;font-weight:700;font-size:.85rem;
+    padding:8px 16px;border-radius:999px;transition:background .2s;
+  }
+  .article-body .referral-box .ref-links a:hover{background:#b38e3c}
+  .article-body .referral-box .ref-soon{color:#b38e3c;font-size:.85rem;font-style:italic}
+  .table-wrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem;min-width:480px}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+  th{background:var(--mint);color:var(--green-dark)}
+  .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-weight:600;margin-bottom:20px}
 
   /* ===== Disclaimer ===== */
-  #disclaimer{background:#fff}
+  #disclaimer{background:#fff;padding:56px 0}
   .disc-box{max-width:820px;margin:0 auto;background:var(--gold-soft);border:1px solid #ECDFBA;border-radius:18px;padding:28px}
   .disc-box h3{color:#8a6d2a;margin-bottom:12px;font-size:1.1rem}
   .disc-box p{color:#6b5a32;font-size:.9rem;margin-bottom:10px}
 
-  /* ===== FAQ ===== */
-  #faq{background:var(--mint)}
-  .faq-list{max-width:760px;margin:0 auto}
-  .faq{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
-  .faq summary{cursor:pointer;list-style:none;font-weight:700;color:var(--green-dark);padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";font-size:1.4rem;color:var(--green);transition:transform .2s}
-  .faq[open] summary::after{transform:rotate(45deg)}
-  .faq p{padding:0 20px 18px;color:var(--muted);font-size:.95rem}
-
   /* ===== Contact ===== */
-  #contact{background:#fff}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-  .contact-info h2{font-size:2.1rem;color:var(--green-dark);margin-bottom:16px}
-  .contact-info p{color:var(--muted);margin-bottom:26px}
-  .contact-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
-  .contact-row .ico{font-size:1.3rem}
-  .contact-row b{color:var(--green-dark)}
-  .contact-row span{display:block;color:var(--muted);font-size:.93rem}
-  .contact-form{background:var(--mint);border:1px solid var(--line);border-radius:24px;padding:32px}
-  .contact-form label{display:block;font-weight:600;color:var(--green-dark);margin-bottom:6px;font-size:.9rem}
-  .contact-form select,.contact-form input,.contact-form textarea{
-    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
-    font-size:.95rem;font-family:inherit;margin-bottom:16px;transition:border .2s;background:#fff;
+  #contact{background:var(--mint)}
+  .contact-box{max-width:560px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:40px 32px}
+  .contact-box .ico{font-size:2.4rem;margin-bottom:14px}
+  .contact-box h2{color:var(--green-dark);font-size:1.6rem;margin-bottom:10px}
+  .contact-box p{color:var(--muted);margin-bottom:22px}
+  .contact-box a.mail{
+    display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;
+    font-weight:700;padding:12px 26px;border-radius:999px;font-size:1rem;transition:background .2s;
   }
-  .contact-form select:focus,.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--green)}
-  .contact-form textarea{min-height:110px;resize:vertical}
+  .contact-box a.mail:hover{background:var(--green-dark)}
 
   /* ===== Footer ===== */
-  footer{background:var(--green-dark);color:#C9E1DB;padding:56px 0 24px}
-  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:36px}
-  .foot-brand{font-size:1.3rem;font-weight:800;color:#fff}
-  .foot-brand .logo{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#fff;color:var(--green-dark);margin-right:8px;font-size:1rem}
-  .foot-brand p{font-weight:400;font-size:.88rem;margin-top:14px;line-height:1.7}
-  footer h4{color:#fff;margin-bottom:14px;font-size:1rem}
-  footer a{display:block;color:#C9E1DB;margin-bottom:10px;font-size:.9rem;transition:color .2s}
-  footer a:hover{color:#fff}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.18);padding-top:22px;text-align:center;font-size:.85rem}
-  .foot-bottom .heart{color:#E0A94A}
+  footer{background:var(--green-dark);color:#C9E1DB;padding:48px 0 28px}
+  .foot-inner{text-align:center}
+  .foot-brand{font-size:1.3rem;font-weight:800;color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px}
+  .foot-brand .logo{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:#fff;color:var(--green-dark);font-size:.95rem}
+  footer p{font-size:.88rem;line-height:1.7}
+  .foot-bottom{margin-top:22px;border-top:1px solid rgba(255,255,255,.18);padding-top:20px;font-size:.82rem;color:#9fbfb8}
 
   @media(max-width:900px){
-    .hero .wrap,.why-grid,.contact-grid{grid-template-columns:1fr}
-    .plans,.guide-grid{grid-template-columns:1fr 1fr}
-    .pay-grid{grid-template-columns:repeat(2,1fr)}
-    .foot-grid{grid-template-columns:1fr 1fr}
-    h1{font-size:2.4rem}
+    .guide-grid{grid-template-columns:1fr 1fr}
     .nav-links{display:none}
     .menu-toggle{display:block}
-    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:#fff;padding:20px 24px;border-bottom:1px solid var(--line);gap:16px}
   }
   @media(max-width:560px){
-    .plans,.guide-grid{grid-template-columns:1fr}
-    .pay-grid{grid-template-columns:1fr 1fr}
-    .stats{gap:24px;flex-wrap:wrap}
-    .foot-grid{grid-template-columns:1fr}
+    .guide-grid{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -275,109 +210,28 @@
 
 <header>
   <div class="wrap nav">
-    <a href="#" class="brand">
-      <span class="logo" style="background:transparent;box-shadow:none"><img src="assets/logo.png" alt="DoorGo" style="width:38px;height:38px;border-radius:11px"></span>
+    <a href="#home" class="brand">
+      <span class="logo"><img src="assets/logo.png" alt="DoorGo" style="width:38px;height:38px;border-radius:11px"></span>
       DoorGo
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#services" data-i18n="nav.services">服务方案</a>
-      <a href="#guides" data-i18n="nav.guides">攻略内容</a>
-      <a href="#payments" data-i18n="nav.payments">支付方式</a>
-      <a href="#why" data-i18n="nav.why">为什么选我们</a>
-      <a href="#faq" data-i18n="nav.faq">常见问题</a>
-      <a href="#contact" data-i18n="nav.contact">联系我们</a>
+      <a href="#guides">开户攻略</a>
+      <a href="#guides">信用卡攻略</a>
+      <a href="#disclaimer">免责声明</a>
+      <a href="#contact">联系我们</a>
     </nav>
-    <div class="nav-cta">
-      <div class="lang-switch" id="langSwitch">
-        <button data-lang="zhHans" class="active">简</button>
-        <button data-lang="zhHant">繁</button>
-        <button data-lang="en">EN</button>
-      </div>
-      <a href="#contact" class="btn" data-i18n="nav.cta">立即咨询</a>
-    </div>
     <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
 </header>
 
 <section class="hero" id="home">
   <div class="wrap">
-    <div>
-      <span class="badge"><span class="dot"></span><span data-i18n="hero.badge">打开通往港澳金融的大门</span></span>
-      <h1><span class="accent">DoorGo</span> · <span data-i18n="hero.title">港澳开户与信用卡攻略</span></h1>
-      <p data-i18n="hero.sub">专业的一对一开户咨询、实时信用卡优惠情报、深度攻略内容。从内地到香港、从香港到海外，帮你少走弯路，轻松通关。</p>
-      <div class="hero-cta">
-        <a href="#services" class="btn" data-i18n="hero.cta1">查看服务方案</a>
-        <a href="#guides" class="btn ghost" data-i18n="hero.cta2">浏览攻略</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><b>500+</b><span data-i18n="hero.stat1">开户成功案例</span></div>
-        <div class="stat"><b>120+</b><span data-i18n="hero.stat2">篇深度攻略</span></div>
-        <div class="stat"><b>7×24</b><span data-i18n="hero.stat3">在线答疑</span></div>
-      </div>
-    </div>
-    <div class="hero-art">
-      <div class="hero-card">
-        <div class="visual">
-          <div class="door"></div>
-          <div class="arrow">→</div>
-        </div>
-      </div>
-      <div class="float-card fc-1">
-        <div class="tag">🔥 <span data-i18n="hero.hot">热门</span></div>
-        <b data-i18n="hero.hotTitle">香港银行开户全攻略</b>
-      </div>
-      <div class="float-card fc-2">
-        <span class="from" data-i18n="hero.planLabel">咨询套餐</span>
-        <div class="price"><span data-i18n="hero.price">¥199 起</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow" data-i18n="services.eyebrow">Our Services</div>
-      <h2 data-i18n="services.title">服务方案</h2>
-      <p data-i18n="services.sub">从免费攻略到一对一深度咨询，选择最适合你的方案。</p>
-    </div>
-    <div class="plans">
-      <div class="plan">
-        <div class="p-name" data-i18n="plan1.name">免费攻略</div>
-        <div class="p-price">¥0 <small data-i18n="plan1.period">/ 永久</small></div>
-        <div class="p-desc" data-i18n="plan1.desc">入门必读，了解港澳开户基础知识</div>
-        <ul>
-          <li data-i18n="plan1.f1">基础开户流程图文</li>
-          <li data-i18n="plan1.f2">常见问题解答</li>
-          <li data-i18n="plan1.f3">银行开户条件速查</li>
-        </ul>
-        <a href="#guides" class="btn ghost" data-i18n="plan1.cta">免费浏览</a>
-      </div>
-      <div class="plan popular">
-        <span class="pop-tag" data-i18n="plan2.pop">最受欢迎</span>
-        <div class="p-name" data-i18n="plan2.name">深度攻略会员</div>
-        <div class="p-price">¥99 <small data-i18n="plan2.period">/ 年</small></div>
-        <div class="p-desc" data-i18n="plan2.desc">解锁全部深度攻略 + 实时优惠情报</div>
-        <ul>
-          <li data-i18n="plan2.f1">全部深度攻略解锁</li>
-          <li data-i18n="plan2.f2">实时信用卡优惠更新</li>
-          <li data-i18n="plan2.f3">开户路线模板与清单</li>
-          <li data-i18n="plan2.f4">专属社群答疑</li>
-        </ul>
-        <button class="btn gold" onclick="buyPlan('会员')" data-i18n="plan2.cta">立即开通</button>
-      </div>
-      <div class="plan">
-        <div class="p-name" data-i18n="plan3.name">一对一咨询</div>
-        <div class="p-price">¥199 <small data-i18n="plan3.period">/ 次</small></div>
-        <div class="p-desc" data-i18n="plan3.desc">专属顾问，针对你的情况定制方案</div>
-        <ul>
-          <li data-i18n="plan3.f1">1 对 1 深度咨询</li>
-          <li data-i18n="plan3.f2">开户材料预审</li>
-          <li data-i18n="plan3.f3">个性化路线规划</li>
-          <li data-i18n="plan3.f4">后续跟进指导</li>
-        </ul>
-        <button class="btn" onclick="buyPlan('咨询')" data-i18n="plan3.cta">立即预约</button>
-      </div>
+    <span class="badge"><span class="dot"></span>打开通往港澳金融的大门</span>
+    <h1><span class="accent">港澳开户</span> · 香港信用卡<br>科普攻略站</h1>
+    <p>专注银行开户与信用卡申请的流程科普：全流程详解、材料清单、注意事项与实用 Tips。不代办、不中介、不陪开户，只做靠谱的攻略内容。</p>
+    <div class="hero-cta">
+      <a href="#guides" class="btn">开始看攻略</a>
+      <a href="#contact" class="btn ghost">联系我</a>
     </div>
   </div>
 </section>
@@ -385,335 +239,54 @@
 <section id="guides">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow" data-i18n="guides.eyebrow">Guides &amp; Content</div>
-      <h2 data-i18n="guides.title">攻略内容库</h2>
-      <p data-i18n="guides.sub">持续更新的港澳开户攻略、信用卡优惠情报与付费素材。</p>
+      <div class="eyebrow">Guides</div>
+      <h2>攻略内容库</h2>
+      <p>分门别类整理，点击卡片查看完整攻略内容。</p>
     </div>
-    <div class="guide-grid">
-      <div class="guide">
-        <div class="thumb t1">🏦<span class="cat" data-i18n="g1.cat">开户攻略</span></div>
-        <div class="g-body">
-          <h3 data-i18n="g1.title">香港银行开户全流程图解</h3>
-          <p data-i18n="g1.desc">从选行、预约到面签，一步步带你走完整个开户流程。</p>
-          <div class="g-foot"><span class="free" data-i18n="g1.tag">免费 · 必读</span></div>
-        </div>
-      </div>
-      <div class="guide">
-        <div class="thumb t2">💳<span class="cat" data-i18n="g2.cat">信用卡</span></div>
-        <div class="g-body">
-          <h3 data-i18n="g2.title">2024 香港信用卡迎新礼/返现对比</h3>
-          <p data-i18n="g2.desc">实时更新的优惠情报，帮你挑到最划算的一张卡。</p>
-          <div class="g-foot"><span class="free" data-i18n="g2.tag">免费 · 持续更新</span></div>
-        </div>
-      </div>
-      <div class="guide">
-        <div class="thumb t3">📋<span class="cat" data-i18n="g3.cat">付费素材</span><span class="lock" data-i18n="pay.lock">付费</span></div>
-        <div class="g-body">
-          <h3 data-i18n="g3.title">开户材料清单 + 填写模板</h3>
-          <p data-i18n="g3.desc">齐全的材料清单与可直接套用的填写模板，省时省心。</p>
-          <div class="g-foot"><span class="price">¥29</span><a class="free" href="#payments" data-i18n="pay.buy">购买 →</a></div>
-        </div>
-      </div>
-      <div class="guide">
-        <div class="thumb t4">🗺️<span class="cat" data-i18n="g4.cat">路线规划</span><span class="lock" data-i18n="pay.lock">付费</span></div>
-        <div class="g-body">
-          <h3 data-i18n="g4.title">内地 → 香港 → 海外 进阶路线图</h3>
-          <p data-i18n="g4.desc">为高净值用户定制的一站式离岸开户路线解析。</p>
-          <div class="g-foot"><span class="price">¥49</span><a class="free" href="#payments" data-i18n="pay.buy">购买 →</a></div>
-        </div>
-      </div>
-      <div class="guide">
-        <div class="thumb t5">🌐<span class="cat" data-i18n="g5.cat">海外账户</span><span class="lock" data-i18n="pay.lock">付费</span></div>
-        <div class="g-body">
-          <h3 data-i18n="g5.title">澳门 / 新加坡 / 海外账户开户对比</h3>
-          <p data-i18n="g5.desc">多地区账户横向对比，帮你做出最优选择。</p>
-          <div class="g-foot"><span class="price">¥39</span><a class="free" href="#payments" data-i18n="pay.buy">购买 →</a></div>
-        </div>
-      </div>
-      <div class="guide">
-        <div class="thumb t6">🎁<span class="cat" data-i18n="g6.cat">优惠情报</span></div>
-        <div class="g-body">
-          <h3 data-i18n="g6.title">每月信用卡优惠速递</h3>
-          <p data-i18n="g6.desc">精选每月最值得参与的返现、里程、迎新活动。</p>
-          <div class="g-foot"><span class="free" data-i18n="g6.tag">免费 · 每月更新</span></div>
-        </div>
-      </div>
+    <div class="search-bar">
+      <span class="s-ico">🔍</span>
+      <input type="text" id="searchInput" placeholder="搜索攻略，如：香港 / 信用卡 / 住址证明…">
     </div>
-  </div>
-</section>
-
-<section id="payments">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow" data-i18n="pay.title">Payment Methods</div>
-      <h2 data-i18n="pay.payTitle">支付方式</h2>
-      <p data-i18n="pay.sub">付款时你可以自由选择自己方便的支付方式，覆盖全球主流渠道。</p>
+    <div class="cat-nav" id="catNav">
+      <button class="active" data-cat="all">全部</button>
+      <button data-cat="account">港澳开户</button>
+      <button data-cat="card">香港信用卡</button>
+      <button data-cat="refund">返款优惠</button>
     </div>
-    <div class="pay-grid">
-      <div class="pay-card"><div class="p-ico">💳</div><b data-i18n="pay.card">信用卡</b><span>Visa / Master / 银联</span></div>
-      <div class="pay-card"><div class="p-ico">🅰️</div><b>Apple Pay</b><span data-i18n="pay.apd">iPhone 一键支付</span></div>
-      <div class="pay-card"><div class="p-ico">🇬</div><b>Google Pay</b><span data-i18n="pay.gpd">Android 一键支付</span></div>
-      <div class="pay-card"><div class="p-ico">💚</div><b data-i18n="pay.alipay">支付宝</b><span>Alipay / 支付宝HK</span></div>
-      <div class="pay-card"><div class="p-ico">💚</div><b data-i18n="pay.wechat">微信支付</b><span>WeChat Pay</span></div>
-      <div class="pay-card"><div class="p-ico">🏦</div><b data-i18n="pay.fps">FPS 转数快</b><span data-i18n="pay.fpsd">香港即时转账</span></div>
-      <div class="pay-card"><div class="p-ico">📱</div><b>PayMe</b><span data-i18n="pay.paymed">香港电子钱包</span></div>
-      <div class="pay-card"><div class="p-ico">🐙</div><b data-i18n="pay.octopus">八达通</b><span>Octopus 钱包</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="why">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow" data-i18n="why.eyebrow">Why DoorGo</div>
-      <h2 data-i18n="why.title">为什么选择 DoorGo</h2>
-      <p data-i18n="why.sub">专业、透明、持续更新，帮你真正打开港澳金融这扇门。</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-text">
-        <h3 data-i18n="why.h3">让复杂的开户变得简单</h3>
-        <p data-i18n="why.p1">港澳开户涉及选行、材料、流程、面签等多个环节，信息零散且常常过时。DoorGo 把最关键的攻略系统化整理，并持续跟踪政策变化，确保内容及时准确。</p>
-        <p data-i18n="why.p2">无论你是想出境旅游、留学会用港卡，还是规划离岸资产与海外账户，我们都能给你清晰的路线和可落地的建议。</p>
-        <div class="features">
-          <div class="feature"><div class="ico">✅</div><b data-i18n="why.f1t">内容实时更新</b><span data-i18n="why.f1d">政策、优惠变动第一时间同步</span></div>
-          <div class="feature"><div class="ico">🎯</div><b data-i18n="why.f2t">一对一定制</b><span data-i18n="why.f2d">针对个人情况给出专属方案</span></div>
-          <div class="feature"><div class="ico">🔒</div><b data-i18n="why.f3t">信息透明</b><span data-i18n="why.f3d">费用、条件一目了然</span></div>
-          <div class="feature"><div class="ico">🌍</div><b data-i18n="why.f4t">多地区覆盖</b><span data-i18n="why.f4d">香港、澳门、海外一站搞定</span></div>
-        </div>
-      </div>
-      <div class="why-art">
-        <div class="big">🚪</div>
-        <div class="exp"><b>500+</b><span data-i18n="why.exp">开户成功案例</span></div>
-      </div>
-    </div>
+    <div class="guide-grid" id="guideGrid"></div>
   </div>
 </section>
 
 <section id="disclaimer">
   <div class="wrap">
     <div class="disc-box">
-      <h3 data-i18n="disc.title">⚠️ 免责声明</h3>
-      <p data-i18n="disc.p1">本站所有攻略与内容仅供参考与学习用途，不构成任何投资、理财或开户的正式法律建议。银行开户政策、信用卡优惠活动可能随时调整，请以银行及发卡机构官方最新公告为准。</p>
-      <p data-i18n="disc.p2">本站不提供任何形式的代办违规、套现或规避监管的服务。开户与用卡请遵守当地法律法规。</p>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow" data-i18n="faq.eyebrow">FAQ</div>
-      <h2 data-i18n="faq.title">常见问题</h2>
-    </div>
-    <div class="faq-list">
-      <details class="faq">
-        <summary data-i18n="faq.q1">内地人可以开香港银行账户吗？</summary>
-        <p data-i18n="faq.a1">可以。内地居民凭有效证件（如港澳通行证、身份证）及住址证明等，在香港部分银行可开立个人账户。具体条件因银行而异，建议先阅读我们的免费攻略或预约一对一咨询。</p>
-      </details>
-      <details class="faq">
-        <summary data-i18n="faq.q2">开户需要准备哪些材料？</summary>
-        <p data-i18n="faq.a2">通常需要：有效身份证明、港澳通行证/护照、住址证明（如水电账单、银行月结单）、过关小票等。我们提供完整的材料清单与填写模板可供下载。</p>
-      </details>
-      <details class="faq">
-        <summary data-i18n="faq.q3">付费内容如何支付？</summary>
-        <p data-i18n="faq.a3">我们支持信用卡（Visa/Master/银联）、Apple Pay、Google Pay、支付宝、微信支付、FPS 转数快、PayMe、八达通等多种方式，付款时你可以自由选择最方便的渠道。</p>
-      </details>
-      <details class="faq">
-        <summary data-i18n="faq.q4">一对一咨询怎么做？</summary>
-        <p data-i18n="faq.a4">下单后我们的顾问会与你联系，先了解你的具体情况（出行目的、资金规划等），再给出个性化的开户路线与材料准备建议。</p>
-      </details>
-      <details class="faq">
-        <summary data-i18n="faq.q5">攻略内容会一直更新吗？</summary>
-        <p data-i18n="faq.a5">会。会员订阅有效期内，你可持续获取我们更新的攻略、优惠情报与模板，政策变化我们会第一时间跟进。</p>
-      </details>
+      <h3>⚠️ 免责声明</h3>
+      <p>本站所有攻略与内容仅供参考与学习用途，不构成任何投资、理财、开户或申卡的正式法律／专业建议。银行开户政策、信用卡优惠活动可能随时调整，请以各银行及发卡机构官方最新公告为准。</p>
+      <p>本站不提供任何形式的代办、中介、线下陪开户、套现或规避监管的服务。开户与用卡请遵守当地法律法规。</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow" data-i18n="contact.eyebrow">Contact Us</div>
-      <h2 data-i18n="contact.title">联系我们</h2>
-      <p data-i18n="contact.sub">有任何问题，欢迎随时留言或咨询。</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-row"><span class="ico">💬</span><div><b data-i18n="contact.wx">微信 / WhatsApp</b><span>DoorGo-HK</span></div></div>
-        <div class="contact-row"><span class="ico">✉️</span><div><b data-i18n="contact.email">邮箱</b><span>hello@doorgo.hk</span></div></div>
-        <div class="contact-row"><span class="ico">🕐</span><div><b data-i18n="contact.hours">服务时间</b><span data-i18n="contact.hoursd">每日 9:00 - 22:00（在线答疑）</span></div></div>
-        <div class="contact-row"><span class="ico">📍</span><div><b data-i18n="contact.area">服务范围</b><span data-i18n="contact.aread">香港 · 澳门 · 海外</span></div></div>
-      </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <label data-i18n="form.topic">我想咨询</label>
-        <select name="topic">
-          <option data-i18n="form.o1">香港银行开户</option>
-          <option data-i18n="form.o2">澳门账户</option>
-          <option data-i18n="form.o3">信用卡优惠</option>
-          <option data-i18n="form.o4">海外账户</option>
-          <option data-i18n="form.o5">其他</option>
-        </select>
-        <label data-i18n="form.name">称呼</label>
-        <input type="text" name="name" data-i18n-ph="form.nameph" placeholder="怎么称呼你" required>
-        <label data-i18n="form.contact">联系方式（微信 / WhatsApp / 邮箱）</label>
-        <input type="text" name="contact" data-i18n-ph="form.contactph" placeholder="方便联系你的方式">
-        <label data-i18n="form.msg">留言</label>
-        <textarea name="message" data-i18n-ph="form.msgph" placeholder="简单描述你的需求…"></textarea>
-        <button type="submit" class="btn" style="width:100%;justify-content:center" data-i18n="form.submit">提交咨询</button>
-      </form>
+    <div class="contact-box">
+      <div class="ico">✉️</div>
+      <h2>联系我们</h2>
+      <p>如有任何疑问，欢迎通过邮箱联系。</p>
+      <a class="mail" href="mailto:leosky995@gmail.com">leosky995@gmail.com</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div><span class="logo" style="background:transparent"><img src="assets/logo.png" alt="DoorGo" style="width:34px;height:34px;border-radius:9px"></span>DoorGo</div>
-        <p data-i18n="foot.brand">打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。</p>
-      </div>
-      <div>
-        <h4 data-i18n="foot.nav">快速导航</h4>
-        <a href="#services" data-i18n="nav.services">服务方案</a>
-        <a href="#guides" data-i18n="nav.guides">攻略内容</a>
-        <a href="#payments" data-i18n="nav.payments">支付方式</a>
-        <a href="#contact" data-i18n="nav.contact">联系我们</a>
-      </div>
-      <div>
-        <h4 data-i18n="foot.content">内容</h4>
-        <a href="#guides" data-i18n="foot.guide">开户攻略</a>
-        <a href="#guides" data-i18n="foot.card">信用卡优惠</a>
-        <a href="#disclaimer" data-i18n="foot.disclaimer">免责声明</a>
-      </div>
-      <div>
-        <h4 data-i18n="foot.contact">联系</h4>
-        <a href="mailto:hello@doorgo.hk">hello@doorgo.hk</a>
-        <a href="#" data-i18n="foot.wx">微信/WhatsApp：DoorGo-HK</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span data-i18n="foot.copy">© 2024 DoorGo · 内容仅供参考，不构成投资建议 · Made with</span> <span class="heart">♥</span>
-    </div>
+  <div class="wrap foot-inner">
+    <div class="foot-brand"><span class="logo"><img src="assets/logo.png" alt="DoorGo" style="width:32px;height:32px;border-radius:9px"></span>DoorGo</div>
+    <p>专注港澳银行开户与香港信用卡申请的科普攻略。全流程、材料清单、注意事项与实用 Tips。</p>
+    <div class="foot-bottom">© 2024 DoorGo · 内容仅供参考，不构成投资建议</div>
   </div>
 </footer>
 
-<script>
-  // ===== 三语文案字典（简 / 繁 / 英） =====
-  var I18N = {
-    zhHans: {
-      'nav.services':'服务方案','nav.guides':'攻略内容','nav.payments':'支付方式','nav.why':'为什么选我们','nav.faq':'常见问题','nav.contact':'联系我们','nav.cta':'立即咨询',
-      'hero.badge':'打开通往港澳金融的大门','hero.title':'港澳开户与信用卡攻略','hero.sub':'专业的一对一开户咨询、实时信用卡优惠情报、深度攻略内容。从内地到香港、从香港到海外，帮你少走弯路，轻松通关。','hero.cta1':'查看服务方案','hero.cta2':'浏览攻略','hero.stat1':'开户成功案例','hero.stat2':'篇深度攻略','hero.stat3':'在线答疑','hero.hot':'热门','hero.hotTitle':'香港银行开户全攻略','hero.planLabel':'咨询套餐','hero.price':'¥199 起',
-      'services.eyebrow':'Our Services','services.title':'服务方案','services.sub':'从免费攻略到一对一深度咨询，选择最适合你的方案。',
-      'plan1.name':'免费攻略','plan1.period':'/ 永久','plan1.desc':'入门必读，了解港澳开户基础知识','plan1.f1':'基础开户流程图文','plan1.f2':'常见问题解答','plan1.f3':'银行开户条件速查','plan1.cta':'免费浏览',
-      'plan2.pop':'最受欢迎','plan2.name':'深度攻略会员','plan2.period':'/ 年','plan2.desc':'解锁全部深度攻略 + 实时优惠情报','plan2.f1':'全部深度攻略解锁','plan2.f2':'实时信用卡优惠更新','plan2.f3':'开户路线模板与清单','plan2.f4':'专属社群答疑','plan2.cta':'立即开通',
-      'plan3.name':'一对一咨询','plan3.period':'/ 次','plan3.desc':'专属顾问，针对你的情况定制方案','plan3.f1':'1 对 1 深度咨询','plan3.f2':'开户材料预审','plan3.f3':'个性化路线规划','plan3.f4':'后续跟进指导','plan3.cta':'立即预约',
-      'guides.eyebrow':'Guides & Content','guides.title':'攻略内容库','guides.sub':'持续更新的港澳开户攻略、信用卡优惠情报与付费素材。',
-      'g1.cat':'开户攻略','g1.title':'香港银行开户全流程图解','g1.desc':'从选行、预约到面签，一步步带你走完整个开户流程。','g1.tag':'免费 · 必读',
-      'g2.cat':'信用卡','g2.title':'2024 香港信用卡迎新礼/返现对比','g2.desc':'实时更新的优惠情报，帮你挑到最划算的一张卡。','g2.tag':'免费 · 持续更新',
-      'g3.cat':'付费素材','g3.title':'开户材料清单 + 填写模板','g3.desc':'齐全的材料清单与可直接套用的填写模板，省时省心。',
-      'g4.cat':'路线规划','g4.title':'内地 → 香港 → 海外 进阶路线图','g4.desc':'为高净值用户定制的一站式离岸开户路线解析。',
-      'g5.cat':'海外账户','g5.title':'澳门 / 新加坡 / 海外账户开户对比','g5.desc':'多地区账户横向对比，帮你做出最优选择。',
-      'g6.cat':'优惠情报','g6.title':'每月信用卡优惠速递','g6.desc':'精选每月最值得参与的返现、里程、迎新活动。','g6.tag':'免费 · 每月更新',
-      'pay.lock':'付费','pay.buy':'购买 →',
-      'pay.title':'Payment Methods','pay.payTitle':'支付方式','pay.sub':'付款时你可以自由选择自己方便的支付方式，覆盖全球主流渠道。','pay.card':'信用卡','pay.apd':'iPhone 一键支付','pay.gpd':'Android 一键支付','pay.alipay':'支付宝','pay.wechat':'微信支付','pay.fps':'FPS 转数快','pay.fpsd':'香港即时转账','pay.paymed':'香港电子钱包','pay.octopus':'八达通',
-      'why.eyebrow':'Why DoorGo','why.title':'为什么选择 DoorGo','why.sub':'专业、透明、持续更新，帮你真正打开港澳金融这扇门。','why.h3':'让复杂的开户变得简单','why.p1':'港澳开户涉及选行、材料、流程、面签等多个环节，信息零散且常常过时。DoorGo 把最关键的攻略系统化整理，并持续跟踪政策变化，确保内容及时准确。','why.p2':'无论你是想出境旅游、留学会用港卡，还是规划离岸资产与海外账户，我们都能给你清晰的路线和可落地的建议。','why.f1t':'内容实时更新','why.f1d':'政策、优惠变动第一时间同步','why.f2t':'一对一定制','why.f2d':'针对个人情况给出专属方案','why.f3t':'信息透明','why.f3d':'费用、条件一目了然','why.f4t':'多地区覆盖','why.f4d':'香港、澳门、海外一站搞定','why.exp':'开户成功案例',
-      'disc.title':'⚠️ 免责声明','disc.p1':'本站所有攻略与内容仅供参考与学习用途，不构成任何投资、理财或开户的正式法律建议。银行开户政策、信用卡优惠活动可能随时调整，请以银行及发卡机构官方最新公告为准。','disc.p2':'本站不提供任何形式的代办违规、套现或规避监管的服务。开户与用卡请遵守当地法律法规。',
-      'faq.eyebrow':'FAQ','faq.title':'常见问题','faq.q1':'内地人可以开香港银行账户吗？','faq.a1':'可以。内地居民凭有效证件（如港澳通行证、身份证）及住址证明等，在香港部分银行可开立个人账户。具体条件因银行而异，建议先阅读我们的免费攻略或预约一对一咨询。','faq.q2':'开户需要准备哪些材料？','faq.a2':'通常需要：有效身份证明、港澳通行证/护照、住址证明（如水电账单、银行月结单）、过关小票等。我们提供完整的材料清单与填写模板可供下载。','faq.q3':'付费内容如何支付？','faq.a3':'我们支持信用卡（Visa/Master/银联）、Apple Pay、Google Pay、支付宝、微信支付、FPS 转数快、PayMe、八达通等多种方式，付款时你可以自由选择最方便的渠道。','faq.q4':'一对一咨询怎么做？','faq.a4':'下单后我们的顾问会与你联系，先了解你的具体情况（出行目的、资金规划等），再给出个性化的开户路线与材料准备建议。','faq.q5':'攻略内容会一直更新吗？','faq.a5':'会。会员订阅有效期内，你可持续获取我们更新的攻略、优惠情报与模板，政策变化我们会第一时间跟进。',
-      'contact.eyebrow':'Contact Us','contact.title':'联系我们','contact.sub':'有任何问题，欢迎随时留言或咨询。','contact.wx':'微信 / WhatsApp','contact.email':'邮箱','contact.hours':'服务时间','contact.hoursd':'每日 9:00 - 22:00（在线答疑）','contact.area':'服务范围','contact.aread':'香港 · 澳门 · 海外',
-      'form.topic':'我想咨询','form.o1':'香港银行开户','form.o2':'澳门账户','form.o3':'信用卡优惠','form.o4':'海外账户','form.o5':'其他','form.name':'称呼','form.nameph':'怎么称呼你','form.contact':'联系方式（微信 / WhatsApp / 邮箱）','form.contactph':'方便联系你的方式','form.msg':'留言','form.msgph':'简单描述你的需求…','form.submit':'提交咨询',
-      'foot.brand':'打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。','foot.nav':'快速导航','foot.content':'内容','foot.guide':'开户攻略','foot.card':'信用卡优惠','foot.disclaimer':'免责声明','foot.contact':'联系','foot.wx':'微信/WhatsApp：DoorGo-HK','foot.copy':'© 2024 DoorGo · 内容仅供参考，不构成投资建议 · Made with'
-    },
-    zhHant: {
-      'nav.services':'服務方案','nav.guides':'攻略內容','nav.payments':'支付方式','nav.why':'為什麼選我們','nav.faq':'常見問題','nav.contact':'聯繫我們','nav.cta':'立即諮詢',
-      'hero.badge':'開啟通往港澳金融的大門','hero.title':'港澳開戶與信用卡攻略','hero.sub':'專業的一對一開戶諮詢、即時信用卡優惠情報、深度攻略內容。從內地到香港、從香港到海外，幫你少走彎路，輕鬆通關。','hero.cta1':'查看服務方案','hero.cta2':'瀏覽攻略','hero.stat1':'開戶成功案例','hero.stat2':'篇深度攻略','hero.stat3':'在線答疑','hero.hot':'熱門','hero.hotTitle':'香港銀行開戶全攻略','hero.planLabel':'諮詢套餐','hero.price':'¥199 起',
-      'services.eyebrow':'Our Services','services.title':'服務方案','services.sub':'從免費攻略到一對一深度諮詢，選擇最適合你的方案。',
-      'plan1.name':'免費攻略','plan1.period':'/ 永久','plan1.desc':'入門必讀，了解港澳開戶基礎知識','plan1.f1':'基礎開戶流程圖文','plan1.f2':'常見問題解答','plan1.f3':'銀行開戶條件速查','plan1.cta':'免費瀏覽',
-      'plan2.pop':'最受歡迎','plan2.name':'深度攻略會員','plan2.period':'/ 年','plan2.desc':'解鎖全部深度攻略 + 即時優惠情報','plan2.f1':'全部深度攻略解鎖','plan2.f2':'即時信用卡優惠更新','plan2.f3':'開戶路線模板與清單','plan2.f4':'專屬社群答疑','plan2.cta':'立即開通',
-      'plan3.name':'一對一諮詢','plan3.period':'/ 次','plan3.desc':'專屬顧問，針對你的情況定制方案','plan3.f1':'1 對 1 深度諮詢','plan3.f2':'開戶材料預審','plan3.f3':'個性化路線規劃','plan3.f4':'後續跟進指導','plan3.cta':'立即預約',
-      'guides.eyebrow':'Guides & Content','guides.title':'攻略內容庫','guides.sub':'持續更新的港澳開戶攻略、信用卡優惠情報與付費素材。',
-      'g1.cat':'開戶攻略','g1.title':'香港銀行開戶全流程圖解','g1.desc':'從選行、預約到面簽，一步步帶你走完整個開戶流程。','g1.tag':'免費 · 必讀',
-      'g2.cat':'信用卡','g2.title':'2024 香港信用卡迎新禮/回贈對比','g2.desc':'即時更新的優惠情報，幫你挑到最划算的一張卡。','g2.tag':'免費 · 持續更新',
-      'g3.cat':'付費素材','g3.title':'開戶材料清單 + 填寫模板','g3.desc':'齊全的材料清單與可直接套用的填寫模板，省時省心。',
-      'g4.cat':'路線規劃','g4.title':'內地 → 香港 → 海外 進階路線圖','g4.desc':'為高淨值用戶定製的一站式離岸開戶路線解析。',
-      'g5.cat':'海外賬戶','g5.title':'澳門 / 新加坡 / 海外賬戶開戶對比','g5.desc':'多地區賬戶橫向對比，幫你做出最優選擇。',
-      'g6.cat':'優惠情報','g6.title':'每月信用卡優惠速遞','g6.desc':'精選每月最值得參與的回贈、里數、迎新活動。','g6.tag':'免費 · 每月更新',
-      'pay.lock':'付費','pay.buy':'購買 →',
-      'pay.title':'Payment Methods','pay.payTitle':'支付方式','pay.sub':'付款時你可以自由選擇自己方便的支付方式，覆蓋全球主流渠道。','pay.card':'信用卡','pay.apd':'iPhone 一鍵支付','pay.gpd':'Android 一鍵支付','pay.alipay':'支付寶','pay.wechat':'微信支付','pay.fps':'FPS 轉數快','pay.fpsd':'香港即時轉賬','pay.paymed':'香港電子錢包','pay.octopus':'八達通',
-      'why.eyebrow':'Why DoorGo','why.title':'為什麼選擇 DoorGo','why.sub':'專業、透明、持續更新，幫你真正打開港澳金融這扇門。','why.h3':'讓複雜的開戶變得簡單','why.p1':'港澳開戶涉及選行、材料、流程、面簽等多個環節，信息零散且常常過時。DoorGo 把最關鍵的攻略系鏈化整理，並持續追蹤政策變化，確保內容及時準確。','why.p2':'無論你是想出境旅遊、留學會用港卡，還是規劃離岸資產與海外賬戶，我們都能給你清晰的路線和可落地的建議。','why.f1t':'內容即時更新','why.f1d':'政策、優惠變動第一時間同步','why.f2t':'一對一定制','why.f2d':'針對個人情況給出專屬方案','why.f3t':'信息透明','why.f3d':'費用、條件一目了然','why.f4t':'多地區覆蓋','why.f4d':'香港、澳門、海外一站搞定','why.exp':'開戶成功案例',
-      'disc.title':'⚠️ 免責聲明','disc.p1':'本站所有攻略與內容僅供參考與學習用途，不構成任何投資、理財或開戶的正式法律建議。銀行開戶政策、信用卡優惠活動可能隨時調整，請以銀行及發卡機構官方最新公告為準。','disc.p2':'本站不提供任何形式的代辦違規、套現或規避監管的服務。開戶與用卡請遵守當地法律法規。',
-      'faq.eyebrow':'FAQ','faq.title':'常見問題','faq.q1':'內地人可以開香港銀行賬戶嗎？','faq.a1':'可以。內地居民憑有效證件（如港澳通行證、身份證）及住址證明等，在香港部分銀行可開立個人賬戶。具體條件因銀行而異，建議先閱讀我們的免費攻略或預約一對一諮詢。','faq.q2':'開戶需要準備哪些材料？','faq.a2':'通常需要：有效身份證明、港澳通行證/護照、住址證明（如水電賬單、銀行月結單）、過關小票等。我們提供完整的材料清單與填寫模板可供下載。','faq.q3':'付費內容如何支付？','faq.a3':'我們支持信用卡（Visa/Master/銀聯）、Apple Pay、Google Pay、支付寶、微信支付、FPS 轉數快、PayMe、八達通等多種方式，付款時你可以自由選擇最方便的渠道。','faq.q4':'一對一諮詢怎麼做？','faq.a4':'下單後我們的顧問會與你聯繫，先了解你的具體情況（出行目的、資金規劃等），再給出個性化的開戶路線與材料準備建議。','faq.q5':'攻略內容會一直更新嗎？','faq.a5':'會。會員訂閱有效期內，你可持續獲取我們更新的攻略、優惠情報與模板，政策變化我們會第一時間跟進。',
-      'contact.eyebrow':'Contact Us','contact.title':'聯繫我們','contact.sub':'有任何問題，歡迎隨時留言或諮詢。','contact.wx':'微信 / WhatsApp','contact.email':'郵箱','contact.hours':'服務時間','contact.hoursd':'每日 9:00 - 22:00（在線答疑）','contact.area':'服務範圍','contact.aread':'香港 · 澳門 · 海外',
-      'form.topic':'我想諮詢','form.o1':'香港銀行開戶','form.o2':'澳門賬戶','form.o3':'信用卡優惠','form.o4':'海外賬戶','form.o5':'其他','form.name':'稱呼','form.nameph':'怎麼稱呼你','form.contact':'聯繫方式（微信 / WhatsApp / 郵箱）','form.contactph':'方便聯繫你的方式','form.msg':'留言','form.msgph':'簡單描述你的需求…','form.submit':'提交諮詢',
-      'foot.brand':'開啟通往港澳金融的大門。開戶攻略、信用卡優惠、一對一諮詢。','foot.nav':'快速導航','foot.content':'內容','foot.guide':'開戶攻略','foot.card':'信用卡優惠','foot.disclaimer':'免責聲明','foot.contact':'聯繫','foot.wx':'微信/WhatsApp：DoorGo-HK','foot.copy':'© 2024 DoorGo · 內容僅供參考，不構成投資建議 · Made with'
-    },
-    en: {
-      'nav.services':'Services','nav.guides':'Guides','nav.payments':'Payments','nav.why':'Why Us','nav.faq':'FAQ','nav.contact':'Contact','nav.cta':'Get Started',
-      'hero.badge':'Open the door to HK & Macau finance','hero.title':'HK & Macau Banking & Card Guides','hero.sub':'One-on-one account opening guidance, real-time credit card rewards, and in-depth guides. From mainland to Hong Kong, from Hong Kong to overseas — we help you navigate with confidence.','hero.cta1':'View Services','hero.cta2':'Browse Guides','hero.stat1':'Successful cases','hero.stat2':'In-depth guides','hero.stat3':'Online support','hero.hot':'Hot','hero.hotTitle':'Hong Kong Bank Account Guide','hero.planLabel':'Consultation','hero.price':'From ¥199',
-      'services.eyebrow':'Our Services','services.title':'Service Plans','services.sub':'From free guides to one-on-one consultation, choose the plan that fits you.',
-      'plan1.name':'Free Guide','plan1.period':'/ Forever','plan1.desc':'Essential reading to understand HK & Macau account basics','plan1.f1':'Basic account opening steps','plan1.f2':'Common questions answered','plan1.f3':'Bank requirements quick check','plan1.cta':'Browse Free',
-      'plan2.pop':'Most Popular','plan2.name':'Premium Membership','plan2.period':'/ Year','plan2.desc':'Unlock all in-depth guides + real-time rewards intel','plan2.f1':'Unlock all in-depth guides','plan2.f2':'Real-time credit card offers','plan2.f3':'Account opening templates & checklists','plan2.f4':'Exclusive community support','plan2.cta':'Subscribe Now',
-      'plan3.name':'1-on-1 Consultation','plan3.period':'/ Session','plan3.desc':'A dedicated advisor to tailor a plan for you','plan3.f1':'1-on-1 in-depth consultation','plan3.f2':'Document pre-review','plan3.f3':'Personalized route planning','plan3.f4':'Follow-up guidance','plan3.cta':'Book Now',
-      'guides.eyebrow':'Guides & Content','guides.title':'Guide Library','guides.sub':'Constantly updated HK & Macau account guides, card rewards intel, and premium content.',
-      'g1.cat':'Account Guide','g1.title':'Hong Kong Bank Account — Step-by-Step','g1.desc':'From choosing a bank to the interview, we walk you through the whole process.','g1.tag':'Free · Must-read',
-      'g2.cat':'Credit Cards','g2.title':'2024 HK Credit Card Welcome Offers Compared','g2.desc':'Real-time rewards intel to help you pick the best card.','g2.tag':'Free · Updated',
-      'g3.cat':'Premium Content','g3.title':'Account Opening Checklist + Templates','g3.desc':'A complete document checklist and ready-to-use templates.','g4.cat':'Route Planning','g4.title':'Mainland → HK → Overseas Roadmap','g4.desc':'A one-stop offshore account route for high-net-worth users.',
-      'g5.cat':'Offshore Accounts','g5.title':'Macau / Singapore / Overseas Comparison','g5.desc':'Compare accounts across regions to make the best choice.',
-      'g6.cat':'Rewards Intel','g6.title':'Monthly Credit Card Offers','g6.desc':'Handpicked cashback, miles, and welcome offers each month.','g6.tag':'Free · Monthly',
-      'pay.lock':'Paid','pay.buy':'Buy →',
-      'pay.title':'Payment Methods','pay.payTitle':'Payment Methods','pay.sub':'Choose the payment method most convenient for you — covering major channels worldwide.','pay.card':'Credit Card','pay.apd':'One-tap on iPhone','pay.gpd':'One-tap on Android','pay.alipay':'Alipay','pay.wechat':'WeChat Pay','pay.fps':'FPS','pay.fpsd':'HK instant transfer','pay.paymed':'HK e-wallet','pay.octopus':'Octopus',
-      'why.eyebrow':'Why DoorGo','why.title':'Why Choose DoorGo','why.sub':'Professional, transparent, and always updated — we truly open the door to HK & Macau finance.','why.h3':'Making account opening simple','why.p1':'Opening a HK or Macau account involves choosing a bank, documents, procedures and interviews — the information is scattered and often outdated. DoorGo organizes the key guides and tracks policy changes to keep everything accurate.','why.p2':'Whether you travel abroad, study, or plan offshore assets and overseas accounts, we give you a clear route and actionable advice.','why.f1t':'Always Updated','why.f1d':'Policy & offer changes synced instantly','why.f2t':'Personalized','why.f2d':'Tailored advice for your situation','why.f3t':'Transparent','why.f3d':'Fees & conditions clearly shown','why.f4t':'Multi-region','why.f4d':'HK, Macau & overseas in one place','why.exp':'Successful cases',
-      'disc.title':'⚠️ Disclaimer','disc.p1':'All guides and content on this site are for reference and learning only, and do not constitute formal legal or financial advice. Bank policies and credit card offers may change at any time — please refer to official announcements.','disc.p2':'We do not provide any service involving non-compliant transactions, cash-out, or circumvention of regulations. Please comply with local laws.','faq.eyebrow':'FAQ','faq.title':'Frequently Asked Questions','faq.q1':'Can mainland residents open a Hong Kong bank account?','faq.a1':'Yes. Mainland residents can open a personal account at some Hong Kong banks with valid documents (e.g. exit-entry permit, ID) and proof of address. Requirements vary by bank — we suggest reading our free guide or booking a consultation.','faq.q2':'What documents do I need?','faq.a2':'Typically: valid ID, exit-entry permit/passport, proof of address (e.g. utility bill, bank statement), and the immigration slip. We provide a complete checklist and fillable templates.','faq.q3':'How do I pay for premium content?','faq.a3':'We accept credit cards (Visa/Master/UnionPay), Apple Pay, Google Pay, Alipay, WeChat Pay, FPS, PayMe, and Octopus — choose whichever is most convenient.','faq.q4':'How does 1-on-1 consultation work?','faq.a4':'After ordering, our advisor will contact you, understand your situation (travel purpose, financial planning, etc.), and provide a personalized account-opening route and document advice.','faq.q5':'Will the guides be updated?','faq.a5':'Yes. During your membership period, you can continuously access our updated guides, offers, and templates — we follow policy changes promptly.',
-      'contact.eyebrow':'Contact Us','contact.title':'Contact Us','contact.sub':'Have questions? Leave a message or reach out anytime.','contact.wx':'WeChat / WhatsApp','contact.email':'Email','contact.hours':'Support Hours','contact.hoursd':'Daily 9:00 - 22:00 (online)','contact.area':'Service Areas','contact.aread':'Hong Kong · Macau · Overseas',
-      'form.topic':'I want to ask about','form.o1':'Hong Kong bank account','form.o2':'Macau account','form.o3':'Credit card rewards','form.o4':'Overseas account','form.o5':'Other','form.name':'Your Name','form.nameph':'How should we address you','form.contact':'Contact (WeChat / WhatsApp / Email)','form.contactph':'How to reach you','form.msg':'Message','form.msgph':'Briefly describe your needs…','form.submit':'Send Message',
-      'foot.brand':'Open the door to HK & Macau finance. Account guides, credit card rewards, and 1-on-1 consultation.','foot.nav':'Quick Links','foot.content':'Content','foot.guide':'Account Guides','foot.card':'Credit Card Offers','foot.disclaimer':'Disclaimer','foot.contact':'Contact','foot.wx':'WeChat/WhatsApp: DoorGo-HK','foot.copy':'© 2024 DoorGo · For reference only, not investment advice · Made with'
-    }
-  };
-
-  // ===== 语言切换 =====
-  var currentLang = 'zhHans';
-  function setLang(lang){
-    currentLang = lang;
-    var dict = I18N[lang] || I18N.zhHans;
-    // 文本节点
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
-      var key = el.getAttribute('data-i18n');
-      if(dict[key] !== undefined) el.textContent = dict[key];
-    });
-    // placeholder 节点
-    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
-      var key = el.getAttribute('data-i18n-ph');
-      if(dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
-    });
-    // 切换按钮高亮
-    document.querySelectorAll('#langSwitch button').forEach(function(b){
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
-    });
-    // 更新 html lang 属性
-    document.documentElement.lang = (lang === 'zhHans' ? 'zh-Hans' : lang === 'zhHant' ? 'zh-Hant' : 'en');
-    try{ localStorage.setItem('doorgo-lang', lang); }catch(e){}
-  }
-  document.querySelectorAll('#langSwitch button').forEach(function(b){
-    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
-  });
-  // 读取已保存的语言
-  (function(){
-    var saved = null;
-    try{ saved = localStorage.getItem('doorgo-lang'); }catch(e){}
-    if(saved && I18N[saved]) setLang(saved);
-  })();
-
-  // ===== 套餐购买（接入 Stripe Checkout 后替换为真实支付链接） =====
-  function buyPlan(type){
-    alert('你选择了「' + type + '」套餐。\n\n支付功能即将接入，付款时你可自由选择：信用卡 / Apple Pay / 支付宝 / 微信 / FPS / PayMe 等。');
-  }
-
-  // ===== 咨询表单提交（demo） =====
-  function handleSubmit(e){
-    e.preventDefault();
-    var name = e.target.name.value;
-    alert('感谢你的咨询，' + (name||'朋友') + '！我们会尽快与你联系。');
-    e.target.reset();
-  }
-</script>
+<script src="guides-data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
