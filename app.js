@@ -9,7 +9,7 @@
   var CAT_LABEL = {
     account: '港澳开户',
     card: '香港信用卡',
-    refund: '返款优惠'
+    refund: '付费服务'
   };
 
   function matches(g) {
@@ -36,6 +36,7 @@
         + '<div class="thumb ' + g.thumb + '">' + g.icon
         + '<span class="cat">' + CAT_LABEL[g.cat] + '</span>'
         + (g.soon ? '<span class="soon">筹备中</span>' : (g.hot ? '<span class="soon" style="background:#E0524D">热门</span>' : ''))
+        + (g.paid ? '<span class="soon" style="background:var(--gold)">' + g.price + '</span>' : '')
         + '</div>'
         + '<div class="g-body">'
         + '<h3>' + g.title + '</h3>'
@@ -79,7 +80,7 @@ function openGuide(id) {
   var CAT_LABEL = {
     account: '港澳开户',
     card: '香港信用卡',
-    refund: '返款优惠'
+    refund: '付费服务'
   };
 
   function renderBlock(b) {
@@ -102,6 +103,8 @@ function openGuide(id) {
         return '<div class="info-box"><b>ℹ️ 说明：</b>' + b.text + '</div>';
       case 'referral':
         return '<div class="referral-box"><div class="ref-title">' + (b.title || '🎁 我的推荐 / 邀请') + '</div><p>' + b.text + '</p><div class="ref-links">' + (b.links ? b.links.map(function(l){return '<a href="'+l.url+'" target="_blank" rel="noopener">'+l.label+'</a>';}).join('') : '<span class="ref-soon">邀请链接待更新</span>') + '</div></div>';
+      case 'buy':
+        return '<div class="buy-box"><a class="btn buy-btn" href="' + b.url + '" target="_blank" rel="noopener">💳 ' + b.text + '</a></div>';
       case 'table':
         var thead = '<thead><tr>' + b.head.map(function (h) { return '<th>' + h + '</th>'; }).join('') + '</tr></thead>';
         var tbody = '<tbody>' + b.rows.map(function (r) {
