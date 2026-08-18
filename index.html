@@ -53,6 +53,12 @@
   .nav-links a{transition:color .2s}
   .nav-links a:hover{color:var(--green)}
   .nav-cta{display:flex;align-items:center;gap:14px}
+  .lang-switch{display:flex;align-items:center;background:var(--mint);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
+  .lang-switch button{
+    background:transparent;border:none;cursor:pointer;font-size:.82rem;font-weight:700;
+    color:var(--muted);padding:5px 12px;border-radius:999px;transition:.2s;font-family:inherit;
+  }
+  .lang-switch button.active{background:var(--green);color:#fff}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
     background:var(--green);color:#fff;font-weight:700;
@@ -274,15 +280,20 @@
       DoorGo
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#services">服务方案</a>
-      <a href="#guides">攻略内容</a>
-      <a href="#payments">支付方式</a>
-      <a href="#why">为什么选我们</a>
-      <a href="#faq">常见问题</a>
-      <a href="#contact">联系我们</a>
+      <a href="#services" data-i18n="nav.services">服务方案</a>
+      <a href="#guides" data-i18n="nav.guides">攻略内容</a>
+      <a href="#payments" data-i18n="nav.payments">支付方式</a>
+      <a href="#why" data-i18n="nav.why">为什么选我们</a>
+      <a href="#faq" data-i18n="nav.faq">常见问题</a>
+      <a href="#contact" data-i18n="nav.contact">联系我们</a>
     </nav>
     <div class="nav-cta">
-      <a href="#contact" class="btn">立即咨询</a>
+      <div class="lang-switch" id="langSwitch">
+        <button data-lang="zhHans" class="active">简</button>
+        <button data-lang="zhHant">繁</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#contact" class="btn" data-i18n="nav.cta">立即咨询</a>
     </div>
     <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
@@ -291,17 +302,17 @@
 <section class="hero" id="home">
   <div class="wrap">
     <div>
-      <span class="badge"><span class="dot"></span>打开通往港澳金融的大门</span>
-      <h1><span class="accent">DoorGo</span> · 港澳开户与信用卡攻略</h1>
-      <p>专业的一对一开户咨询、实时信用卡优惠情报、深度攻略内容。从内地到香港、从香港到海外，帮你少走弯路，轻松通关。</p>
+      <span class="badge"><span class="dot"></span><span data-i18n="hero.badge">打开通往港澳金融的大门</span></span>
+      <h1><span class="accent">DoorGo</span> · <span data-i18n="hero.title">港澳开户与信用卡攻略</span></h1>
+      <p data-i18n="hero.sub">专业的一对一开户咨询、实时信用卡优惠情报、深度攻略内容。从内地到香港、从香港到海外，帮你少走弯路，轻松通关。</p>
       <div class="hero-cta">
-        <a href="#services" class="btn">查看服务方案</a>
-        <a href="#guides" class="btn ghost">浏览攻略</a>
+        <a href="#services" class="btn" data-i18n="hero.cta1">查看服务方案</a>
+        <a href="#guides" class="btn ghost" data-i18n="hero.cta2">浏览攻略</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>500+</b><span>开户成功案例</span></div>
-        <div class="stat"><b>120+</b><span>篇深度攻略</span></div>
-        <div class="stat"><b>7×24</b><span>在线答疑</span></div>
+        <div class="stat"><b>500+</b><span data-i18n="hero.stat1">开户成功案例</span></div>
+        <div class="stat"><b>120+</b><span data-i18n="hero.stat2">篇深度攻略</span></div>
+        <div class="stat"><b>7×24</b><span data-i18n="hero.stat3">在线答疑</span></div>
       </div>
     </div>
     <div class="hero-art">
@@ -312,12 +323,12 @@
         </div>
       </div>
       <div class="float-card fc-1">
-        <div class="tag">🔥 热门</div>
-        <b>香港银行开户全攻略</b>
+        <div class="tag">🔥 <span data-i18n="hero.hot">热门</span></div>
+        <b data-i18n="hero.hotTitle">香港银行开户全攻略</b>
       </div>
       <div class="float-card fc-2">
-        <span class="from">咨询套餐</span>
-        <div class="price">¥199 起</div>
+        <span class="from" data-i18n="hero.planLabel">咨询套餐</span>
+        <div class="price"><span data-i18n="hero.price">¥199 起</span></div>
       </div>
     </div>
   </div>
@@ -326,46 +337,46 @@
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Our Services</div>
-      <h2>服务方案</h2>
-      <p>从免费攻略到一对一深度咨询，选择最适合你的方案。</p>
+      <div class="eyebrow" data-i18n="services.eyebrow">Our Services</div>
+      <h2 data-i18n="services.title">服务方案</h2>
+      <p data-i18n="services.sub">从免费攻略到一对一深度咨询，选择最适合你的方案。</p>
     </div>
     <div class="plans">
       <div class="plan">
-        <div class="p-name">免费攻略</div>
-        <div class="p-price">¥0 <small>/ 永久</small></div>
-        <div class="p-desc">入门必读，了解港澳开户基础知识</div>
+        <div class="p-name" data-i18n="plan1.name">免费攻略</div>
+        <div class="p-price">¥0 <small data-i18n="plan1.period">/ 永久</small></div>
+        <div class="p-desc" data-i18n="plan1.desc">入门必读，了解港澳开户基础知识</div>
         <ul>
-          <li>基础开户流程图文</li>
-          <li>常见问题解答</li>
-          <li>银行开户条件速查</li>
+          <li data-i18n="plan1.f1">基础开户流程图文</li>
+          <li data-i18n="plan1.f2">常见问题解答</li>
+          <li data-i18n="plan1.f3">银行开户条件速查</li>
         </ul>
-        <a href="#guides" class="btn ghost">免费浏览</a>
+        <a href="#guides" class="btn ghost" data-i18n="plan1.cta">免费浏览</a>
       </div>
       <div class="plan popular">
-        <span class="pop-tag">最受欢迎</span>
-        <div class="p-name">深度攻略会员</div>
-        <div class="p-price">¥99 <small>/ 年</small></div>
-        <div class="p-desc">解锁全部深度攻略 + 实时优惠情报</div>
+        <span class="pop-tag" data-i18n="plan2.pop">最受欢迎</span>
+        <div class="p-name" data-i18n="plan2.name">深度攻略会员</div>
+        <div class="p-price">¥99 <small data-i18n="plan2.period">/ 年</small></div>
+        <div class="p-desc" data-i18n="plan2.desc">解锁全部深度攻略 + 实时优惠情报</div>
         <ul>
-          <li>全部深度攻略解锁</li>
-          <li>实时信用卡优惠更新</li>
-          <li>开户路线模板与清单</li>
-          <li>专属社群答疑</li>
+          <li data-i18n="plan2.f1">全部深度攻略解锁</li>
+          <li data-i18n="plan2.f2">实时信用卡优惠更新</li>
+          <li data-i18n="plan2.f3">开户路线模板与清单</li>
+          <li data-i18n="plan2.f4">专属社群答疑</li>
         </ul>
-        <button class="btn gold" onclick="buyPlan('会员')">立即开通</button>
+        <button class="btn gold" onclick="buyPlan('会员')" data-i18n="plan2.cta">立即开通</button>
       </div>
       <div class="plan">
-        <div class="p-name">一对一咨询</div>
-        <div class="p-price">¥199 <small>/ 次</small></div>
-        <div class="p-desc">专属顾问，针对你的情况定制方案</div>
+        <div class="p-name" data-i18n="plan3.name">一对一咨询</div>
+        <div class="p-price">¥199 <small data-i18n="plan3.period">/ 次</small></div>
+        <div class="p-desc" data-i18n="plan3.desc">专属顾问，针对你的情况定制方案</div>
         <ul>
-          <li>1 对 1 深度咨询</li>
-          <li>开户材料预审</li>
-          <li>个性化路线规划</li>
-          <li>后续跟进指导</li>
+          <li data-i18n="plan3.f1">1 对 1 深度咨询</li>
+          <li data-i18n="plan3.f2">开户材料预审</li>
+          <li data-i18n="plan3.f3">个性化路线规划</li>
+          <li data-i18n="plan3.f4">后续跟进指导</li>
         </ul>
-        <button class="btn" onclick="buyPlan('咨询')">立即预约</button>
+        <button class="btn" onclick="buyPlan('咨询')" data-i18n="plan3.cta">立即预约</button>
       </div>
     </div>
   </div>
@@ -374,57 +385,57 @@
 <section id="guides">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Guides &amp; Content</div>
-      <h2>攻略内容库</h2>
-      <p>持续更新的港澳开户攻略、信用卡优惠情报与付费素材。</p>
+      <div class="eyebrow" data-i18n="guides.eyebrow">Guides &amp; Content</div>
+      <h2 data-i18n="guides.title">攻略内容库</h2>
+      <p data-i18n="guides.sub">持续更新的港澳开户攻略、信用卡优惠情报与付费素材。</p>
     </div>
     <div class="guide-grid">
       <div class="guide">
-        <div class="thumb t1">🏦<span class="cat">开户攻略</span></div>
+        <div class="thumb t1">🏦<span class="cat" data-i18n="g1.cat">开户攻略</span></div>
         <div class="g-body">
-          <h3>香港银行开户全流程图解</h3>
-          <p>从选行、预约到面签，一步步带你走完整个开户流程。</p>
-          <div class="g-foot"><span class="free">免费 · 必读</span></div>
+          <h3 data-i18n="g1.title">香港银行开户全流程图解</h3>
+          <p data-i18n="g1.desc">从选行、预约到面签，一步步带你走完整个开户流程。</p>
+          <div class="g-foot"><span class="free" data-i18n="g1.tag">免费 · 必读</span></div>
         </div>
       </div>
       <div class="guide">
-        <div class="thumb t2">💳<span class="cat">信用卡</span></div>
+        <div class="thumb t2">💳<span class="cat" data-i18n="g2.cat">信用卡</span></div>
         <div class="g-body">
-          <h3>2024 香港信用卡迎新礼/返现对比</h3>
-          <p>实时更新的优惠情报，帮你挑到最划算的一张卡。</p>
-          <div class="g-foot"><span class="free">免费 · 持续更新</span></div>
+          <h3 data-i18n="g2.title">2024 香港信用卡迎新礼/返现对比</h3>
+          <p data-i18n="g2.desc">实时更新的优惠情报，帮你挑到最划算的一张卡。</p>
+          <div class="g-foot"><span class="free" data-i18n="g2.tag">免费 · 持续更新</span></div>
         </div>
       </div>
       <div class="guide">
-        <div class="thumb t3">📋<span class="cat">付费素材</span><span class="lock">付费</span></div>
+        <div class="thumb t3">📋<span class="cat" data-i18n="g3.cat">付费素材</span><span class="lock" data-i18n="pay.lock">付费</span></div>
         <div class="g-body">
-          <h3>开户材料清单 + 填写模板</h3>
-          <p>齐全的材料清单与可直接套用的填写模板，省时省心。</p>
-          <div class="g-foot"><span class="price">¥29</span><a class="free" href="#payments">购买 →</a></div>
+          <h3 data-i18n="g3.title">开户材料清单 + 填写模板</h3>
+          <p data-i18n="g3.desc">齐全的材料清单与可直接套用的填写模板，省时省心。</p>
+          <div class="g-foot"><span class="price">¥29</span><a class="free" href="#payments" data-i18n="pay.buy">购买 →</a></div>
         </div>
       </div>
       <div class="guide">
-        <div class="thumb t4">🗺️<span class="cat">路线规划</span><span class="lock">付费</span></div>
+        <div class="thumb t4">🗺️<span class="cat" data-i18n="g4.cat">路线规划</span><span class="lock" data-i18n="pay.lock">付费</span></div>
         <div class="g-body">
-          <h3>内地 → 香港 → 海外 进阶路线图</h3>
-          <p>为高净值用户定制的一站式离岸开户路线解析。</p>
-          <div class="g-foot"><span class="price">¥49</span><a class="free" href="#payments">购买 →</a></div>
+          <h3 data-i18n="g4.title">内地 → 香港 → 海外 进阶路线图</h3>
+          <p data-i18n="g4.desc">为高净值用户定制的一站式离岸开户路线解析。</p>
+          <div class="g-foot"><span class="price">¥49</span><a class="free" href="#payments" data-i18n="pay.buy">购买 →</a></div>
         </div>
       </div>
       <div class="guide">
-        <div class="thumb t5">🌐<span class="cat">海外账户</span><span class="lock">付费</span></div>
+        <div class="thumb t5">🌐<span class="cat" data-i18n="g5.cat">海外账户</span><span class="lock" data-i18n="pay.lock">付费</span></div>
         <div class="g-body">
-          <h3>澳门 / 新加坡 / 海外账户开户对比</h3>
-          <p>多地区账户横向对比，帮你做出最优选择。</p>
-          <div class="g-foot"><span class="price">¥39</span><a class="free" href="#payments">购买 →</a></div>
+          <h3 data-i18n="g5.title">澳门 / 新加坡 / 海外账户开户对比</h3>
+          <p data-i18n="g5.desc">多地区账户横向对比，帮你做出最优选择。</p>
+          <div class="g-foot"><span class="price">¥39</span><a class="free" href="#payments" data-i18n="pay.buy">购买 →</a></div>
         </div>
       </div>
       <div class="guide">
-        <div class="thumb t6">🎁<span class="cat">优惠情报</span></div>
+        <div class="thumb t6">🎁<span class="cat" data-i18n="g6.cat">优惠情报</span></div>
         <div class="g-body">
-          <h3>每月信用卡优惠速递</h3>
-          <p>精选每月最值得参与的返现、里程、迎新活动。</p>
-          <div class="g-foot"><span class="free">免费 · 每月更新</span></div>
+          <h3 data-i18n="g6.title">每月信用卡优惠速递</h3>
+          <p data-i18n="g6.desc">精选每月最值得参与的返现、里程、迎新活动。</p>
+          <div class="g-foot"><span class="free" data-i18n="g6.tag">免费 · 每月更新</span></div>
         </div>
       </div>
     </div>
@@ -434,19 +445,19 @@
 <section id="payments">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Payment Methods</div>
-      <h2>支付方式</h2>
-      <p>付款时你可以自由选择自己方便的支付方式，覆盖全球主流渠道。</p>
+      <div class="eyebrow" data-i18n="pay.title">Payment Methods</div>
+      <h2 data-i18n="pay.payTitle">支付方式</h2>
+      <p data-i18n="pay.sub">付款时你可以自由选择自己方便的支付方式，覆盖全球主流渠道。</p>
     </div>
     <div class="pay-grid">
-      <div class="pay-card"><div class="p-ico">💳</div><b>信用卡</b><span>Visa / Master / 银联</span></div>
-      <div class="pay-card"><div class="p-ico">🅰️</div><b>Apple Pay</b><span>iPhone 一键支付</span></div>
-      <div class="pay-card"><div class="p-ico">🇬</div><b>Google Pay</b><span>Android 一键支付</span></div>
-      <div class="pay-card"><div class="p-ico">💚</div><b>支付宝</b><span>Alipay / 支付宝HK</span></div>
-      <div class="pay-card"><div class="p-ico">💚</div><b>微信支付</b><span>WeChat Pay</span></div>
-      <div class="pay-card"><div class="p-ico">🏦</div><b>FPS 转数快</b><span>香港即时转账</span></div>
-      <div class="pay-card"><div class="p-ico">📱</div><b>PayMe</b><span>香港电子钱包</span></div>
-      <div class="pay-card"><div class="p-ico">🐙</div><b>八达通</b><span>Octopus 钱包</span></div>
+      <div class="pay-card"><div class="p-ico">💳</div><b data-i18n="pay.card">信用卡</b><span>Visa / Master / 银联</span></div>
+      <div class="pay-card"><div class="p-ico">🅰️</div><b>Apple Pay</b><span data-i18n="pay.apd">iPhone 一键支付</span></div>
+      <div class="pay-card"><div class="p-ico">🇬</div><b>Google Pay</b><span data-i18n="pay.gpd">Android 一键支付</span></div>
+      <div class="pay-card"><div class="p-ico">💚</div><b data-i18n="pay.alipay">支付宝</b><span>Alipay / 支付宝HK</span></div>
+      <div class="pay-card"><div class="p-ico">💚</div><b data-i18n="pay.wechat">微信支付</b><span>WeChat Pay</span></div>
+      <div class="pay-card"><div class="p-ico">🏦</div><b data-i18n="pay.fps">FPS 转数快</b><span data-i18n="pay.fpsd">香港即时转账</span></div>
+      <div class="pay-card"><div class="p-ico">📱</div><b>PayMe</b><span data-i18n="pay.paymed">香港电子钱包</span></div>
+      <div class="pay-card"><div class="p-ico">🐙</div><b data-i18n="pay.octopus">八达通</b><span>Octopus 钱包</span></div>
     </div>
   </div>
 </section>
@@ -454,25 +465,25 @@
 <section id="why">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Why DoorGo</div>
-      <h2>为什么选择 DoorGo</h2>
-      <p>专业、透明、持续更新，帮你真正打开港澳金融这扇门。</p>
+      <div class="eyebrow" data-i18n="why.eyebrow">Why DoorGo</div>
+      <h2 data-i18n="why.title">为什么选择 DoorGo</h2>
+      <p data-i18n="why.sub">专业、透明、持续更新，帮你真正打开港澳金融这扇门。</p>
     </div>
     <div class="why-grid">
       <div class="why-text">
-        <h3>让复杂的开户变得简单</h3>
-        <p>港澳开户涉及选行、材料、流程、面签等多个环节，信息零散且常常过时。DoorGo 把最关键的攻略系统化整理，并持续跟踪政策变化，确保内容及时准确。</p>
-        <p>无论你是想出境旅游、留学会用港卡，还是规划离岸资产与海外账户，我们都能给你清晰的路线和可落地的建议。</p>
+        <h3 data-i18n="why.h3">让复杂的开户变得简单</h3>
+        <p data-i18n="why.p1">港澳开户涉及选行、材料、流程、面签等多个环节，信息零散且常常过时。DoorGo 把最关键的攻略系统化整理，并持续跟踪政策变化，确保内容及时准确。</p>
+        <p data-i18n="why.p2">无论你是想出境旅游、留学会用港卡，还是规划离岸资产与海外账户，我们都能给你清晰的路线和可落地的建议。</p>
         <div class="features">
-          <div class="feature"><div class="ico">✅</div><b>内容实时更新</b><span>政策、优惠变动第一时间同步</span></div>
-          <div class="feature"><div class="ico">🎯</div><b>一对一定制</b><span>针对个人情况给出专属方案</span></div>
-          <div class="feature"><div class="ico">🔒</div><b>信息透明</b><span>费用、条件一目了然</span></div>
-          <div class="feature"><div class="ico">🌍</div><b>多地区覆盖</b><span>香港、澳门、海外一站搞定</span></div>
+          <div class="feature"><div class="ico">✅</div><b data-i18n="why.f1t">内容实时更新</b><span data-i18n="why.f1d">政策、优惠变动第一时间同步</span></div>
+          <div class="feature"><div class="ico">🎯</div><b data-i18n="why.f2t">一对一定制</b><span data-i18n="why.f2d">针对个人情况给出专属方案</span></div>
+          <div class="feature"><div class="ico">🔒</div><b data-i18n="why.f3t">信息透明</b><span data-i18n="why.f3d">费用、条件一目了然</span></div>
+          <div class="feature"><div class="ico">🌍</div><b data-i18n="why.f4t">多地区覆盖</b><span data-i18n="why.f4d">香港、澳门、海外一站搞定</span></div>
         </div>
       </div>
       <div class="why-art">
         <div class="big">🚪</div>
-        <div class="exp"><b>500+</b><span>开户成功案例</span></div>
+        <div class="exp"><b>500+</b><span data-i18n="why.exp">开户成功案例</span></div>
       </div>
     </div>
   </div>
@@ -481,9 +492,9 @@
 <section id="disclaimer">
   <div class="wrap">
     <div class="disc-box">
-      <h3>⚠️ 免责声明</h3>
-      <p>本站所有攻略与内容仅供参考与学习用途，不构成任何投资、理财或开户的正式法律建议。银行开户政策、信用卡优惠活动可能随时调整，请以银行及发卡机构官方最新公告为准。</p>
-      <p>本站不提供任何形式的代办违规、套现或规避监管的服务。开户与用卡请遵守当地法律法规。</p>
+      <h3 data-i18n="disc.title">⚠️ 免责声明</h3>
+      <p data-i18n="disc.p1">本站所有攻略与内容仅供参考与学习用途，不构成任何投资、理财或开户的正式法律建议。银行开户政策、信用卡优惠活动可能随时调整，请以银行及发卡机构官方最新公告为准。</p>
+      <p data-i18n="disc.p2">本站不提供任何形式的代办违规、套现或规避监管的服务。开户与用卡请遵守当地法律法规。</p>
     </div>
   </div>
 </section>
@@ -491,29 +502,29 @@
 <section id="faq">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">FAQ</div>
-      <h2>常见问题</h2>
+      <div class="eyebrow" data-i18n="faq.eyebrow">FAQ</div>
+      <h2 data-i18n="faq.title">常见问题</h2>
     </div>
     <div class="faq-list">
       <details class="faq">
-        <summary>内地人可以开香港银行账户吗？</summary>
-        <p>可以。内地居民凭有效证件（如港澳通行证、身份证）及住址证明等，在香港部分银行可开立个人账户。具体条件因银行而异，建议先阅读我们的免费攻略或预约一对一咨询。</p>
+        <summary data-i18n="faq.q1">内地人可以开香港银行账户吗？</summary>
+        <p data-i18n="faq.a1">可以。内地居民凭有效证件（如港澳通行证、身份证）及住址证明等，在香港部分银行可开立个人账户。具体条件因银行而异，建议先阅读我们的免费攻略或预约一对一咨询。</p>
       </details>
       <details class="faq">
-        <summary>开户需要准备哪些材料？</summary>
-        <p>通常需要：有效身份证明、港澳通行证/护照、住址证明（如水电账单、银行月结单）、过关小票等。我们提供完整的材料清单与填写模板可供下载。</p>
+        <summary data-i18n="faq.q2">开户需要准备哪些材料？</summary>
+        <p data-i18n="faq.a2">通常需要：有效身份证明、港澳通行证/护照、住址证明（如水电账单、银行月结单）、过关小票等。我们提供完整的材料清单与填写模板可供下载。</p>
       </details>
       <details class="faq">
-        <summary>付费内容如何支付？</summary>
-        <p>我们支持信用卡（Visa/Master/银联）、Apple Pay、Google Pay、支付宝、微信支付、FPS 转数快、PayMe、八达通等多种方式，付款时你可以自由选择最方便的渠道。</p>
+        <summary data-i18n="faq.q3">付费内容如何支付？</summary>
+        <p data-i18n="faq.a3">我们支持信用卡（Visa/Master/银联）、Apple Pay、Google Pay、支付宝、微信支付、FPS 转数快、PayMe、八达通等多种方式，付款时你可以自由选择最方便的渠道。</p>
       </details>
       <details class="faq">
-        <summary>一对一咨询怎么做？</summary>
-        <p>下单后我们的顾问会与你联系，先了解你的具体情况（出行目的、资金规划等），再给出个性化的开户路线与材料准备建议。</p>
+        <summary data-i18n="faq.q4">一对一咨询怎么做？</summary>
+        <p data-i18n="faq.a4">下单后我们的顾问会与你联系，先了解你的具体情况（出行目的、资金规划等），再给出个性化的开户路线与材料准备建议。</p>
       </details>
       <details class="faq">
-        <summary>攻略内容会一直更新吗？</summary>
-        <p>会。会员订阅有效期内，你可持续获取我们更新的攻略、优惠情报与模板，政策变化我们会第一时间跟进。</p>
+        <summary data-i18n="faq.q5">攻略内容会一直更新吗？</summary>
+        <p data-i18n="faq.a5">会。会员订阅有效期内，你可持续获取我们更新的攻略、优惠情报与模板，政策变化我们会第一时间跟进。</p>
       </details>
     </div>
   </div>
@@ -522,33 +533,33 @@
 <section id="contact">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Contact Us</div>
-      <h2>联系我们</h2>
-      <p>有任何问题，欢迎随时留言或咨询。</p>
+      <div class="eyebrow" data-i18n="contact.eyebrow">Contact Us</div>
+      <h2 data-i18n="contact.title">联系我们</h2>
+      <p data-i18n="contact.sub">有任何问题，欢迎随时留言或咨询。</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-row"><span class="ico">💬</span><div><b>微信 / WhatsApp</b><span>DoorGo-HK</span></div></div>
-        <div class="contact-row"><span class="ico">✉️</span><div><b>邮箱</b><span>hello@doorgo.hk</span></div></div>
-        <div class="contact-row"><span class="ico">🕐</span><div><b>服务时间</b><span>每日 9:00 - 22:00（在线答疑）</span></div></div>
-        <div class="contact-row"><span class="ico">📍</span><div><b>服务范围</b><span>香港 · 澳门 · 海外</span></div></div>
+        <div class="contact-row"><span class="ico">💬</span><div><b data-i18n="contact.wx">微信 / WhatsApp</b><span>DoorGo-HK</span></div></div>
+        <div class="contact-row"><span class="ico">✉️</span><div><b data-i18n="contact.email">邮箱</b><span>hello@doorgo.hk</span></div></div>
+        <div class="contact-row"><span class="ico">🕐</span><div><b data-i18n="contact.hours">服务时间</b><span data-i18n="contact.hoursd">每日 9:00 - 22:00（在线答疑）</span></div></div>
+        <div class="contact-row"><span class="ico">📍</span><div><b data-i18n="contact.area">服务范围</b><span data-i18n="contact.aread">香港 · 澳门 · 海外</span></div></div>
       </div>
       <form class="contact-form" onsubmit="handleSubmit(event)">
-        <label>我想咨询</label>
+        <label data-i18n="form.topic">我想咨询</label>
         <select name="topic">
-          <option>香港银行开户</option>
-          <option>澳门账户</option>
-          <option>信用卡优惠</option>
-          <option>海外账户</option>
-          <option>其他</option>
+          <option data-i18n="form.o1">香港银行开户</option>
+          <option data-i18n="form.o2">澳门账户</option>
+          <option data-i18n="form.o3">信用卡优惠</option>
+          <option data-i18n="form.o4">海外账户</option>
+          <option data-i18n="form.o5">其他</option>
         </select>
-        <label>称呼</label>
-        <input type="text" name="name" placeholder="怎么称呼你" required>
-        <label>联系方式（微信 / WhatsApp / 邮箱）</label>
-        <input type="text" name="contact" placeholder="方便联系你的方式">
-        <label>留言</label>
-        <textarea name="message" placeholder="简单描述你的需求…"></textarea>
-        <button type="submit" class="btn" style="width:100%;justify-content:center">提交咨询</button>
+        <label data-i18n="form.name">称呼</label>
+        <input type="text" name="name" data-i18n-ph="form.nameph" placeholder="怎么称呼你" required>
+        <label data-i18n="form.contact">联系方式（微信 / WhatsApp / 邮箱）</label>
+        <input type="text" name="contact" data-i18n-ph="form.contactph" placeholder="方便联系你的方式">
+        <label data-i18n="form.msg">留言</label>
+        <textarea name="message" data-i18n-ph="form.msgph" placeholder="简单描述你的需求…"></textarea>
+        <button type="submit" class="btn" style="width:100%;justify-content:center" data-i18n="form.submit">提交咨询</button>
       </form>
     </div>
   </div>
@@ -559,40 +570,144 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <div><span class="logo" style="background:transparent"><img src="assets/logo.png" alt="DoorGo" style="width:34px;height:34px;border-radius:9px"></span>DoorGo</div>
-        <p>打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。</p>
+        <p data-i18n="foot.brand">打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。</p>
       </div>
       <div>
-        <h4>快速导航</h4>
-        <a href="#services">服务方案</a>
-        <a href="#guides">攻略内容</a>
-        <a href="#payments">支付方式</a>
-        <a href="#contact">联系我们</a>
+        <h4 data-i18n="foot.nav">快速导航</h4>
+        <a href="#services" data-i18n="nav.services">服务方案</a>
+        <a href="#guides" data-i18n="nav.guides">攻略内容</a>
+        <a href="#payments" data-i18n="nav.payments">支付方式</a>
+        <a href="#contact" data-i18n="nav.contact">联系我们</a>
       </div>
       <div>
-        <h4>内容</h4>
-        <a href="#guides">开户攻略</a>
-        <a href="#guides">信用卡优惠</a>
-        <a href="#disclaimer">免责声明</a>
+        <h4 data-i18n="foot.content">内容</h4>
+        <a href="#guides" data-i18n="foot.guide">开户攻略</a>
+        <a href="#guides" data-i18n="foot.card">信用卡优惠</a>
+        <a href="#disclaimer" data-i18n="foot.disclaimer">免责声明</a>
       </div>
       <div>
-        <h4>联系</h4>
+        <h4 data-i18n="foot.contact">联系</h4>
         <a href="mailto:hello@doorgo.hk">hello@doorgo.hk</a>
-        <a href="#">微信/WhatsApp：DoorGo-HK</a>
+        <a href="#" data-i18n="foot.wx">微信/WhatsApp：DoorGo-HK</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2024 DoorGo · 内容仅供参考，不构成投资建议 · Made with <span class="heart">♥</span>
+      <span data-i18n="foot.copy">© 2024 DoorGo · 内容仅供参考，不构成投资建议 · Made with</span> <span class="heart">♥</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // 套餐购买（跳转到 Stripe Checkout / 付款说明，正式接入后替换为真实支付链接）
+  // ===== 三语文案字典（简 / 繁 / 英） =====
+  var I18N = {
+    zhHans: {
+      'nav.services':'服务方案','nav.guides':'攻略内容','nav.payments':'支付方式','nav.why':'为什么选我们','nav.faq':'常见问题','nav.contact':'联系我们','nav.cta':'立即咨询',
+      'hero.badge':'打开通往港澳金融的大门','hero.title':'港澳开户与信用卡攻略','hero.sub':'专业的一对一开户咨询、实时信用卡优惠情报、深度攻略内容。从内地到香港、从香港到海外，帮你少走弯路，轻松通关。','hero.cta1':'查看服务方案','hero.cta2':'浏览攻略','hero.stat1':'开户成功案例','hero.stat2':'篇深度攻略','hero.stat3':'在线答疑','hero.hot':'热门','hero.hotTitle':'香港银行开户全攻略','hero.planLabel':'咨询套餐','hero.price':'¥199 起',
+      'services.eyebrow':'Our Services','services.title':'服务方案','services.sub':'从免费攻略到一对一深度咨询，选择最适合你的方案。',
+      'plan1.name':'免费攻略','plan1.period':'/ 永久','plan1.desc':'入门必读，了解港澳开户基础知识','plan1.f1':'基础开户流程图文','plan1.f2':'常见问题解答','plan1.f3':'银行开户条件速查','plan1.cta':'免费浏览',
+      'plan2.pop':'最受欢迎','plan2.name':'深度攻略会员','plan2.period':'/ 年','plan2.desc':'解锁全部深度攻略 + 实时优惠情报','plan2.f1':'全部深度攻略解锁','plan2.f2':'实时信用卡优惠更新','plan2.f3':'开户路线模板与清单','plan2.f4':'专属社群答疑','plan2.cta':'立即开通',
+      'plan3.name':'一对一咨询','plan3.period':'/ 次','plan3.desc':'专属顾问，针对你的情况定制方案','plan3.f1':'1 对 1 深度咨询','plan3.f2':'开户材料预审','plan3.f3':'个性化路线规划','plan3.f4':'后续跟进指导','plan3.cta':'立即预约',
+      'guides.eyebrow':'Guides & Content','guides.title':'攻略内容库','guides.sub':'持续更新的港澳开户攻略、信用卡优惠情报与付费素材。',
+      'g1.cat':'开户攻略','g1.title':'香港银行开户全流程图解','g1.desc':'从选行、预约到面签，一步步带你走完整个开户流程。','g1.tag':'免费 · 必读',
+      'g2.cat':'信用卡','g2.title':'2024 香港信用卡迎新礼/返现对比','g2.desc':'实时更新的优惠情报，帮你挑到最划算的一张卡。','g2.tag':'免费 · 持续更新',
+      'g3.cat':'付费素材','g3.title':'开户材料清单 + 填写模板','g3.desc':'齐全的材料清单与可直接套用的填写模板，省时省心。',
+      'g4.cat':'路线规划','g4.title':'内地 → 香港 → 海外 进阶路线图','g4.desc':'为高净值用户定制的一站式离岸开户路线解析。',
+      'g5.cat':'海外账户','g5.title':'澳门 / 新加坡 / 海外账户开户对比','g5.desc':'多地区账户横向对比，帮你做出最优选择。',
+      'g6.cat':'优惠情报','g6.title':'每月信用卡优惠速递','g6.desc':'精选每月最值得参与的返现、里程、迎新活动。','g6.tag':'免费 · 每月更新',
+      'pay.lock':'付费','pay.buy':'购买 →',
+      'pay.title':'Payment Methods','pay.payTitle':'支付方式','pay.sub':'付款时你可以自由选择自己方便的支付方式，覆盖全球主流渠道。','pay.card':'信用卡','pay.apd':'iPhone 一键支付','pay.gpd':'Android 一键支付','pay.alipay':'支付宝','pay.wechat':'微信支付','pay.fps':'FPS 转数快','pay.fpsd':'香港即时转账','pay.paymed':'香港电子钱包','pay.octopus':'八达通',
+      'why.eyebrow':'Why DoorGo','why.title':'为什么选择 DoorGo','why.sub':'专业、透明、持续更新，帮你真正打开港澳金融这扇门。','why.h3':'让复杂的开户变得简单','why.p1':'港澳开户涉及选行、材料、流程、面签等多个环节，信息零散且常常过时。DoorGo 把最关键的攻略系统化整理，并持续跟踪政策变化，确保内容及时准确。','why.p2':'无论你是想出境旅游、留学会用港卡，还是规划离岸资产与海外账户，我们都能给你清晰的路线和可落地的建议。','why.f1t':'内容实时更新','why.f1d':'政策、优惠变动第一时间同步','why.f2t':'一对一定制','why.f2d':'针对个人情况给出专属方案','why.f3t':'信息透明','why.f3d':'费用、条件一目了然','why.f4t':'多地区覆盖','why.f4d':'香港、澳门、海外一站搞定','why.exp':'开户成功案例',
+      'disc.title':'⚠️ 免责声明','disc.p1':'本站所有攻略与内容仅供参考与学习用途，不构成任何投资、理财或开户的正式法律建议。银行开户政策、信用卡优惠活动可能随时调整，请以银行及发卡机构官方最新公告为准。','disc.p2':'本站不提供任何形式的代办违规、套现或规避监管的服务。开户与用卡请遵守当地法律法规。',
+      'faq.eyebrow':'FAQ','faq.title':'常见问题','faq.q1':'内地人可以开香港银行账户吗？','faq.a1':'可以。内地居民凭有效证件（如港澳通行证、身份证）及住址证明等，在香港部分银行可开立个人账户。具体条件因银行而异，建议先阅读我们的免费攻略或预约一对一咨询。','faq.q2':'开户需要准备哪些材料？','faq.a2':'通常需要：有效身份证明、港澳通行证/护照、住址证明（如水电账单、银行月结单）、过关小票等。我们提供完整的材料清单与填写模板可供下载。','faq.q3':'付费内容如何支付？','faq.a3':'我们支持信用卡（Visa/Master/银联）、Apple Pay、Google Pay、支付宝、微信支付、FPS 转数快、PayMe、八达通等多种方式，付款时你可以自由选择最方便的渠道。','faq.q4':'一对一咨询怎么做？','faq.a4':'下单后我们的顾问会与你联系，先了解你的具体情况（出行目的、资金规划等），再给出个性化的开户路线与材料准备建议。','faq.q5':'攻略内容会一直更新吗？','faq.a5':'会。会员订阅有效期内，你可持续获取我们更新的攻略、优惠情报与模板，政策变化我们会第一时间跟进。',
+      'contact.eyebrow':'Contact Us','contact.title':'联系我们','contact.sub':'有任何问题，欢迎随时留言或咨询。','contact.wx':'微信 / WhatsApp','contact.email':'邮箱','contact.hours':'服务时间','contact.hoursd':'每日 9:00 - 22:00（在线答疑）','contact.area':'服务范围','contact.aread':'香港 · 澳门 · 海外',
+      'form.topic':'我想咨询','form.o1':'香港银行开户','form.o2':'澳门账户','form.o3':'信用卡优惠','form.o4':'海外账户','form.o5':'其他','form.name':'称呼','form.nameph':'怎么称呼你','form.contact':'联系方式（微信 / WhatsApp / 邮箱）','form.contactph':'方便联系你的方式','form.msg':'留言','form.msgph':'简单描述你的需求…','form.submit':'提交咨询',
+      'foot.brand':'打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。','foot.nav':'快速导航','foot.content':'内容','foot.guide':'开户攻略','foot.card':'信用卡优惠','foot.disclaimer':'免责声明','foot.contact':'联系','foot.wx':'微信/WhatsApp：DoorGo-HK','foot.copy':'© 2024 DoorGo · 内容仅供参考，不构成投资建议 · Made with'
+    },
+    zhHant: {
+      'nav.services':'服務方案','nav.guides':'攻略內容','nav.payments':'支付方式','nav.why':'為什麼選我們','nav.faq':'常見問題','nav.contact':'聯繫我們','nav.cta':'立即諮詢',
+      'hero.badge':'開啟通往港澳金融的大門','hero.title':'港澳開戶與信用卡攻略','hero.sub':'專業的一對一開戶諮詢、即時信用卡優惠情報、深度攻略內容。從內地到香港、從香港到海外，幫你少走彎路，輕鬆通關。','hero.cta1':'查看服務方案','hero.cta2':'瀏覽攻略','hero.stat1':'開戶成功案例','hero.stat2':'篇深度攻略','hero.stat3':'在線答疑','hero.hot':'熱門','hero.hotTitle':'香港銀行開戶全攻略','hero.planLabel':'諮詢套餐','hero.price':'¥199 起',
+      'services.eyebrow':'Our Services','services.title':'服務方案','services.sub':'從免費攻略到一對一深度諮詢，選擇最適合你的方案。',
+      'plan1.name':'免費攻略','plan1.period':'/ 永久','plan1.desc':'入門必讀，了解港澳開戶基礎知識','plan1.f1':'基礎開戶流程圖文','plan1.f2':'常見問題解答','plan1.f3':'銀行開戶條件速查','plan1.cta':'免費瀏覽',
+      'plan2.pop':'最受歡迎','plan2.name':'深度攻略會員','plan2.period':'/ 年','plan2.desc':'解鎖全部深度攻略 + 即時優惠情報','plan2.f1':'全部深度攻略解鎖','plan2.f2':'即時信用卡優惠更新','plan2.f3':'開戶路線模板與清單','plan2.f4':'專屬社群答疑','plan2.cta':'立即開通',
+      'plan3.name':'一對一諮詢','plan3.period':'/ 次','plan3.desc':'專屬顧問，針對你的情況定制方案','plan3.f1':'1 對 1 深度諮詢','plan3.f2':'開戶材料預審','plan3.f3':'個性化路線規劃','plan3.f4':'後續跟進指導','plan3.cta':'立即預約',
+      'guides.eyebrow':'Guides & Content','guides.title':'攻略內容庫','guides.sub':'持續更新的港澳開戶攻略、信用卡優惠情報與付費素材。',
+      'g1.cat':'開戶攻略','g1.title':'香港銀行開戶全流程圖解','g1.desc':'從選行、預約到面簽，一步步帶你走完整個開戶流程。','g1.tag':'免費 · 必讀',
+      'g2.cat':'信用卡','g2.title':'2024 香港信用卡迎新禮/回贈對比','g2.desc':'即時更新的優惠情報，幫你挑到最划算的一張卡。','g2.tag':'免費 · 持續更新',
+      'g3.cat':'付費素材','g3.title':'開戶材料清單 + 填寫模板','g3.desc':'齊全的材料清單與可直接套用的填寫模板，省時省心。',
+      'g4.cat':'路線規劃','g4.title':'內地 → 香港 → 海外 進階路線圖','g4.desc':'為高淨值用戶定製的一站式離岸開戶路線解析。',
+      'g5.cat':'海外賬戶','g5.title':'澳門 / 新加坡 / 海外賬戶開戶對比','g5.desc':'多地區賬戶橫向對比，幫你做出最優選擇。',
+      'g6.cat':'優惠情報','g6.title':'每月信用卡優惠速遞','g6.desc':'精選每月最值得參與的回贈、里數、迎新活動。','g6.tag':'免費 · 每月更新',
+      'pay.lock':'付費','pay.buy':'購買 →',
+      'pay.title':'Payment Methods','pay.payTitle':'支付方式','pay.sub':'付款時你可以自由選擇自己方便的支付方式，覆蓋全球主流渠道。','pay.card':'信用卡','pay.apd':'iPhone 一鍵支付','pay.gpd':'Android 一鍵支付','pay.alipay':'支付寶','pay.wechat':'微信支付','pay.fps':'FPS 轉數快','pay.fpsd':'香港即時轉賬','pay.paymed':'香港電子錢包','pay.octopus':'八達通',
+      'why.eyebrow':'Why DoorGo','why.title':'為什麼選擇 DoorGo','why.sub':'專業、透明、持續更新，幫你真正打開港澳金融這扇門。','why.h3':'讓複雜的開戶變得簡單','why.p1':'港澳開戶涉及選行、材料、流程、面簽等多個環節，信息零散且常常過時。DoorGo 把最關鍵的攻略系鏈化整理，並持續追蹤政策變化，確保內容及時準確。','why.p2':'無論你是想出境旅遊、留學會用港卡，還是規劃離岸資產與海外賬戶，我們都能給你清晰的路線和可落地的建議。','why.f1t':'內容即時更新','why.f1d':'政策、優惠變動第一時間同步','why.f2t':'一對一定制','why.f2d':'針對個人情況給出專屬方案','why.f3t':'信息透明','why.f3d':'費用、條件一目了然','why.f4t':'多地區覆蓋','why.f4d':'香港、澳門、海外一站搞定','why.exp':'開戶成功案例',
+      'disc.title':'⚠️ 免責聲明','disc.p1':'本站所有攻略與內容僅供參考與學習用途，不構成任何投資、理財或開戶的正式法律建議。銀行開戶政策、信用卡優惠活動可能隨時調整，請以銀行及發卡機構官方最新公告為準。','disc.p2':'本站不提供任何形式的代辦違規、套現或規避監管的服務。開戶與用卡請遵守當地法律法規。',
+      'faq.eyebrow':'FAQ','faq.title':'常見問題','faq.q1':'內地人可以開香港銀行賬戶嗎？','faq.a1':'可以。內地居民憑有效證件（如港澳通行證、身份證）及住址證明等，在香港部分銀行可開立個人賬戶。具體條件因銀行而異，建議先閱讀我們的免費攻略或預約一對一諮詢。','faq.q2':'開戶需要準備哪些材料？','faq.a2':'通常需要：有效身份證明、港澳通行證/護照、住址證明（如水電賬單、銀行月結單）、過關小票等。我們提供完整的材料清單與填寫模板可供下載。','faq.q3':'付費內容如何支付？','faq.a3':'我們支持信用卡（Visa/Master/銀聯）、Apple Pay、Google Pay、支付寶、微信支付、FPS 轉數快、PayMe、八達通等多種方式，付款時你可以自由選擇最方便的渠道。','faq.q4':'一對一諮詢怎麼做？','faq.a4':'下單後我們的顧問會與你聯繫，先了解你的具體情況（出行目的、資金規劃等），再給出個性化的開戶路線與材料準備建議。','faq.q5':'攻略內容會一直更新嗎？','faq.a5':'會。會員訂閱有效期內，你可持續獲取我們更新的攻略、優惠情報與模板，政策變化我們會第一時間跟進。',
+      'contact.eyebrow':'Contact Us','contact.title':'聯繫我們','contact.sub':'有任何問題，歡迎隨時留言或諮詢。','contact.wx':'微信 / WhatsApp','contact.email':'郵箱','contact.hours':'服務時間','contact.hoursd':'每日 9:00 - 22:00（在線答疑）','contact.area':'服務範圍','contact.aread':'香港 · 澳門 · 海外',
+      'form.topic':'我想諮詢','form.o1':'香港銀行開戶','form.o2':'澳門賬戶','form.o3':'信用卡優惠','form.o4':'海外賬戶','form.o5':'其他','form.name':'稱呼','form.nameph':'怎麼稱呼你','form.contact':'聯繫方式（微信 / WhatsApp / 郵箱）','form.contactph':'方便聯繫你的方式','form.msg':'留言','form.msgph':'簡單描述你的需求…','form.submit':'提交諮詢',
+      'foot.brand':'開啟通往港澳金融的大門。開戶攻略、信用卡優惠、一對一諮詢。','foot.nav':'快速導航','foot.content':'內容','foot.guide':'開戶攻略','foot.card':'信用卡優惠','foot.disclaimer':'免責聲明','foot.contact':'聯繫','foot.wx':'微信/WhatsApp：DoorGo-HK','foot.copy':'© 2024 DoorGo · 內容僅供參考，不構成投資建議 · Made with'
+    },
+    en: {
+      'nav.services':'Services','nav.guides':'Guides','nav.payments':'Payments','nav.why':'Why Us','nav.faq':'FAQ','nav.contact':'Contact','nav.cta':'Get Started',
+      'hero.badge':'Open the door to HK & Macau finance','hero.title':'HK & Macau Banking & Card Guides','hero.sub':'One-on-one account opening guidance, real-time credit card rewards, and in-depth guides. From mainland to Hong Kong, from Hong Kong to overseas — we help you navigate with confidence.','hero.cta1':'View Services','hero.cta2':'Browse Guides','hero.stat1':'Successful cases','hero.stat2':'In-depth guides','hero.stat3':'Online support','hero.hot':'Hot','hero.hotTitle':'Hong Kong Bank Account Guide','hero.planLabel':'Consultation','hero.price':'From ¥199',
+      'services.eyebrow':'Our Services','services.title':'Service Plans','services.sub':'From free guides to one-on-one consultation, choose the plan that fits you.',
+      'plan1.name':'Free Guide','plan1.period':'/ Forever','plan1.desc':'Essential reading to understand HK & Macau account basics','plan1.f1':'Basic account opening steps','plan1.f2':'Common questions answered','plan1.f3':'Bank requirements quick check','plan1.cta':'Browse Free',
+      'plan2.pop':'Most Popular','plan2.name':'Premium Membership','plan2.period':'/ Year','plan2.desc':'Unlock all in-depth guides + real-time rewards intel','plan2.f1':'Unlock all in-depth guides','plan2.f2':'Real-time credit card offers','plan2.f3':'Account opening templates & checklists','plan2.f4':'Exclusive community support','plan2.cta':'Subscribe Now',
+      'plan3.name':'1-on-1 Consultation','plan3.period':'/ Session','plan3.desc':'A dedicated advisor to tailor a plan for you','plan3.f1':'1-on-1 in-depth consultation','plan3.f2':'Document pre-review','plan3.f3':'Personalized route planning','plan3.f4':'Follow-up guidance','plan3.cta':'Book Now',
+      'guides.eyebrow':'Guides & Content','guides.title':'Guide Library','guides.sub':'Constantly updated HK & Macau account guides, card rewards intel, and premium content.',
+      'g1.cat':'Account Guide','g1.title':'Hong Kong Bank Account — Step-by-Step','g1.desc':'From choosing a bank to the interview, we walk you through the whole process.','g1.tag':'Free · Must-read',
+      'g2.cat':'Credit Cards','g2.title':'2024 HK Credit Card Welcome Offers Compared','g2.desc':'Real-time rewards intel to help you pick the best card.','g2.tag':'Free · Updated',
+      'g3.cat':'Premium Content','g3.title':'Account Opening Checklist + Templates','g3.desc':'A complete document checklist and ready-to-use templates.','g4.cat':'Route Planning','g4.title':'Mainland → HK → Overseas Roadmap','g4.desc':'A one-stop offshore account route for high-net-worth users.',
+      'g5.cat':'Offshore Accounts','g5.title':'Macau / Singapore / Overseas Comparison','g5.desc':'Compare accounts across regions to make the best choice.',
+      'g6.cat':'Rewards Intel','g6.title':'Monthly Credit Card Offers','g6.desc':'Handpicked cashback, miles, and welcome offers each month.','g6.tag':'Free · Monthly',
+      'pay.lock':'Paid','pay.buy':'Buy →',
+      'pay.title':'Payment Methods','pay.payTitle':'Payment Methods','pay.sub':'Choose the payment method most convenient for you — covering major channels worldwide.','pay.card':'Credit Card','pay.apd':'One-tap on iPhone','pay.gpd':'One-tap on Android','pay.alipay':'Alipay','pay.wechat':'WeChat Pay','pay.fps':'FPS','pay.fpsd':'HK instant transfer','pay.paymed':'HK e-wallet','pay.octopus':'Octopus',
+      'why.eyebrow':'Why DoorGo','why.title':'Why Choose DoorGo','why.sub':'Professional, transparent, and always updated — we truly open the door to HK & Macau finance.','why.h3':'Making account opening simple','why.p1':'Opening a HK or Macau account involves choosing a bank, documents, procedures and interviews — the information is scattered and often outdated. DoorGo organizes the key guides and tracks policy changes to keep everything accurate.','why.p2':'Whether you travel abroad, study, or plan offshore assets and overseas accounts, we give you a clear route and actionable advice.','why.f1t':'Always Updated','why.f1d':'Policy & offer changes synced instantly','why.f2t':'Personalized','why.f2d':'Tailored advice for your situation','why.f3t':'Transparent','why.f3d':'Fees & conditions clearly shown','why.f4t':'Multi-region','why.f4d':'HK, Macau & overseas in one place','why.exp':'Successful cases',
+      'disc.title':'⚠️ Disclaimer','disc.p1':'All guides and content on this site are for reference and learning only, and do not constitute formal legal or financial advice. Bank policies and credit card offers may change at any time — please refer to official announcements.','disc.p2':'We do not provide any service involving non-compliant transactions, cash-out, or circumvention of regulations. Please comply with local laws.','faq.eyebrow':'FAQ','faq.title':'Frequently Asked Questions','faq.q1':'Can mainland residents open a Hong Kong bank account?','faq.a1':'Yes. Mainland residents can open a personal account at some Hong Kong banks with valid documents (e.g. exit-entry permit, ID) and proof of address. Requirements vary by bank — we suggest reading our free guide or booking a consultation.','faq.q2':'What documents do I need?','faq.a2':'Typically: valid ID, exit-entry permit/passport, proof of address (e.g. utility bill, bank statement), and the immigration slip. We provide a complete checklist and fillable templates.','faq.q3':'How do I pay for premium content?','faq.a3':'We accept credit cards (Visa/Master/UnionPay), Apple Pay, Google Pay, Alipay, WeChat Pay, FPS, PayMe, and Octopus — choose whichever is most convenient.','faq.q4':'How does 1-on-1 consultation work?','faq.a4':'After ordering, our advisor will contact you, understand your situation (travel purpose, financial planning, etc.), and provide a personalized account-opening route and document advice.','faq.q5':'Will the guides be updated?','faq.a5':'Yes. During your membership period, you can continuously access our updated guides, offers, and templates — we follow policy changes promptly.',
+      'contact.eyebrow':'Contact Us','contact.title':'Contact Us','contact.sub':'Have questions? Leave a message or reach out anytime.','contact.wx':'WeChat / WhatsApp','contact.email':'Email','contact.hours':'Support Hours','contact.hoursd':'Daily 9:00 - 22:00 (online)','contact.area':'Service Areas','contact.aread':'Hong Kong · Macau · Overseas',
+      'form.topic':'I want to ask about','form.o1':'Hong Kong bank account','form.o2':'Macau account','form.o3':'Credit card rewards','form.o4':'Overseas account','form.o5':'Other','form.name':'Your Name','form.nameph':'How should we address you','form.contact':'Contact (WeChat / WhatsApp / Email)','form.contactph':'How to reach you','form.msg':'Message','form.msgph':'Briefly describe your needs…','form.submit':'Send Message',
+      'foot.brand':'Open the door to HK & Macau finance. Account guides, credit card rewards, and 1-on-1 consultation.','foot.nav':'Quick Links','foot.content':'Content','foot.guide':'Account Guides','foot.card':'Credit Card Offers','foot.disclaimer':'Disclaimer','foot.contact':'Contact','foot.wx':'WeChat/WhatsApp: DoorGo-HK','foot.copy':'© 2024 DoorGo · For reference only, not investment advice · Made with'
+    }
+  };
+
+  // ===== 语言切换 =====
+  var currentLang = 'zhHans';
+  function setLang(lang){
+    currentLang = lang;
+    var dict = I18N[lang] || I18N.zhHans;
+    // 文本节点
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined) el.textContent = dict[key];
+    });
+    // placeholder 节点
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-ph');
+      if(dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+    });
+    // 切换按钮高亮
+    document.querySelectorAll('#langSwitch button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+    // 更新 html lang 属性
+    document.documentElement.lang = (lang === 'zhHans' ? 'zh-Hans' : lang === 'zhHant' ? 'zh-Hant' : 'en');
+    try{ localStorage.setItem('doorgo-lang', lang); }catch(e){}
+  }
+  document.querySelectorAll('#langSwitch button').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
+  });
+  // 读取已保存的语言
+  (function(){
+    var saved = null;
+    try{ saved = localStorage.getItem('doorgo-lang'); }catch(e){}
+    if(saved && I18N[saved]) setLang(saved);
+  })();
+
+  // ===== 套餐购买（接入 Stripe Checkout 后替换为真实支付链接） =====
   function buyPlan(type){
     alert('你选择了「' + type + '」套餐。\n\n支付功能即将接入，付款时你可自由选择：信用卡 / Apple Pay / 支付宝 / 微信 / FPS / PayMe 等。');
   }
 
-  // 咨询表单提交（demo，后续可接入微信/邮箱/webhook）
+  // ===== 咨询表单提交（demo） =====
   function handleSubmit(e){
     e.preventDefault();
     var name = e.target.name.value;
