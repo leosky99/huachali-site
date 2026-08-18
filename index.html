@@ -1,291 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HUA CHA LI · Premium Handcrafted Tea</title>
-<meta name="description" content="HUA CHA LI — freshly made, premium-ingredient handcrafted tea. Classic milk tea, refreshing fruit tea, pure tea and delicious snacks.">
-<meta property="og:title" content="HUA CHA LI · Premium Handcrafted Tea">
-<meta property="og:description" content="Every cup is handcrafted with premium ingredients and perfectly brewed tea leaves.">
+<title>DoorGo · 港澳开户与信用卡攻略 | Open the Door to HK &amp; Macau Finance</title>
+<meta name="description" content="DoorGo — 专业的港澳开户、信用卡优惠攻略与付费服务站。一对一开户咨询、实时信用卡优惠情报、深度攻略内容。">
+<meta property="og:title" content="DoorGo · 港澳开户与信用卡攻略">
+<meta property="og:description" content="打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。">
 <meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.png">
 <style>
   :root{
-    --green:#016236;
-    --green-dark:#014d2b;
-    --green-soft:#e8f3ec;
-    --mint:#f3faf6;
-    --text:#2c2c2c;
-    --muted:#4a4a4a;
-    --line:#e3ebe5;
-    --gold:#c8a24b;
+    --green:#0B6E5C;
+    --green-dark:#085245;
+    --green-soft:#E7F2EF;
+    --mint:#F3FAF8;
+    --text:#22313D;
+    --muted:#5A6B78;
+    --line:#DCE7E3;
+    --gold:#C8A24B;
+    --gold-soft:#F6EFDC;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
     color:var(--text);
     background:#fff;
-    line-height:1.6;
+    line-height:1.7;
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
 
   /* ===== Header ===== */
   header{
     position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.94);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--green);font-size:1.25rem}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--green-dark);font-size:1.3rem;letter-spacing:-.01em}
   .brand .logo{
-    width:38px;height:38px;border-radius:10px;
-    background:linear-gradient(135deg,var(--green),#069a52);
-    display:grid;place-items:center;color:#fff;font-size:.95rem;font-weight:800;letter-spacing:.02em;
+    width:38px;height:38px;border-radius:11px;
+    background:linear-gradient(135deg,var(--green),#0E8A70);
+    display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.05rem;
+    box-shadow:0 4px 12px -4px rgba(11,110,92,.5);
   }
-  .brand small{font-weight:600;color:var(--muted);font-size:.7rem;letter-spacing:.14em}
-  .nav-links{display:flex;gap:30px;font-weight:600;color:var(--muted)}
+  .nav-links{display:flex;gap:28px;font-weight:600;color:var(--muted);font-size:.95rem}
   .nav-links a{transition:color .2s}
   .nav-links a:hover{color:var(--green)}
-  .nav-cta{display:flex;align-items:center;gap:16px}
-  .nav-phone{font-weight:700;color:var(--green)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
     background:var(--green);color:#fff;font-weight:700;
     padding:11px 22px;border-radius:999px;border:none;cursor:pointer;
-    transition:background .2s,transform .1s;
+    transition:background .2s,transform .1s;font-size:.95rem;
   }
   .btn:hover{background:var(--green-dark)}
   .btn:active{transform:scale(.97)}
   .btn.ghost{background:transparent;color:var(--green);border:2px solid var(--green)}
   .btn.ghost:hover{background:var(--green-soft)}
+  .btn.gold{background:var(--gold);color:#fff}
+  .btn.gold:hover{background:#b38e3c}
   .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--green)}
 
   /* ===== Hero ===== */
-  .hero{background:linear-gradient(180deg,var(--mint),#fff);padding:72px 0 64px;position:relative;overflow:hidden}
-  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .hero{background:linear-gradient(180deg,var(--mint),#fff);padding:76px 0 64px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,var(--green-soft),transparent 70%)}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
   .badge{
     display:inline-flex;align-items:center;gap:8px;background:#fff;
     border:1px solid var(--line);border-radius:999px;padding:7px 14px;
     font-size:.85rem;font-weight:600;color:var(--green);margin-bottom:20px;
   }
   .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
-  h1{font-size:3.2rem;line-height:1.15;color:var(--green-dark);font-weight:800;margin-bottom:18px}
+  h1{font-size:3rem;line-height:1.18;color:var(--green-dark);font-weight:800;margin-bottom:18px}
+  h1 .accent{color:var(--green)}
   .hero p{color:var(--muted);max-width:480px;margin-bottom:28px;font-size:1.05rem}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .stats{display:flex;gap:40px;margin-top:36px}
   .stat b{display:block;font-size:1.9rem;color:var(--green)}
   .stat span{color:var(--muted);font-size:.9rem}
   .hero-art{position:relative}
-  .hero-art .card{
+  .hero-card{
     background:#fff;border:1px solid var(--line);border-radius:24px;
-    box-shadow:0 24px 60px -24px rgba(1,98,54,.25);overflow:hidden;
+    box-shadow:0 28px 60px -28px rgba(11,110,92,.3);overflow:hidden;
   }
-  .hero-art .cup{
-    aspect-ratio:4/4.4;background:
-      radial-gradient(circle at 70% 26%,#fff 0 8%,transparent 8.5%),
-      radial-gradient(circle at 30% 40%,rgba(255,255,255,.5) 0 14%,transparent 14.5%),
-      linear-gradient(160deg,#f6d9a8 0%,#e8b96a 38%,#b9792f 100%);
-    position:relative;
+  .hero-card .visual{
+    aspect-ratio:4/3.2;background:linear-gradient(150deg,var(--green),#0E8A70);
+    position:relative;display:grid;place-items:center;
   }
-  .hero-art .cup::before{
-    content:"";position:absolute;left:50%;top:-16px;transform:translateX(-50%);
-    width:120px;height:120px;border-radius:50%;
-    background:radial-gradient(circle at 50% 45%,#fdf6ec 0 42%,transparent 42.5%);
-    border:8px solid #e8b96a;
+  .hero-card .visual .door{
+    width:46%;aspect-ratio:3/4;background:#fff;border-radius:10px 10px 0 0;
+    position:relative;box-shadow:inset 0 -10px 24px rgba(11,110,92,.12);
   }
-  .bubble{
-    position:absolute;border-radius:50%;background:#2b1a0e;opacity:.9;
-    width:16px;height:16px;bottom:18%;left:24%;
-    box-shadow:30px 8px 0 #2b1a0e,58px -6px 0 #2b1a0e,20px 18px 0 #2b1a0e,46px 16px 0 #2b1a0e;
+  .hero-card .visual .door::after{
+    content:"";position:absolute;right:12%;top:50%;width:10px;height:10px;border-radius:50%;background:var(--gold);
   }
+  .hero-card .visual .arrow{
+    position:absolute;font-size:2.4rem;font-weight:800;color:var(--gold);
+    animation:float 2.4s ease-in-out infinite;
+  }
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
   .float-card{
     position:absolute;background:#fff;border-radius:16px;padding:14px 16px;
     box-shadow:0 14px 34px -12px rgba(0,0,0,.25);border:1px solid var(--line);
   }
   .float-card .tag{font-size:.72rem;color:var(--muted);margin-bottom:2px}
   .float-card b{color:var(--green);font-size:1.05rem}
-  .fc-reco{bottom:-18px;left:-20px}
-  .fc-price{bottom:24px;right:-14px;text-align:center}
-  .fc-price .price{font-size:1.3rem;color:var(--green-dark);font-weight:800}
-  .fc-price .from{font-size:.72rem;color:var(--muted)}
+  .fc-1{bottom:-18px;left:-20px}
+  .fc-2{bottom:24px;right:-14px;text-align:center}
+  .fc-2 .price{font-size:1.3rem;color:var(--green-dark);font-weight:800}
+  .fc-2 .from{font-size:.72rem;color:var(--muted)}
 
   /* ===== Sections ===== */
   section{padding:80px 0}
-  .sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+  .sec-head{text-align:center;max-width:660px;margin:0 auto 48px}
   .sec-head .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-  .sec-head h2{font-size:2.4rem;color:var(--green-dark);margin:8px 0 14px}
+  .sec-head h2{font-size:2.3rem;color:var(--green-dark);margin:8px 0 14px}
   .sec-head p{color:var(--muted)}
 
-  /* ===== About ===== */
-  #about{background:#fff}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  .about-text h3{color:var(--green);font-size:1.5rem;margin-bottom:16px}
-  .about-text p{color:var(--muted);margin-bottom:14px}
-  .features{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
-  .feature{background:var(--mint);border:1px solid var(--line);border-radius:16px;padding:20px}
-  .feature .ico{font-size:1.5rem;margin-bottom:8px}
+  /* ===== Services / Plans ===== */
+  #services{background:#fff}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .plan{
+    background:var(--mint);border:1px solid var(--line);border-radius:22px;padding:30px;
+    display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;position:relative;
+  }
+  .plan:hover{transform:translateY(-6px);box-shadow:0 20px 40px -18px rgba(11,110,92,.28)}
+  .plan.popular{border:2px solid var(--green);background:#fff}
+  .plan .pop-tag{
+    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    background:var(--gold);color:#fff;font-size:.75rem;font-weight:800;
+    padding:4px 14px;border-radius:999px;letter-spacing:.04em;
+  }
+  .plan .p-name{color:var(--green);font-weight:800;font-size:1.1rem;margin-bottom:6px}
+  .plan .p-price{color:var(--green-dark);font-weight:800;font-size:2rem;margin-bottom:4px}
+  .plan .p-price small{font-size:.95rem;color:var(--muted);font-weight:500}
+  .plan .p-desc{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+  .plan ul{list-style:none;margin-bottom:24px;flex:1}
+  .plan ul li{padding:8px 0;color:var(--text);font-size:.92rem;border-bottom:1px dashed var(--line);display:flex;gap:8px}
+  .plan ul li::before{content:"✓";color:var(--green);font-weight:800}
+  .plan .btn{justify-content:center;width:100%}
+
+  /* ===== Guides / Content ===== */
+  #guides{background:var(--mint)}
+  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .guide{
+    background:#fff;border-radius:18px;border:1px solid var(--line);overflow:hidden;
+    transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;
+  }
+  .guide:hover{transform:translateY(-6px);box-shadow:0 18px 36px -16px rgba(11,110,92,.25)}
+  .guide .thumb{aspect-ratio:16/9;position:relative;display:grid;place-items:center;font-size:2.6rem}
+  .guide .thumb.t1{background:linear-gradient(140deg,#DBF0EA,#B7DFD4)}
+  .guide .thumb.t2{background:linear-gradient(140deg,#F6EFDC,#EADFC0)}
+  .guide .thumb.t3{background:linear-gradient(140deg,#E3ECF5,#C7D9EA)}
+  .guide .thumb.t4{background:linear-gradient(140deg,#F2E5EC,#E4CBD8)}
+  .guide .thumb.t5{background:linear-gradient(140deg,#E9F0E6,#CFDFC8)}
+  .guide .thumb.t6{background:linear-gradient(140deg,#F6EDE4,#EBDBC9)}
+  .guide .cat{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);color:var(--green-dark);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px}
+  .guide .lock{position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px}
+  .guide .g-body{padding:20px}
+  .guide .g-body h3{color:var(--green-dark);font-size:1.05rem;margin-bottom:6px}
+  .guide .g-body p{color:var(--muted);font-size:.88rem;margin-bottom:16px}
+  .guide .g-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+  .guide .g-foot .price{color:var(--green-dark);font-weight:800}
+  .guide .g-foot .free{color:var(--gold);font-weight:700;font-size:.85rem}
+
+  /* ===== Payments ===== */
+  #payments{background:#fff}
+  .pay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .pay-card{
+    border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center;
+    background:var(--mint);transition:transform .2s,border-color .2s;
+  }
+  .pay-card:hover{transform:translateY(-4px);border-color:var(--green)}
+  .pay-card .p-ico{font-size:1.6rem;margin-bottom:8px}
+  .pay-card b{display:block;color:var(--green-dark);font-size:.95rem;margin-bottom:2px}
+  .pay-card span{color:var(--muted);font-size:.8rem}
+
+  /* ===== Why ===== */
+  #why{background:var(--mint)}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .why-text h3{color:var(--green);font-size:1.5rem;margin-bottom:16px}
+  .why-text p{color:var(--muted);margin-bottom:14px}
+  .features{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  .feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+  .feature .ico{font-size:1.4rem;margin-bottom:8px}
   .feature b{color:var(--green-dark)}
-  .feature span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
-  .about-art{
-    background:linear-gradient(160deg,var(--green),#0b7d4a);border-radius:28px;
-    aspect-ratio:4/4.6;position:relative;overflow:hidden;
+  .feature span{display:block;color:var(--muted);font-size:.88rem;margin-top:4px}
+  .why-art{
+    background:linear-gradient(160deg,var(--green),#0E8A70);border-radius:28px;
+    aspect-ratio:4/4.4;position:relative;overflow:hidden;display:grid;place-items:center;
   }
-  .about-art .leaf{position:absolute;font-size:8rem;opacity:.25}
-  .about-art .l1{top:-20px;left:-20px;transform:rotate(-20deg)}
-  .about-art .l2{bottom:-30px;right:-20px;transform:rotate(140deg)}
-  .exp-badge{
-    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-    text-align:center;color:#fff;
-  }
-  .exp-badge b{font-size:5rem;line-height:1;display:block}
-  .exp-badge span{opacity:.9}
+  .why-art .big{font-size:6rem;line-height:1}
+  .why-art .exp{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);text-align:center;color:#fff}
+  .why-art .exp b{font-size:2.6rem;display:block;line-height:1}
+  .why-art .exp span{opacity:.9;font-size:.9rem}
 
-  /* ===== Menu ===== */
-  #menu{background:var(--mint)}
-  .tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
-  .tab{
-    background:#fff;border:1px solid var(--line);border-radius:999px;
-    padding:9px 20px;font-weight:600;color:var(--muted);cursor:pointer;transition:.2s;
-  }
-  .tab.active,.tab:hover{background:var(--green);color:#fff;border-color:var(--green)}
-  .menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-  .drink{
-    background:#fff;border-radius:20px;border:1px solid var(--line);overflow:hidden;
-    transition:transform .25s,box-shadow .25s;
-  }
-  .drink:hover{transform:translateY(-6px);box-shadow:0 20px 40px -18px rgba(1,98,54,.28)}
-  .drink .photo{position:relative;aspect-ratio:1/1}
-  .drink .photo .c1{width:100%;height:100%;background:linear-gradient(150deg,#e9b874,#c0842f)}
-  .drink .photo .c2{width:100%;height:100%;background:linear-gradient(150deg,#f5c98a,#e29a45)}
-  .drink .photo .c3{width:100%;height:100%;background:linear-gradient(150deg,#a8d5a2,#5ba566)}
-  .drink .photo .c4{width:100%;height:100%;background:linear-gradient(150deg,#d7a97c,#9c6a3c)}
-  .drink .photo .c5{width:100%;height:100%;background:linear-gradient(150deg,#f7c65b,#e29a20)}
-  .drink .photo .c6{width:100%;height:100%;background:linear-gradient(150deg,#b98cd6,#7c4da0)}
-  .drink .photo .c7{width:100%;height:100%;background:linear-gradient(150deg,#f5df6b,#c8b22e)}
-  .drink .photo .c8{width:100%;height:100%;background:linear-gradient(150deg,#8fbf7f,#4d8a44)}
-  .drink .photo .c9{width:100%;height:100%;background:linear-gradient(150deg,#cfe6b0,#8fbf7f)}
-  .drink .photo .c10{width:100%;height:100%;background:linear-gradient(150deg,#e8b96a,#c0842f)}
-  .drink .photo .c11{width:100%;height:100%;background:linear-gradient(150deg,#f0d9a8,#d9b06a)}
-  .drink .photo .cup-s{
-    position:absolute;inset:0;margin:auto;width:56%;aspect-ratio:3/4;
-    border-radius:8px 8px 16px 16px;background:rgba(255,255,255,.82);
-    box-shadow:0 8px 20px -6px rgba(0,0,0,.25);
-  }
-  .drink .photo .straw{
-    position:absolute;left:50%;top:10px;transform:translateX(-50%) rotate(12deg);
-    width:10px;height:42%;background:#e0654a;border-radius:6px;transform-origin:bottom;
-  }
-  .drink .new-flag{
-    position:absolute;top:12px;left:12px;background:var(--gold);color:#fff;
-    font-size:.7rem;font-weight:800;padding:4px 10px;border-radius:999px;letter-spacing:.06em;
-  }
-  .drink .score{
-    position:absolute;top:12px;right:12px;background:rgba(255,255,255,.9);
-    font-size:.8rem;font-weight:700;color:var(--green-dark);padding:4px 10px;border-radius:999px;
-  }
-  .drink .info{padding:18px}
-  .drink .info h3{color:var(--green);font-size:1.1rem;margin-bottom:4px}
-  .drink .info .desc{color:var(--muted);font-size:.88rem;min-height:2.5em}
-  .drink .info .row{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
-  .drink .info .price{color:var(--green-dark);font-weight:800;font-size:1.15rem}
-  .drink .info .more{color:var(--gold);font-weight:700;font-size:.85rem}
-  .menu-foot{text-align:center;margin-top:40px}
-
-  /* ===== Reviews ===== */
-  #reviews{background:#fff}
-  .reviews-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:stretch}
-  .quote-cards{display:grid;grid-template-columns:1fr;gap:20px}
-  .quote{background:var(--mint);border:1px solid var(--line);border-radius:18px;padding:24px}
-  .quote p{color:var(--muted);font-size:.97rem;margin-bottom:16px}
-  .quote .stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
-  .quote .who{display:flex;align-items:center;gap:12px}
-  .quote .who .av{
-    width:42px;height:42px;border-radius:50%;background:var(--green);
-    color:#fff;display:grid;place-items:center;font-weight:700;
-  }
-  .quote .who b{color:var(--green-dark)}
-  .quote .who span{display:block;color:var(--muted);font-size:.82rem}
-  .rating-card{
-    background:linear-gradient(160deg,var(--green),#0b7d4a);color:#fff;
-    border-radius:24px;padding:36px;display:flex;flex-direction:column;justify-content:center;
-  }
-  .rating-card .big{font-size:4rem;font-weight:800;line-height:1}
-  .rating-card .big small{font-size:1.2rem;font-weight:600}
-  .rating-card .metrics{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
-  .rating-card .m b{display:block;font-size:1.4rem}
-  .rating-card .m span{opacity:.85;font-size:.85rem}
+  /* ===== Disclaimer ===== */
+  #disclaimer{background:#fff}
+  .disc-box{max-width:820px;margin:0 auto;background:var(--gold-soft);border:1px solid #ECDFBA;border-radius:18px;padding:28px}
+  .disc-box h3{color:#8a6d2a;margin-bottom:12px;font-size:1.1rem}
+  .disc-box p{color:#6b5a32;font-size:.9rem;margin-bottom:10px}
 
   /* ===== FAQ ===== */
-  #faq{background:#fff}
+  #faq{background:var(--mint)}
   .faq-list{max-width:760px;margin:0 auto}
-  .faq{
-    background:var(--mint);border:1px solid var(--line);border-radius:14px;
-    margin-bottom:12px;padding:0;overflow:hidden;
-  }
-  .faq summary{
-    cursor:pointer;list-style:none;font-weight:700;color:var(--green-dark);
-    padding:18px 20px;display:flex;justify-content:space-between;align-items:center;
-  }
+  .faq{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  .faq summary{cursor:pointer;list-style:none;font-weight:700;color:var(--green-dark);padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
   .faq summary::-webkit-details-marker{display:none}
   .faq summary::after{content:"+";font-size:1.4rem;color:var(--green);transition:transform .2s}
   .faq[open] summary::after{transform:rotate(45deg)}
   .faq p{padding:0 20px 18px;color:var(--muted);font-size:.95rem}
 
-  /* ===== Locations ===== */
-  #locations{background:#fff}
-  .loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .loc-card{background:var(--mint);border:1px solid var(--line);border-radius:20px;padding:28px}
-  .loc-pin{font-size:1.8rem;margin-bottom:12px}
-  .loc-card h3{color:var(--green-dark);font-size:1.2rem;margin-bottom:8px}
-  .loc-card p{color:var(--muted);font-size:.95rem}
-  .loc-card .loc-hours{color:var(--green);font-weight:600;margin-top:10px}
-
   /* ===== Contact ===== */
-  #contact{background:var(--mint)}
+  #contact{background:#fff}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-  .contact-info h2{font-size:2.2rem;color:var(--green-dark);margin-bottom:16px}
-  .contact-info p{color:var(--muted);margin-bottom:28px}
-  .contact-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
-  .contact-row .ico{font-size:1.4rem}
+  .contact-info h2{font-size:2.1rem;color:var(--green-dark);margin-bottom:16px}
+  .contact-info p{color:var(--muted);margin-bottom:26px}
+  .contact-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+  .contact-row .ico{font-size:1.3rem}
   .contact-row b{color:var(--green-dark)}
-  .contact-row span{display:block;color:var(--muted);font-size:.95rem}
-  .contact-form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px}
+  .contact-row span{display:block;color:var(--muted);font-size:.93rem}
+  .contact-form{background:var(--mint);border:1px solid var(--line);border-radius:24px;padding:32px}
   .contact-form label{display:block;font-weight:600;color:var(--green-dark);margin-bottom:6px;font-size:.9rem}
-  .contact-form input,.contact-form textarea{
+  .contact-form select,.contact-form input,.contact-form textarea{
     width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
-    font-size:.95rem;font-family:inherit;margin-bottom:16px;transition:border .2s;
+    font-size:.95rem;font-family:inherit;margin-bottom:16px;transition:border .2s;background:#fff;
   }
-  .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--green)}
+  .contact-form select:focus,.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--green)}
   .contact-form textarea{min-height:110px;resize:vertical}
 
   /* ===== Footer ===== */
-  footer{background:var(--green-dark);color:#cfe5d8;padding:56px 0 24px}
+  footer{background:var(--green-dark);color:#C9E1DB;padding:56px 0 24px}
   .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:36px}
   .foot-brand{font-size:1.3rem;font-weight:800;color:#fff}
-  .foot-brand .logo{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#fff;color:var(--green-dark);margin-right:8px}
+  .foot-brand .logo{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#fff;color:var(--green-dark);margin-right:8px;font-size:1rem}
   .foot-brand p{font-weight:400;font-size:.88rem;margin-top:14px;line-height:1.7}
   footer h4{color:#fff;margin-bottom:14px;font-size:1rem}
-  footer a{display:block;color:#cfe5d8;margin-bottom:10px;font-size:.9rem;transition:color .2s}
+  footer a{display:block;color:#C9E1DB;margin-bottom:10px;font-size:.9rem;transition:color .2s}
   footer a:hover{color:#fff}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.18);padding-top:22px;text-align:center;font-size:.85rem}
-  .foot-bottom .heart{color:#e0654a}
+  .foot-bottom .heart{color:#E0A94A}
 
   @media(max-width:900px){
-    .hero .wrap,.about-grid,.reviews-grid,.contact-grid{grid-template-columns:1fr}
-    .menu-grid{grid-template-columns:repeat(2,1fr)}
-    .loc-grid{grid-template-columns:1fr}
+    .hero .wrap,.why-grid,.contact-grid{grid-template-columns:1fr}
+    .plans,.guide-grid{grid-template-columns:1fr 1fr}
+    .pay-grid{grid-template-columns:repeat(2,1fr)}
     .foot-grid{grid-template-columns:1fr 1fr}
     h1{font-size:2.4rem}
-    .nav-links,.nav-phone{display:none}
+    .nav-links{display:none}
     .menu-toggle{display:block}
     .nav-links.open{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:#fff;padding:20px 24px;border-bottom:1px solid var(--line);gap:16px}
   }
   @media(max-width:560px){
-    .menu-grid{grid-template-columns:1fr}
+    .plans,.guide-grid{grid-template-columns:1fr}
+    .pay-grid{grid-template-columns:1fr 1fr}
     .stats{gap:24px;flex-wrap:wrap}
     .foot-grid{grid-template-columns:1fr}
   }
@@ -296,19 +270,19 @@
 <header>
   <div class="wrap nav">
     <a href="#" class="brand">
-      <span class="logo">HCL</span>
-      HUA CHA LI
+      <span class="logo" style="background:transparent;box-shadow:none"><img src="assets/logo.png" alt="DoorGo" style="width:38px;height:38px;border-radius:11px"></span>
+      DoorGo
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#services">服务方案</a>
+      <a href="#guides">攻略内容</a>
+      <a href="#payments">支付方式</a>
+      <a href="#why">为什么选我们</a>
+      <a href="#faq">常见问题</a>
+      <a href="#contact">联系我们</a>
     </nav>
     <div class="nav-cta">
-      <a href="tel:+85265423394" class="nav-phone">+852 6542 3394</a>
-      <a href="#contact" class="btn">Order Now</a>
+      <a href="#contact" class="btn">立即咨询</a>
     </div>
     <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
   </div>
@@ -317,207 +291,199 @@
 <section class="hero" id="home">
   <div class="wrap">
     <div>
-      <span class="badge"><span class="dot"></span>Freshly Made · Premium Ingredients</span>
-      <h1>Refreshing,<br>Delicious Tea</h1>
-      <p>Every cup is handcrafted with premium ingredients and perfectly brewed tea leaves, delivering a one-of-a-kind tea experience.</p>
+      <span class="badge"><span class="dot"></span>打开通往港澳金融的大门</span>
+      <h1><span class="accent">DoorGo</span> · 港澳开户与信用卡攻略</h1>
+      <p>专业的一对一开户咨询、实时信用卡优惠情报、深度攻略内容。从内地到香港、从香港到海外，帮你少走弯路，轻松通关。</p>
       <div class="hero-cta">
-        <a href="#menu" class="btn">Explore Menu</a>
-        <a href="#about" class="btn ghost">About Us</a>
+        <a href="#services" class="btn">查看服务方案</a>
+        <a href="#guides" class="btn ghost">浏览攻略</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>50+</b><span>Drink Varieties</span></div>
-        <div class="stat"><b>10k+</b><span>Happy Customers</span></div>
-        <div class="stat"><b>5</b><span>Years of Craft</span></div>
+        <div class="stat"><b>500+</b><span>开户成功案例</span></div>
+        <div class="stat"><b>120+</b><span>篇深度攻略</span></div>
+        <div class="stat"><b>7×24</b><span>在线答疑</span></div>
       </div>
     </div>
     <div class="hero-art">
-      <div class="card">
-        <div class="cup"><span class="bubble"></span></div>
+      <div class="hero-card">
+        <div class="visual">
+          <div class="door"></div>
+          <div class="arrow">→</div>
+        </div>
       </div>
-      <div class="float-card fc-reco">
-        <div class="tag">🥤 Signature</div>
-        <b>Pearl Milk Tea</b>
+      <div class="float-card fc-1">
+        <div class="tag">🔥 热门</div>
+        <b>香港银行开户全攻略</b>
       </div>
-      <div class="float-card fc-price">
-        <span class="from">From</span>
-        <div class="price">$28</div>
+      <div class="float-card fc-2">
+        <span class="from">咨询套餐</span>
+        <div class="price">¥199 起</div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="about">
+<section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">About Us</div>
-      <h2>Crafted with Premium Ingredients</h2>
-      <p>Every drink tells the story of our passion for quality.</p>
+      <div class="eyebrow">Our Services</div>
+      <h2>服务方案</h2>
+      <p>从免费攻略到一对一深度咨询，选择最适合你的方案。</p>
     </div>
-    <div class="about-grid">
-      <div class="about-text">
-        <h3>HUA CHA LI · Est. 2019</h3>
-        <p>Founded in 2019, HUA CHA LI is a chain brand dedicated to premium tea beverages. We source our tea leaves from trusted farms, brew every cup fresh, and customize it to your taste.</p>
-        <p>Our mission is to bring every customer the most authentic tea experience, filling each sip with surprise and satisfaction. From classic pearl milk tea to refreshing fruit tea, we craft every cup with care — just for you.</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="p-name">免费攻略</div>
+        <div class="p-price">¥0 <small>/ 永久</small></div>
+        <div class="p-desc">入门必读，了解港澳开户基础知识</div>
+        <ul>
+          <li>基础开户流程图文</li>
+          <li>常见问题解答</li>
+          <li>银行开户条件速查</li>
+        </ul>
+        <a href="#guides" class="btn ghost">免费浏览</a>
+      </div>
+      <div class="plan popular">
+        <span class="pop-tag">最受欢迎</span>
+        <div class="p-name">深度攻略会员</div>
+        <div class="p-price">¥99 <small>/ 年</small></div>
+        <div class="p-desc">解锁全部深度攻略 + 实时优惠情报</div>
+        <ul>
+          <li>全部深度攻略解锁</li>
+          <li>实时信用卡优惠更新</li>
+          <li>开户路线模板与清单</li>
+          <li>专属社群答疑</li>
+        </ul>
+        <button class="btn gold" onclick="buyPlan('会员')">立即开通</button>
+      </div>
+      <div class="plan">
+        <div class="p-name">一对一咨询</div>
+        <div class="p-price">¥199 <small>/ 次</small></div>
+        <div class="p-desc">专属顾问，针对你的情况定制方案</div>
+        <ul>
+          <li>1 对 1 深度咨询</li>
+          <li>开户材料预审</li>
+          <li>个性化路线规划</li>
+          <li>后续跟进指导</li>
+        </ul>
+        <button class="btn" onclick="buyPlan('咨询')">立即预约</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guides">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Guides &amp; Content</div>
+      <h2>攻略内容库</h2>
+      <p>持续更新的港澳开户攻略、信用卡优惠情报与付费素材。</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide">
+        <div class="thumb t1">🏦<span class="cat">开户攻略</span></div>
+        <div class="g-body">
+          <h3>香港银行开户全流程图解</h3>
+          <p>从选行、预约到面签，一步步带你走完整个开户流程。</p>
+          <div class="g-foot"><span class="free">免费 · 必读</span></div>
+        </div>
+      </div>
+      <div class="guide">
+        <div class="thumb t2">💳<span class="cat">信用卡</span></div>
+        <div class="g-body">
+          <h3>2024 香港信用卡迎新礼/返现对比</h3>
+          <p>实时更新的优惠情报，帮你挑到最划算的一张卡。</p>
+          <div class="g-foot"><span class="free">免费 · 持续更新</span></div>
+        </div>
+      </div>
+      <div class="guide">
+        <div class="thumb t3">📋<span class="cat">付费素材</span><span class="lock">付费</span></div>
+        <div class="g-body">
+          <h3>开户材料清单 + 填写模板</h3>
+          <p>齐全的材料清单与可直接套用的填写模板，省时省心。</p>
+          <div class="g-foot"><span class="price">¥29</span><a class="free" href="#payments">购买 →</a></div>
+        </div>
+      </div>
+      <div class="guide">
+        <div class="thumb t4">🗺️<span class="cat">路线规划</span><span class="lock">付费</span></div>
+        <div class="g-body">
+          <h3>内地 → 香港 → 海外 进阶路线图</h3>
+          <p>为高净值用户定制的一站式离岸开户路线解析。</p>
+          <div class="g-foot"><span class="price">¥49</span><a class="free" href="#payments">购买 →</a></div>
+        </div>
+      </div>
+      <div class="guide">
+        <div class="thumb t5">🌐<span class="cat">海外账户</span><span class="lock">付费</span></div>
+        <div class="g-body">
+          <h3>澳门 / 新加坡 / 海外账户开户对比</h3>
+          <p>多地区账户横向对比，帮你做出最优选择。</p>
+          <div class="g-foot"><span class="price">¥39</span><a class="free" href="#payments">购买 →</a></div>
+        </div>
+      </div>
+      <div class="guide">
+        <div class="thumb t6">🎁<span class="cat">优惠情报</span></div>
+        <div class="g-body">
+          <h3>每月信用卡优惠速递</h3>
+          <p>精选每月最值得参与的返现、里程、迎新活动。</p>
+          <div class="g-foot"><span class="free">免费 · 每月更新</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="payments">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Payment Methods</div>
+      <h2>支付方式</h2>
+      <p>付款时你可以自由选择自己方便的支付方式，覆盖全球主流渠道。</p>
+    </div>
+    <div class="pay-grid">
+      <div class="pay-card"><div class="p-ico">💳</div><b>信用卡</b><span>Visa / Master / 银联</span></div>
+      <div class="pay-card"><div class="p-ico">🅰️</div><b>Apple Pay</b><span>iPhone 一键支付</span></div>
+      <div class="pay-card"><div class="p-ico">🇬</div><b>Google Pay</b><span>Android 一键支付</span></div>
+      <div class="pay-card"><div class="p-ico">💚</div><b>支付宝</b><span>Alipay / 支付宝HK</span></div>
+      <div class="pay-card"><div class="p-ico">💚</div><b>微信支付</b><span>WeChat Pay</span></div>
+      <div class="pay-card"><div class="p-ico">🏦</div><b>FPS 转数快</b><span>香港即时转账</span></div>
+      <div class="pay-card"><div class="p-ico">📱</div><b>PayMe</b><span>香港电子钱包</span></div>
+      <div class="pay-card"><div class="p-ico">🐙</div><b>八达通</b><span>Octopus 钱包</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why DoorGo</div>
+      <h2>为什么选择 DoorGo</h2>
+      <p>专业、透明、持续更新，帮你真正打开港澳金融这扇门。</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-text">
+        <h3>让复杂的开户变得简单</h3>
+        <p>港澳开户涉及选行、材料、流程、面签等多个环节，信息零散且常常过时。DoorGo 把最关键的攻略系统化整理，并持续跟踪政策变化，确保内容及时准确。</p>
+        <p>无论你是想出境旅游、留学会用港卡，还是规划离岸资产与海外账户，我们都能给你清晰的路线和可落地的建议。</p>
         <div class="features">
-          <div class="feature"><div class="ico">🍃</div><b>Premium Ingredients</b><span>Finely selected tea leaves and fresh fruit</span></div>
-          <div class="feature"><div class="ico">👨‍🍳</div><b>Expert Team</b><span>Experienced tea artisans</span></div>
-          <div class="feature"><div class="ico">✅</div><b>Quality Guarantee</b><span>Every step strictly controlled</span></div>
-          <div class="feature"><div class="ico">🕐</div><b>Freshly Made</b><span>Every cup made on the spot</span></div>
+          <div class="feature"><div class="ico">✅</div><b>内容实时更新</b><span>政策、优惠变动第一时间同步</span></div>
+          <div class="feature"><div class="ico">🎯</div><b>一对一定制</b><span>针对个人情况给出专属方案</span></div>
+          <div class="feature"><div class="ico">🔒</div><b>信息透明</b><span>费用、条件一目了然</span></div>
+          <div class="feature"><div class="ico">🌍</div><b>多地区覆盖</b><span>香港、澳门、海外一站搞定</span></div>
         </div>
       </div>
-      <div class="about-art">
-        <span class="leaf l1">🍃</span>
-        <span class="leaf l2">🍵</span>
-        <div class="exp-badge"><b>5+</b><span>Years of Experience</span></div>
+      <div class="why-art">
+        <div class="big">🚪</div>
+        <div class="exp"><b>500+</b><span>开户成功案例</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="menu">
+<section id="disclaimer">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Our Menu</div>
-      <h2>Explore Our Drinks</h2>
-      <p>From classic milk tea to refreshing fruit tea, from pure tea to tasty snacks — there's something for everyone.</p>
-    </div>
-    <div class="tabs">
-      <button class="tab active" onclick="filterDrinks('all',this)">All</button>
-      <button class="tab" onclick="filterDrinks('milk',this)">Milk Tea</button>
-      <button class="tab" onclick="filterDrinks('fruit',this)">Fruit Tea</button>
-      <button class="tab" onclick="filterDrinks('tea',this)">Pure Tea</button>
-      <button class="tab" onclick="filterDrinks('snack',this)">Snacks</button>
-    </div>
-    <div class="menu-grid" id="menuGrid">
-      <div class="drink" data-cat="milk">
-        <div class="photo"><div class="c1"></div><span class="straw"></span><span class="score">4.9</span></div>
-        <div class="info">
-          <h3>Classic Pearl Milk Tea</h3>
-          <div class="desc">Rich milk tea with chewy tapioca pearls</div>
-          <div class="row"><span class="price">$28</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="milk">
-        <div class="photo"><div class="c2"></div><span class="straw"></span><span class="score">4.8</span></div>
-        <div class="info">
-          <h3>Caramel Milk Tea</h3>
-          <div class="desc">Rich caramel flavor</div>
-          <div class="row"><span class="price">$28</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="milk">
-        <div class="photo"><div class="c3"></div><span class="straw"></span><span class="score">4.9</span><span class="new-flag">NEW</span></div>
-        <div class="info">
-          <h3>Matcha Milk Tea</h3>
-          <div class="desc">Fragrant Japanese matcha</div>
-          <div class="row"><span class="price">$30</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="milk">
-        <div class="photo"><div class="c4"></div><span class="straw"></span><span class="score">4.7</span></div>
-        <div class="info">
-          <h3>Hong Kong Milk Tea</h3>
-          <div class="desc">Traditional Hong Kong style</div>
-          <div class="row"><span class="price">$30</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="fruit">
-        <div class="photo"><div class="c5"></div><span class="straw"></span><span class="score">4.8</span><span class="new-flag">NEW</span></div>
-        <div class="info">
-          <h3>Mango Green Tea</h3>
-          <div class="desc">Fresh mango with jasmine green tea</div>
-          <div class="row"><span class="price">$32</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="fruit">
-        <div class="photo"><div class="c6"></div><span class="straw"></span><span class="score">4.6</span></div>
-        <div class="info">
-          <h3>Grape Fruit Tea</h3>
-          <div class="desc">Juicy grapes bursting with flavor</div>
-          <div class="row"><span class="price">$32</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="fruit">
-        <div class="photo"><div class="c7"></div><span class="straw"></span><span class="score">4.9</span></div>
-        <div class="info">
-          <h3>Lemon Passion Tea</h3>
-          <div class="desc">Zesty lemon & passionfruit blend</div>
-          <div class="row"><span class="price">$31</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="tea">
-        <div class="photo"><div class="c8"></div><span class="score">4.7</span></div>
-        <div class="info">
-          <h3>Premium Oolong Tea</h3>
-          <div class="desc">Roasted oolong, clean and aromatic</div>
-          <div class="row"><span class="price">$26</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="tea">
-        <div class="photo"><div class="c9"></div><span class="score">4.8</span></div>
-        <div class="info">
-          <h3>Jasmine Green Tea</h3>
-          <div class="desc">Fragrant jasmine, light and floral</div>
-          <div class="row"><span class="price">$24</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="snack">
-        <div class="photo"><div class="c10"></div><span class="score">4.5</span></div>
-        <div class="info">
-          <h3>Taiyaki Waffle</h3>
-          <div class="desc">Warm, fluffy Japanese-style waffle</div>
-          <div class="row"><span class="price">$22</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-      <div class="drink" data-cat="snack">
-        <div class="photo"><div class="c11"></div><span class="score">4.6</span></div>
-        <div class="info">
-          <h3>Butter Croissant</h3>
-          <div class="desc">Buttery, flaky, freshly baked</div>
-          <div class="row"><span class="price">$18</span><span class="more">Learn More →</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="menu-foot">
-      <a href="#contact" class="btn">View Full Menu</a>
-    </div>
-  </div>
-</section>
-
-<section id="reviews">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Testimonials</div>
-      <h2>What Our Customers Say</h2>
-      <p>Hear real reviews from our customers at HUA CHA LI.</p>
-    </div>
-    <div class="reviews-grid">
-      <div class="quote-cards">
-        <div class="quote">
-          <div class="stars">★★★★★</div>
-          <p>"The best milk tea! Perfectly balanced flavor with delightfully chewy pearls. I always order their signature pearl milk tea and it never disappoints. The cozy atmosphere makes it a great spot to gather with friends."</p>
-          <div class="who"><span class="av">R</span><div><b>Rachel Lin</b><span>Loyal Customer</span></div></div>
-        </div>
-        <div class="quote">
-          <div class="stars">★★★★★</div>
-          <p>"I come here every single day. The service and quality are consistently excellent and the staff are so friendly. I especially love their matcha series — rich but not overwhelming, the perfect afternoon tea."</p>
-          <div class="who"><span class="av">D</span><div><b>Daniel Chan</b><span>Regular</span></div></div>
-        </div>
-        <div class="quote">
-          <div class="stars">★★★★★</div>
-          <p>"Finally found a bubble tea shop that uses real tea leaves! You can truly taste the quality. Their fruit tea series is amazing too — fresh fruit and a clean tea base. Highly recommended!"</p>
-          <div class="who"><span class="av">M</span><div><b>Mia Wong</b><span>Food Blogger</span></div></div>
-        </div>
-      </div>
-      <div class="rating-card">
-        <div class="big">4.9 <small>/ 5</small></div>
-        <p style="opacity:.9;margin-top:6px">Average Rating</p>
-        <div class="metrics">
-          <div class="m"><b>10k+</b><span>Positive Reviews</span></div>
-          <div class="m"><b>98%</b><span>Satisfaction</span></div>
-          <div class="m"><b>50+</b><span>Returning Customers</span></div>
-        </div>
-      </div>
+    <div class="disc-box">
+      <h3>⚠️ 免责声明</h3>
+      <p>本站所有攻略与内容仅供参考与学习用途，不构成任何投资、理财或开户的正式法律建议。银行开户政策、信用卡优惠活动可能随时调整，请以银行及发卡机构官方最新公告为准。</p>
+      <p>本站不提供任何形式的代办违规、套现或规避监管的服务。开户与用卡请遵守当地法律法规。</p>
     </div>
   </div>
 </section>
@@ -526,60 +492,29 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">FAQ</div>
-      <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to know about HUA CHA LI.</p>
+      <h2>常见问题</h2>
     </div>
     <div class="faq-list">
       <details class="faq">
-        <summary>Do you offer delivery?</summary>
-        <p>Yes! We partner with major food delivery platforms. You can also call us to place an order and pick it up in-store to enjoy it fresh.</p>
+        <summary>内地人可以开香港银行账户吗？</summary>
+        <p>可以。内地居民凭有效证件（如港澳通行证、身份证）及住址证明等，在香港部分银行可开立个人账户。具体条件因银行而异，建议先阅读我们的免费攻略或预约一对一咨询。</p>
       </details>
       <details class="faq">
-        <summary>Can I customize the sweetness and ice level?</summary>
-        <p>Absolutely. Every drink can be adjusted to your taste — choose your preferred sugar level (0–100%) and ice amount, or go sugar-free.</p>
+        <summary>开户需要准备哪些材料？</summary>
+        <p>通常需要：有效身份证明、港澳通行证/护照、住址证明（如水电账单、银行月结单）、过关小票等。我们提供完整的材料清单与填写模板可供下载。</p>
       </details>
       <details class="faq">
-        <summary>Do you offer dairy-free or lactose-free options?</summary>
-        <p>Yes, we offer oat milk and soy milk substitutes for most milk tea drinks, so everyone can enjoy a delicious cup.</p>
+        <summary>付费内容如何支付？</summary>
+        <p>我们支持信用卡（Visa/Master/银联）、Apple Pay、Google Pay、支付宝、微信支付、FPS 转数快、PayMe、八达通等多种方式，付款时你可以自由选择最方便的渠道。</p>
       </details>
       <details class="faq">
-        <summary>Where are your stores located?</summary>
-        <p>Our flagship store is at 123 Tea Street, Hong Kong, with more locations opening soon. Follow us for the latest updates.</p>
+        <summary>一对一咨询怎么做？</summary>
+        <p>下单后我们的顾问会与你联系，先了解你的具体情况（出行目的、资金规划等），再给出个性化的开户路线与材料准备建议。</p>
       </details>
       <details class="faq">
-        <summary>How can I contact customer service?</summary>
-        <p>Call us at +852 6542 3394, email hello@huachali.com, or use the contact form on this page — we usually reply within 24 hours.</p>
+        <summary>攻略内容会一直更新吗？</summary>
+        <p>会。会员订阅有效期内，你可持续获取我们更新的攻略、优惠情报与模板，政策变化我们会第一时间跟进。</p>
       </details>
-    </div>
-  </div>
-</section>
-
-<section id="locations">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Locations</div>
-      <h2>Find Us Near You</h2>
-      <p>Visit one of our stores and enjoy a fresh cup today.</p>
-    </div>
-    <div class="loc-grid">
-      <div class="loc-card">
-        <div class="loc-pin">📍</div>
-        <h3>Central Flagship</h3>
-        <p>123 Tea Street, Central, Hong Kong</p>
-        <p class="loc-hours">Daily 10:00 – 22:00</p>
-      </div>
-      <div class="loc-card">
-        <div class="loc-pin">📍</div>
-        <h3>Causeway Bay</h3>
-        <p>88 Harbour Road, Causeway Bay, Hong Kong</p>
-        <p class="loc-hours">Daily 10:30 – 22:30</p>
-      </div>
-      <div class="loc-card">
-        <div class="loc-pin">📍</div>
-        <h3>Tsim Sha Tsui</h3>
-        <p>12 Canton Road, Tsim Sha Tsui, Hong Kong</p>
-        <p class="loc-hours">Daily 10:00 – 22:00</p>
-      </div>
     </div>
   </div>
 </section>
@@ -588,24 +523,32 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Contact Us</div>
-      <h2>Visit HUA CHA LI</h2>
-      <p>Every cup is made with care, using premium ingredients for the perfect tea experience.</p>
+      <h2>联系我们</h2>
+      <p>有任何问题，欢迎随时留言或咨询。</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-row"><span class="ico">📍</span><div><b>Address</b><span>123 Tea Street, Hong Kong</span></div></div>
-        <div class="contact-row"><span class="ico">📞</span><div><b>Phone</b><span>+852 6542 3394</span></div></div>
-        <div class="contact-row"><span class="ico">✉️</span><div><b>Email</b><span>hello@huachali.com</span></div></div>
-        <div class="contact-row"><span class="ico">🕐</span><div><b>Opening Hours</b><span>Daily 10:00 - 22:00</span></div></div>
+        <div class="contact-row"><span class="ico">💬</span><div><b>微信 / WhatsApp</b><span>DoorGo-HK</span></div></div>
+        <div class="contact-row"><span class="ico">✉️</span><div><b>邮箱</b><span>hello@doorgo.hk</span></div></div>
+        <div class="contact-row"><span class="ico">🕐</span><div><b>服务时间</b><span>每日 9:00 - 22:00（在线答疑）</span></div></div>
+        <div class="contact-row"><span class="ico">📍</span><div><b>服务范围</b><span>香港 · 澳门 · 海外</span></div></div>
       </div>
       <form class="contact-form" onsubmit="handleSubmit(event)">
-        <label>Your Name</label>
-        <input type="text" name="name" placeholder="Enter your name" required>
-        <label>Phone Number</label>
-        <input type="tel" name="phone" placeholder="Enter your phone number">
-        <label>Message</label>
-        <textarea name="message" placeholder="What would you like to order? Let us know…"></textarea>
-        <button type="submit" class="btn" style="width:100%;justify-content:center">Send Message</button>
+        <label>我想咨询</label>
+        <select name="topic">
+          <option>香港银行开户</option>
+          <option>澳门账户</option>
+          <option>信用卡优惠</option>
+          <option>海外账户</option>
+          <option>其他</option>
+        </select>
+        <label>称呼</label>
+        <input type="text" name="name" placeholder="怎么称呼你" required>
+        <label>联系方式（微信 / WhatsApp / 邮箱）</label>
+        <input type="text" name="contact" placeholder="方便联系你的方式">
+        <label>留言</label>
+        <textarea name="message" placeholder="简单描述你的需求…"></textarea>
+        <button type="submit" class="btn" style="width:100%;justify-content:center">提交咨询</button>
       </form>
     </div>
   </div>
@@ -615,52 +558,45 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <div><span class="logo">HCL</span>HUA CHA LI</div>
-        <p>Every cup is made with care, using premium ingredients for the perfect tea experience.</p>
+        <div><span class="logo" style="background:transparent"><img src="assets/logo.png" alt="DoorGo" style="width:34px;height:34px;border-radius:9px"></span>DoorGo</div>
+        <p>打开通往港澳金融的大门。开户攻略、信用卡优惠、一对一咨询。</p>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <h4>快速导航</h4>
+        <a href="#services">服务方案</a>
+        <a href="#guides">攻略内容</a>
+        <a href="#payments">支付方式</a>
+        <a href="#contact">联系我们</a>
       </div>
       <div>
-        <h4>Information</h4>
-        <a href="#faq">FAQ</a>
-        <a href="#locations">Locations</a>
-        <a href="#contact">Delivery</a>
-        <a href="#contact">Privacy Policy</a>
-        <a href="#contact">Terms of Service</a>
+        <h4>内容</h4>
+        <a href="#guides">开户攻略</a>
+        <a href="#guides">信用卡优惠</a>
+        <a href="#disclaimer">免责声明</a>
       </div>
       <div>
-        <h4>Contact</h4>
-        <a href="tel:+85265423394">+852 6542 3394</a>
-        <a href="mailto:hello@huachali.com">hello@huachali.com</a>
-        <a href="#">123 Tea Street, Hong Kong</a>
+        <h4>联系</h4>
+        <a href="mailto:hello@doorgo.hk">hello@doorgo.hk</a>
+        <a href="#">微信/WhatsApp：DoorGo-HK</a>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2024 HUA CHA LI · All Rights Reserved · Brewed with <span class="heart">♥</span>
+      © 2024 DoorGo · 内容仅供参考，不构成投资建议 · Made with <span class="heart">♥</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // Menu category filter
-  function filterDrinks(cat, btn){
-    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('#menuGrid .drink').forEach(d=>{
-      d.style.display = (cat==='all' || d.dataset.cat===cat) ? '' : 'none';
-    });
+  // 套餐购买（跳转到 Stripe Checkout / 付款说明，正式接入后替换为真实支付链接）
+  function buyPlan(type){
+    alert('你选择了「' + type + '」套餐。\n\n支付功能即将接入，付款时你可自由选择：信用卡 / Apple Pay / 支付宝 / 微信 / FPS / PayMe 等。');
   }
 
-  // Form submit (demo: shows a message; needs a real backend / third-party form service)
+  // 咨询表单提交（demo，后续可接入微信/邮箱/webhook）
   function handleSubmit(e){
     e.preventDefault();
     var name = e.target.name.value;
-    alert('Thank you for your message, ' + (name||'friend') + '! We will get back to you soon. (Demo form — will need a backend to send real messages.)');
+    alert('感谢你的咨询，' + (name||'朋友') + '！我们会尽快与你联系。');
     e.target.reset();
   }
 </script>
