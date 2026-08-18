@@ -44,7 +44,7 @@
         + '</div></div>';
     }
 
-    // 在「全部攻略」视图下按子类分组（开户 / 信用卡 / 付费），加小标题分隔
+    // 在「全部攻略」视图下按子类分组（开户 / 信用卡 / 付费），做成可折叠的手风琴
     if (currentCat === 'all') {
       var groups = [
         { key: 'account', label: '🏦 港澳开户' },
@@ -58,14 +58,30 @@
           return g.cat === grp.key;
         });
         if (!items.length) return;
-        html += '<div class="group-title">' + grp.label + '</div>';
-        html += '<div class="group-cards">' + items.map(cardHtml).join('') + '</div>';
+        html += '<div class="acc-group">'
+          + '<button class="group-title" type="button" onclick="toggleGroup(this)">'
+          + '<span>' + grp.label + '</span>'
+          + '<span class="acc-count">' + items.length + ' 篇</span>'
+          + '<span class="acc-arrow">▾</span>'
+          + '</button>'
+          + '<div class="group-cards acc-body" style="display:none">' + items.map(cardHtml).join('') + '</div>'
+          + '</div>';
       });
       grid.innerHTML = html;
     } else {
       grid.innerHTML = list.map(cardHtml).join('');
     }
   }
+
+  // 手风琴展开/收起
+  window.toggleGroup = function (btn) {
+    var body = btn.nextElementSibling;
+    var arrow = btn.querySelector('.acc-arrow');
+    if (!body) return;
+    var isOpen = body.style.display !== 'none';
+    body.style.display = isOpen ? 'none' : 'grid';
+    arrow.textContent = isOpen ? '▾' : '▴';
+  };
 
   if (catNav) {
     catNav.addEventListener('click', function (e) {
